@@ -3616,6 +3616,46 @@
   }
   #page-building-our-operating-system .closing-note p{ margin:0; font-size:0.94rem; color:#3D5F51; }
 
+  /* Buttons (scoped copy, matching established Hub button system) */
+  #page-building-our-operating-system .btn{
+    display:inline-flex; align-items:center; gap:12px;
+    font-weight:600; font-size:0.96rem;
+    padding:14px 20px 14px 22px; border-radius:999px;
+    border:1px solid transparent; cursor:pointer; white-space:nowrap;
+    text-decoration:none;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  #page-building-our-operating-system .btn:hover{ transform:translateY(-1px); }
+  #page-building-our-operating-system .btn:focus-visible{ outline:2px solid var(--green); outline-offset:2px; }
+  #page-building-our-operating-system .btn-primary{ background:var(--black); color:var(--white); }
+  #page-building-our-operating-system .btn-primary:hover{ background:var(--black-soft); }
+  #page-building-our-operating-system .btn-primary .arrow-circle{ color:var(--green-on-black); border-color:rgba(79,190,147,0.5); }
+  #page-building-our-operating-system .arrow-circle{
+    width:34px; height:34px; border-radius:50%;
+    border:1px solid currentColor;
+    display:inline-flex; align-items:center; justify-content:center; flex:none;
+  }
+  #page-building-our-operating-system .arrow-circle svg{ width:13px; height:13px; }
+
+  #page-building-our-operating-system .os-doc-links{
+    display:flex; flex-wrap:wrap; gap:14px; margin-top:20px;
+  }
+  #page-building-our-operating-system .os-doc-fine-note{
+    margin-top:14px; font-size:0.84rem; color:var(--ink-faint); line-height:1.6;
+  }
+  #page-building-our-operating-system .os-mode-status{
+    font-size:0.78rem; font-weight:600; color:var(--green-deep);
+    background:var(--green-tint); border-radius:999px; padding:3px 10px;
+    display:inline-block; margin-bottom:10px;
+  }
+
+  @media (max-width:560px){
+    #page-building-our-operating-system .btn{
+      width:100%; justify-content:center;
+      white-space:normal; text-align:center; line-height:1.3;
+    }
+  }
+
   /* Motivation section — four-card grid */
   #page-building-our-operating-system .why-grid{
     display:grid; grid-template-columns:repeat(4, 1fr); gap:12px; margin-top:16px;
@@ -6636,267 +6676,309 @@
       <header class="page-header">
         <p class="eyebrow-label">Operating system</p>
         <h1>Building Our Operating System</h1>
-        <p class="lede">Cioré is researching Lumé OS, an operating-system direction built around clearer privacy, plainer language, and more understandable control over what a phone and its apps can do.</p>
-        <p class="lede">This is early, active research. Nothing here is a confirmed feature, finished interface, or final decision.</p>
+        <p class="lede">Cioré is planning Lumé OS as a custom hardened Android operating system based on AOSP, the Android Open Source Project. Lumé is intended to make privacy, accessibility, app control, and device settings easier to understand for people who do not want to become technology experts.</p>
+        <p class="lede">Lumé is in planning and early development preparation. The first technical build is intended for one supported stock Android reference device, internal testing, and selected invited waitlist testers. It is not a finished operating system, public download, carrier ready phone, or final Cioré hardware platform.</p>
       </header>
 
-      <!-- ================= WHY CIORÉ IS BUILDING THIS DIRECTION ================= -->
+      <div class="os-callout">
+        <p><strong>Current status.</strong> Founder direction and first build scope are defined. Reference device selection, AOSP branch, build environment, security architecture, app compatibility, Gaia signals, and accessibility implementation require technical validation and specialist review.</p>
+      </div>
+
+      <!-- ================= INTERNAL LUMÉ DOCUMENTS ================= -->
+      <section aria-labelledby="os-docs-heading">
+        <p class="section-label">Internal Lumé documents</p>
+        <h2 id="os-docs-heading">Read the Current Lumé Direction</h2>
+        <p>These restricted internal documents explain the current Lumé OS product direction, first build scope, technical questions, and future research areas. They are intended to help contributors understand what is confirmed, what requires validation, and where their research can help.</p>
+
+        <div class="os-doc-links">
+          <a class="btn btn-primary" href="https://drive.google.com/file/d/1abI2q1liRnLP22wBabWr5aLhK3536Zzv/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+            Read the Lumé OS Product Definition Guide
+            <span class="arrow-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+          <a class="btn btn-primary" href="https://drive.google.com/file/d/1qgQDxLjsNrYiLF3nVNPlgXOHyxCcaz_n/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+            Read the Lumé OS Brief
+            <span class="arrow-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+        <p class="os-doc-fine-note">These are restricted internal documents. You may need to request access after opening them.</p>
+      </section>
+
+      <!-- ================= WHY CIORÉ IS BUILDING LUMÉ ================= -->
       <section aria-labelledby="os-why-heading">
         <p class="section-label">Starting simply</p>
-        <h2 id="os-why-heading">Why Cioré Is Building This Direction</h2>
-        <p>Cioré is building Lumé OS around a small set of consistent priorities.</p>
-
-        <div class="why-grid">
-          <div class="why-card">
-            <h3>Clearer choices</h3>
-            <p>People should be able to understand important settings, app requests, and device behavior.</p>
-          </div>
-          <div class="why-card">
-            <h3>Visible privacy</h3>
-            <p>Sensitive access should be easier to notice and easier to revisit.</p>
-          </div>
-          <div class="why-card">
-            <h3>Useful technology</h3>
-            <p>A privacy-centered phone still needs to support real hardware, everyday tasks, and practical app choices.</p>
-          </div>
-          <div class="why-card">
-            <h3>Longer use</h3>
-            <p>Software support, clear updates, repairability planning, and hardware compatibility all matter when people want to keep a phone longer.</p>
-          </div>
-        </div>
-
-        <div class="os-callout">
-          <p>Cioré is not trying to block everything. We're researching how to give people clearer choices and better boundaries without making their phone confusing or unusable.</p>
-        </div>
+        <h2 id="os-why-heading">Why Cioré Is Building Lumé</h2>
+        <p>People can feel unsure about what apps, cameras, microphones, location services, and other device systems are doing with their personal information. Lumé is intended to help people understand what apps request, what choices they have, and where they can review those choices.</p>
+        <p>Lumé is designed for privacy minded users, people who are not technical, people with accessibility needs, families, caregivers, professionals, and people who want familiar apps where practical. The intended experience is calm, understandable, and customizable, built around clear choices rather than fear based messaging.</p>
       </section>
 
-      <!-- ================= WHY PHONE SOFTWARE MATTERS ================= -->
-      <section aria-labelledby="os-software-matters-heading">
-        <p class="section-label">How phone software affects people</p>
-        <h2 id="os-software-matters-heading">Why Phone Software Matters</h2>
-        <p>A phone can hold and create sensitive information, including messages, calls, photos, videos, files, contacts, calendar information, location, camera access, microphone access, health or wellness information, device identifiers, app activity, network information, Bluetooth and nearby-device signals, sensor information, and account information.</p>
-        <p>Apps may need some of this information to provide useful features. A camera app may need camera access. A map app may need location. A messaging app may need contacts or files when someone chooses to share them.</p>
-        <p>The question is whether an app needs the access, whether the request is explained clearly, whether the access is limited to the right time, and whether a person can easily change their mind later.</p>
-
-        <div class="os-callout">
-          <p>Cioré is designing toward a phone experience where sensitive access is easier to understand, easier to notice, and easier to revisit.</p>
-        </div>
-      </section>
-
-      <!-- ================= THE GAP WE WANT TO ADDRESS ================= -->
-      <section aria-labelledby="os-gap-heading">
-        <p class="section-label">Cioré direction</p>
-        <h2 id="os-gap-heading">The Gap We Want to Address</h2>
-        <p>Cioré is exploring an operating-system direction for people who want more than a long privacy policy and a collection of buried settings.</p>
-        <p>We want the phone to explain important choices in everyday language, make sensitive access easier to notice, and give people clearer ways to decide what apps can do.</p>
-
-        <div class="table-wrap"><table class="os-table"><thead><tr>
-<th scope="col">Current challenge</th>
-<th scope="col">Cioré direction</th>
-</tr></thead><tbody>
-<tr>
-<td data-label="Current challenge">Permissions can be easy to approve without understanding.</td>
-<td data-label="Cioré direction">Explain requests in plain language and make important choices easier to revisit.</td>
-</tr>
-<tr>
-<td data-label="Current challenge">App behavior can be hard to see after installation.</td>
-<td data-label="Cioré direction">Explore a privacy dashboard that shows recent sensitive access clearly.</td>
-</tr>
-<tr>
-<td data-label="Current challenge">Privacy settings can be scattered across menus.</td>
-<td data-label="Cioré direction">Bring important controls into a more understandable, organized experience.</td>
-</tr>
-<tr>
-<td data-label="Current challenge">People need useful apps but want fewer surprises.</td>
-<td data-label="Cioré direction">Research a practical balance between app compatibility, privacy, safety, and user choice.</td>
-</tr>
-</tbody></table></div>
-      </section>
-
-      <!-- ================= WHAT APPS MAY ASK FOR ================= -->
-      <section aria-labelledby="os-apps-ask-heading">
-        <p class="section-label">App access</p>
-        <h2 id="os-apps-ask-heading">What Apps May Ask For</h2>
-        <p>Apps can request many kinds of access. Lumé OS research focuses on making these requests easier to notice, understand, and reconsider later.</p>
-
-        <div class="notice-grid">
-  <div class="notice-grid-item">Camera and microphone access</div>
-  <div class="notice-grid-item">Precise or approximate location</div>
-  <div class="notice-grid-item">Contacts, calendar, and files</div>
-  <div class="notice-grid-item">Background activity and battery use</div>
-  <div class="notice-grid-item">Notifications and alerts</div>
-  <div class="notice-grid-item">Other installed apps or device activity</div>
-  <div class="notice-grid-item">Network and internet access</div>
-  <div class="notice-grid-item">Device sensors such as motion or proximity</div>
-</div>
-      </section>
-
-      <!-- ================= MODES FOR DIFFERENT CONTEXTS ================= -->
-      <section aria-labelledby="os-modes-heading">
-        <p class="section-label">Different needs</p>
-        <h2 id="os-modes-heading">Modes for Different Contexts</h2>
-        <p>People don't all use their phone in the same way. Cioré is exploring whether optional modes could help people see settings and controls that better fit their context without making the device confusing.</p>
-
-        <div class="table-wrap"><table class="os-table"><thead><tr>
-<th scope="col">Mode</th>
-<th scope="col">Intended purpose</th>
-<th scope="col">Still needs research</th>
-</tr></thead><tbody>
-<tr>
-<td data-label="Mode">Consumer mode</td>
-<td data-label="Intended purpose">A clear everyday experience with understandable privacy and device controls</td>
-<td data-label="Still needs research">Default layout, settings complexity, app support, accessibility, and user testing</td>
-</tr>
-<tr>
-<td data-label="Mode">Business mode</td>
-<td data-label="Intended purpose">A possible workspace-focused mode with clearer organization for work-related activity</td>
-<td data-label="Still needs research">Privacy boundaries, organization controls, device management, accessibility, and legal review</td>
-</tr>
-<tr>
-<td data-label="Mode">Parent mode</td>
-<td data-label="Intended purpose">A possible set of tools that could help caregivers guide children's device use</td>
-<td data-label="Still needs research">Child safety, consent, family needs, accessibility, privacy, and legal review</td>
-</tr>
-<tr>
-<td data-label="Mode">Gamer mode</td>
-<td data-label="Intended purpose">A possible performance and focus direction for people who want clearer control while playing</td>
-<td data-label="Still needs research">Battery impact, heat, notifications, accessibility, display behavior, and user value</td>
-</tr>
-</tbody></table></div>
-
-        <div class="os-callout">
-          <p>These are early directions for research. They are not confirmed profiles, finished features, or promises of specific controls.</p>
-        </div>
-      </section>
-
-      <!-- ================= KEEPING APPS IN THEIR OWN SPACE ================= -->
-      <section aria-labelledby="os-isolation-heading">
-        <p class="section-label">App isolation</p>
-        <h2 id="os-isolation-heading">Keeping Apps in Their Own Space</h2>
-        <p>We are researching how to keep apps from freely sharing information with each other unless a person allows it. This includes studying app isolation, network-level controls, and how much an app can see about the rest of the device.</p>
-        <p>This research connects closely to Gaia, which is exploring how to help people notice and understand this kind of activity in the first place.</p>
-        <a class="inline-link" href="#gaia">See the Gaia research</a>
-      </section>
-
-      <!-- ================= HOW LUMÉ FITS THE PHONE ================= -->
-      <section aria-labelledby="os-fit-heading">
-        <p class="section-label">Software and hardware together</p>
-        <h2 id="os-fit-heading">How Lumé Fits the Phone</h2>
-        <p>Lumé OS doesn't exist separately from the hardware research happening elsewhere in the Hub. Decisions about repairable parts, modular accessories, sensors, and physical controls all shape what the software layer needs to support.</p>
-        <p>As phone hardware directions change, Lumé OS research has to stay flexible enough to work alongside them rather than assuming a fixed set of components.</p>
-        <a class="inline-link" href="#the-phone">See The Phone research</a>
-      </section>
-
-      <!-- ================= WHY WE'RE STARTING WITH A HARDENED OPEN FOUNDATION ================= -->
-      <section aria-labelledby="os-foundation-heading">
-        <p class="section-label">Practical approach</p>
-        <h2 id="os-foundation-heading">Why We're Starting With a Hardened Open Foundation</h2>
-        <p>Building an entire operating system from nothing is not realistic for an early-stage team. We are researching how to start from a well-supported, open foundation and focus our own work on the privacy, clarity, and control improvements that matter most.</p>
-        <p>This approach also needs research into long-term maintenance, security updates, and how much we can realistically support over time.</p>
-
-        <div class="flow-card">
-          <div class="os-flow-diagram" role="img" aria-label="Approach: build Cioré's interface, privacy controls, settings, and user experience, then test accessibility, performance, privacy, compatibility, and maintenance needs, then work toward greater platform independence over time.">
-            <div aria-hidden="true">
-              <span class="os-flow-node">Build Cioré's interface, privacy controls, settings, and user experience</span>
-              <span class="os-flow-arrow">↓</span>
-              <span class="os-flow-node">Test accessibility, performance, privacy, compatibility, and maintenance needs</span>
-              <span class="os-flow-arrow">↓</span>
-              <span class="os-flow-node">Work toward greater platform independence over time</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="os-callout">
-          <p>Hardening is not a guarantee that a phone cannot be compromised. It is ongoing work to reduce avoidable risk, test assumptions, respond to updates, and improve over time.</p>
-        </div>
-      </section>
-
-      <!-- ================= APPS NEED ACCESS TO FUNCTION ================= -->
-      <section aria-labelledby="os-apps-function-heading">
-        <p class="section-label">Useful app choices</p>
-        <h2 id="os-apps-function-heading">Apps Need Access to Function</h2>
-        <p>A useful operating system has to balance boundaries with everyday function. A camera app can't take a photo without camera access. A map app can't guide someone without location access. A messaging service can't send messages without a network connection.</p>
-        <p>Cioré is researching how to make these tradeoffs clearer rather than pretending every app can work with no access to phone features, information, or the internet.</p>
-
-        <ul class="bullets">
-          <li>Which permissions are necessary for common app categories</li>
-          <li>Which permissions may be broader than needed</li>
-          <li>How Lumé should explain permission tradeoffs</li>
-          <li>Which apps rely on external services</li>
-          <li>How app compatibility should be tested and documented</li>
-          <li>How users can make informed app choices</li>
-          <li>How privacy, security, usability, accessibility, and compatibility can be balanced</li>
-        </ul>
-
-        <div class="os-callout">
-          <p>Compatibility is part of user trust. Cioré needs to test and document how apps work instead of making broad promises before the system is ready.</p>
-        </div>
-      </section>
-
-      <!-- ================= KEEPING THE PHONE USEFUL OVER TIME ================= -->
-      <section aria-labelledby="os-longevity-heading">
-        <p class="section-label">Long-term care</p>
-        <h2 id="os-longevity-heading">Keeping the Phone Useful Over Time</h2>
-        <p>Cioré is working toward greater platform independence over time.</p>
-        <p>This includes researching how software updates, security patches, and long-term support could work without locking people into decisions made this year. It also connects to hardware research on repairable parts and modular accessories, since a phone that can be serviced and adapted needs software that can keep up with it.</p>
-        <a class="inline-link" href="#modularity-repairability">See the repairability research</a>
-      </section>
-
-      <!-- ================= WHAT WE NEED TO EXPLORE ================= -->
-      <section aria-labelledby="os-explore-heading">
-        <p class="section-label">Open research</p>
-        <h2 id="os-explore-heading">What We Need to Explore</h2>
-        <p>Every direction on this page still needs evidence, testing, and review.</p>
-
-        <div class="notice-grid">
-  <div class="notice-grid-item">What should be explained before someone changes a privacy or safety setting?</div>
-  <div class="notice-grid-item">Which controls matter most to bring into one organized place?</div>
-  <div class="notice-grid-item">How can the system stay honest about what it can and cannot verify?</div>
-  <div class="notice-grid-item">What tradeoffs come with restricting background app activity?</div>
-  <div class="notice-grid-item">How should update behavior be explained in plain language?</div>
-  <div class="notice-grid-item">What accessibility needs must shape every mode and setting?</div>
-  <div class="notice-grid-item">How much app compatibility can we support while still improving privacy?</div>
-  <div class="notice-grid-item">What should a practical, well-supported foundation look like for a first version?</div>
-</div>
-      </section>
-
-      <!-- ================= STARTING POINTS FOR CONTRIBUTORS ================= -->
-      <section aria-labelledby="os-help-heading">
-        <p class="section-label">Clear for more people</p>
-        <h2 id="os-help-heading">Starting Points for Contributors</h2>
+      <!-- ================= WHAT THE FIRST BUILD FOCUSES ON ================= -->
+      <section aria-labelledby="os-first-build-heading">
+        <p class="section-label">First build scope</p>
+        <h2 id="os-first-build-heading">What the First Build Focuses On</h2>
 
         <div class="os-approach-grid">
           <div class="os-approach-card">
-            <h3>Look for confusion</h3>
-            <p>Identify where settings, permissions, updates, warnings, and explanations may confuse or empower people.</p>
+            <h3>Lumé Settings Experience</h3>
+            <p>Simple, searchable, organized settings that help users find what they need in plain language.</p>
           </div>
           <div class="os-approach-card">
-            <h3>Research tradeoffs</h3>
-            <p>Compare privacy, compatibility, accessibility, battery use, maintenance, and app behavior using credible sources.</p>
+            <h3>Lumé Privacy Center</h3>
+            <p>A clear place to review selected sensitive app access, privacy choices, visible limits, and Gaia notices.</p>
           </div>
           <div class="os-approach-card">
-            <h3>Document clearly</h3>
-            <p>Turn findings into concise notes that separate facts, assumptions, risks, gaps, and open questions.</p>
+            <h3>Plain Language Permission Experience</h3>
+            <p>Clear explanations of what an app requests, why it may need access, what the user can choose, and what may stop working if access is limited.</p>
+          </div>
+          <div class="os-approach-card">
+            <h3>Accessibility and Comfort Center</h3>
+            <p>A central place for text, fonts, contrast, brightness, warmth, motion, sound, haptics, captions, voice, and other relevant preferences.</p>
+          </div>
+          <div class="os-approach-card">
+            <h3>Gaia Indicator and Local Notice History</h3>
+            <p>An optional local indication system for selected permission requests, user initiated privacy changes, and limited review suggested notices where technically supportable.</p>
           </div>
         </div>
 
-        <p class="os-areas-label">Areas likely to need help</p>
-        <ul class="bullets">
-  <li>Operating-system and open-foundation research</li>
-  <li>Privacy and app-permission research</li>
-  <li>App isolation and network-control research</li>
-  <li>App compatibility research</li>
-  <li>Accessibility and inclusive-design research</li>
-  <li>UX writing and plain-language settings</li>
-  <li>AI transparency and user-control research</li>
-  <li>Update and long-term-support research</li>
-  <li>Hardware and software integration research</li>
-  <li>Documentation, decision logs, and research-library organization</li>
-</ul>
+        <div class="os-callout">
+          <p><strong>First build requirement.</strong> The first build validates a focused Lumé experience on one supported reference device. It does not attempt to deliver every future Lumé feature, every app compatibility outcome, or a production ready security platform.</p>
+        </div>
+      </section>
 
+      <!-- ================= HOW LUMÉ HANDLES APP ACCESS ================= -->
+      <section aria-labelledby="os-app-access-heading">
+        <p class="section-label">Sandboxing and sharing</p>
+        <h2 id="os-app-access-heading">How Lumé Handles App Access</h2>
+        <p>Lumé builds on Android app sandboxing and permission controls. Sandboxing means apps are placed in separate spaces so they cannot freely read each other's private data. Apps can still share information when a user intentionally asks them to do something useful, such as sending a photo, opening a map location, using a payment service, signing in, sharing a file, using a password manager, or using an accessibility tool.</p>
+        <p>Lumé's concern includes unnecessary data sharing connected to profiling, advertising, behavioral targeting, cross app tracking, spending habit targeting, and background collection. Lumé can use Android permissions, profiles, system sharing mechanisms, user controlled restrictions, and selected activity indicators where technically supportable. Lumé must not claim it can see, stop, or control every action inside every app.</p>
+
+        <div class="table-wrap">
+          <table class="os-table">
+            <thead><tr><th scope="col">Useful sharing chosen by the user</th><th scope="col">Data sharing that needs review or control</th></tr></thead>
+            <tbody>
+              <tr><td data-label="Useful sharing chosen by the user">Sending a photo to someone</td><td data-label="Data sharing that needs review or control">Profiling based on app usage patterns</td></tr>
+              <tr><td data-label="Useful sharing chosen by the user">Opening a map location</td><td data-label="Data sharing that needs review or control">Advertising and behavioral targeting</td></tr>
+              <tr><td data-label="Useful sharing chosen by the user">Using a payment service</td><td data-label="Data sharing that needs review or control">Cross app tracking</td></tr>
+              <tr><td data-label="Useful sharing chosen by the user">Signing in to a familiar app</td><td data-label="Data sharing that needs review or control">Spending habit targeting</td></tr>
+              <tr><td data-label="Useful sharing chosen by the user">Sharing a file</td><td data-label="Data sharing that needs review or control">Background data collection</td></tr>
+              <tr><td data-label="Useful sharing chosen by the user">Using a password manager</td><td data-label="Data sharing that needs review or control">Unnecessary sharing not requested by the user</td></tr>
+              <tr><td data-label="Useful sharing chosen by the user">Using an accessibility tool</td><td data-label="Data sharing that needs review or control">Sharing without a clear user initiated reason</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ================= WHAT LUMÉ CAN HELP USERS UNDERSTAND ================= -->
+      <section aria-labelledby="os-understand-heading">
+        <p class="section-label">User questions</p>
+        <h2 id="os-understand-heading">What Lumé Can Help Users Understand</h2>
+
+        <div class="table-wrap">
+          <table class="os-table">
+            <thead><tr><th scope="col">User question</th><th scope="col">Lumé direction</th><th scope="col">What needs validation</th></tr></thead>
+            <tbody>
+              <tr><td data-label="User question">What used my camera?</td><td data-label="Lumé direction">Show recent camera access in the Privacy Center where technically supportable</td><td data-label="What needs validation">Which access events Android can reliably report</td></tr>
+              <tr><td data-label="User question">Why did this app ask for my contacts?</td><td data-label="Lumé direction">Explain the request in plain language when the app asks</td><td data-label="What needs validation">Accuracy of app provided reasons</td></tr>
+              <tr><td data-label="User question">Can I turn off location for this app?</td><td data-label="Lumé direction">Point to the relevant Android permission control</td><td data-label="What needs validation">Effect on app functionality per app</td></tr>
+              <tr><td data-label="User question">Can this app run in the background?</td><td data-label="Lumé direction">Surface the setting in plain language</td><td data-label="What needs validation">Battery and performance tradeoffs</td></tr>
+              <tr><td data-label="User question">Does this app depend on Google Play or another outside service?</td><td data-label="Lumé direction">Note known dependencies where identifiable</td><td data-label="What needs validation">Reliable detection across apps</td></tr>
+              <tr><td data-label="User question">Can I place this app in a separate profile?</td><td data-label="Lumé direction">Research direction, depends on Android profile support</td><td data-label="What needs validation">Device and Android version support</td></tr>
+              <tr><td data-label="User question">Can Lumé explain what this privacy setting changes?</td><td data-label="Lumé direction">Plain language explanation goal for every setting</td><td data-label="What needs validation">Writing accuracy and technical review</td></tr>
+              <tr><td data-label="User question">Can Gaia explain why this notice appeared?</td><td data-label="Lumé direction">Research direction for defined, testable signals only</td><td data-label="What needs validation">Whether a clear, accurate explanation is technically possible</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="os-callout">
+          <p>Lumé can only act within the capabilities supported by Android, the device, the app, and the user's chosen settings. Some app behavior may remain outside Lumé's visibility or control. Lumé should explain those limits clearly.</p>
+        </div>
+      </section>
+
+      <!-- ================= GAIA AND USER CONTROL ================= -->
+      <section aria-labelledby="os-gaia-heading">
+        <p class="section-label">Research direction</p>
+        <h2 id="os-gaia-heading">Gaia and User Control</h2>
+        <p>Gaia is Lumé's optional, on device indication and automation direction. Gaia is not a chatbot, not generative AI, not a required assistant, and not a system that reads private app content.</p>
+        <p>First build Gaia signals are limited to sensitive permission requests, user initiated privacy and settings changes, and limited review suggested notices where a rule is clearly defined and technically supportable.</p>
+        <div class="os-callout">
+          <p>AI related indicators remain research direction unless the engineering firm identifies a signal that is clearly defined, reliably observable, understandable to users, and tested for accuracy. Gaia must not imply that it can identify every AI feature, every tracker, every network connection, or every hidden app behavior.</p>
+        </div>
+        <p><a class="inline-link" href="#gaia">Explore Gaia research</a></p>
+      </section>
+
+      <!-- ================= ACCESSIBILITY AND COMFORT ================= -->
+      <section aria-labelledby="os-accessibility-heading">
+        <p class="section-label">Core requirement</p>
+        <h2 id="os-accessibility-heading">Accessibility and Comfort</h2>
+        <p>Accessibility is a core Lumé product requirement and an ongoing research process. Lumé is being designed around large text, text reflow, font choice, dyslexia friendly options, contrast, brightness, warmth, motion reduction, captions, sound, haptics, voice access, speech differences, dexterity, cognitive clarity, caregiver support, and settings recovery.</p>
+        <div class="os-callout">
+          <p>Lumé should give users the choice to set up comfort and accessibility preferences during setup or later. Users should be able to save preferences, return to them, and recover from accidental changes where technically feasible.</p>
+        </div>
+        <p class="os-areas-label">Contributor research needs</p>
+        <div class="notice-grid">
+          <div class="notice-grid-item">Vision and display</div>
+          <div class="notice-grid-item">Reading and language</div>
+          <div class="notice-grid-item">Hearing and sound</div>
+          <div class="notice-grid-item">Motion and sensory comfort</div>
+          <div class="notice-grid-item">Motor and dexterity access</div>
+          <div class="notice-grid-item">Voice and speech access</div>
+          <div class="notice-grid-item">Cognitive clarity</div>
+          <div class="notice-grid-item">Caregiver support</div>
+          <div class="notice-grid-item">Setup and recovery</div>
+        </div>
+      </section>
+
+      <!-- ================= MODES AND PROFILES ================= -->
+      <section aria-labelledby="os-modes-heading">
+        <p class="section-label">Modes and profiles</p>
+        <h2 id="os-modes-heading">Modes and Profiles</h2>
+
+        <div class="why-grid">
+          <div class="why-card">
+            <p class="os-mode-status">First build requirement</p>
+            <h3>Consumer Mode</h3>
+            <p>The default experience for everyday personal use. It focuses on calm privacy minded use of apps, calls, messages, accessible controls, and the Lumé Privacy Center.</p>
+          </div>
+          <div class="why-card">
+            <p class="os-mode-status">Research direction</p>
+            <h3>Business Mode</h3>
+            <p>A future direction for professionals and organizations handling sensitive information. It requires security, privacy, legal, accessibility, and enterprise mobility review.</p>
+          </div>
+          <div class="why-card">
+            <p class="os-mode-status">Research direction</p>
+            <h3>Parent or Caregiver Mode</h3>
+            <p>A future direction for parents, caregivers, children, teenagers, older adults, and dependent users. It requires child privacy, caregiver research, security review, accessibility review, and legal review.</p>
+          </div>
+          <div class="why-card">
+            <p class="os-mode-status">Research direction</p>
+            <h3>Gamer Mode</h3>
+            <p>A future direction for user controlled display, sound, haptics, notification, battery, heat, and network preferences during gaming. It requires device specific performance validation.</p>
+          </div>
+          <div class="why-card">
+            <p class="os-mode-status">Future direction</p>
+            <h3>Travel Mode</h3>
+            <p>A future research direction for people using phones across countries, unfamiliar networks, public Wi Fi, and changing connectivity conditions.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= APP COMPATIBILITY AND USER CHOICE ================= -->
+      <section aria-labelledby="os-compatibility-heading">
+        <p class="section-label">App compatibility</p>
+        <h2 id="os-compatibility-heading">App Compatibility and User Choice</h2>
+        <p>Lumé aims to support familiar apps where practical. Compatibility depends on the selected device, Android version, required services, app developer choices, security restrictions, and user settings. Lumé should explain those dependencies clearly rather than promise universal compatibility.</p>
+
+        <p class="os-areas-label">First build compatibility priorities</p>
+        <div class="notice-grid">
+          <div class="notice-grid-item">Accessibility apps</div>
+          <div class="notice-grid-item">Messaging</div>
+          <div class="notice-grid-item">Maps</div>
+          <div class="notice-grid-item">Photos and video</div>
+          <div class="notice-grid-item">Music</div>
+        </div>
+
+        <p class="os-areas-label" style="margin-top:24px;">Later compatibility research</p>
+        <div class="notice-grid">
+          <div class="notice-grid-item">Banking apps</div>
+          <div class="notice-grid-item">Payment apps</div>
+          <div class="notice-grid-item">Health apps</div>
+          <div class="notice-grid-item">Social media</div>
+          <div class="notice-grid-item">Work apps</div>
+          <div class="notice-grid-item">School apps</div>
+          <div class="notice-grid-item">Government services</div>
+          <div class="notice-grid-item">Travel apps</div>
+          <div class="notice-grid-item">Gaming</div>
+        </div>
+
+        <div class="os-callout">
+          <p>Cioré will not test every app within a category in the first build. The engineering firm and Cioré will select a small, representative set of priority apps after the reference device and AOSP foundation are selected.</p>
+        </div>
+      </section>
+
+      <!-- ================= UPDATES, DEVICE CARE, AND FUTURE HARDWARE ================= -->
+      <section aria-labelledby="os-updates-heading">
+        <p class="section-label">Long term support</p>
+        <h2 id="os-updates-heading">Updates, Device Care, and Future Hardware</h2>
+        <p>Lumé needs ongoing maintenance, security patches, compatibility work, testing, documentation, update delivery, and support planning. Updates should preserve user preferences whenever possible. Privacy settings, app permissions, accessibility preferences, display settings, sound settings, account choices, network preferences, Gaia settings, profile boundaries, and user created restrictions should not change silently.</p>
+        <p>Device Care and Repair Mode are future directions connected to repair minded Cioré hardware, including work described on <a class="inline-link" href="#the-phone">The Phone</a> and <a class="inline-link" href="#modularity-repairability">Modularity &amp; Repairability</a> pages, along with the energy directions on the <a class="inline-link" href="#how-we-want-the-phone-to-charge">How We Want the Phone to Charge</a> page. The first reference device build helps validate Lumé's experience. It does not prove final Cioré hardware capabilities.</p>
+      </section>
+
+      <!-- ================= WHAT IS OUTSIDE THE FIRST BUILD ================= -->
+      <section aria-labelledby="os-outside-heading">
+        <p class="section-label">Scope boundaries</p>
+        <h2 id="os-outside-heading">What Is Outside the First Build</h2>
+
+        <div class="notice-grid">
+          <div class="notice-grid-item">Dedicated Cioré hardware integration</div>
+          <div class="notice-grid-item">Broad multi device support</div>
+          <div class="notice-grid-item">Carrier agreements</div>
+          <div class="notice-grid-item">Custom modem integration</div>
+          <div class="notice-grid-item">SIM or eSIM commitments</div>
+          <div class="notice-grid-item">Emergency calling commitments</div>
+          <div class="notice-grid-item">Mesh, long range radio, and broadcast radio</div>
+          <div class="notice-grid-item">Remote erase or protective mode implementation</div>
+          <div class="notice-grid-item">Encrypted cloud backup implementation</div>
+          <div class="notice-grid-item">Full Repair Mode</div>
+          <div class="notice-grid-item">Biometric system development</div>
+          <div class="notice-grid-item">Public security certification</div>
+          <div class="notice-grid-item">Production ready OTA update system</div>
+          <div class="notice-grid-item">Full Business Mode</div>
+          <div class="notice-grid-item">Full Parent or Caregiver Mode</div>
+          <div class="notice-grid-item">Full Gamer Mode</div>
+          <div class="notice-grid-item">Travel Mode</div>
+          <div class="notice-grid-item">Custom encrypted messaging</div>
+          <div class="notice-grid-item">Cross platform video calling</div>
+          <div class="notice-grid-item">Full app store</div>
+          <div class="notice-grid-item">Universal app compatibility</div>
+          <div class="notice-grid-item">Universal AI detection</div>
+          <div class="notice-grid-item">Complete tracking prevention</div>
+        </div>
+
+        <p>These directions remain important, but they require additional engineering, hardware, carrier, legal, security, accessibility, policy, or operational work before Cioré can present them as product capabilities.</p>
+      </section>
+
+      <!-- ================= HOW CONTRIBUTORS CAN HELP ================= -->
+      <section aria-labelledby="os-help-heading">
+        <p class="section-label">Get involved</p>
+        <h2 id="os-help-heading">How Contributors Can Help</h2>
+
+        <div class="notice-grid">
+          <div class="notice-grid-item">AOSP and open foundation research</div>
+          <div class="notice-grid-item">Privacy and app permission research</div>
+          <div class="notice-grid-item">App isolation and network control research</div>
+          <div class="notice-grid-item">App compatibility research</div>
+          <div class="notice-grid-item">Accessibility and inclusive design research</div>
+          <div class="notice-grid-item">UX writing and plain language settings</div>
+          <div class="notice-grid-item">Gaia transparency and user control research</div>
+          <div class="notice-grid-item">Update and long term support research</div>
+          <div class="notice-grid-item">Hardware and software integration research</div>
+          <div class="notice-grid-item">Documentation, decision log, and research library organization</div>
+          <div class="notice-grid-item">Ethical sourcing and repairability research</div>
+          <div class="notice-grid-item">Testing and beta preparation research</div>
+        </div>
+
+        <div class="os-callout">
+          <p>Use the full Lumé product documents before beginning research. Keep sources, dates, assumptions, findings, gaps, and open questions together. Share a short update in the operating system channel or with the founder.</p>
+        </div>
+        <p class="os-doc-fine-note">Contributors do not have unrestricted access to source code, credentials, signing keys, private user data, restricted systems, or sensitive security materials.</p>
+      </section>
+
+      <!-- ================= FIRST BUILD AND FIRM REVIEW ================= -->
+      <section aria-labelledby="os-firm-heading">
+        <p class="section-label">Specialist review</p>
+        <h2 id="os-firm-heading">First Build and Firm Review</h2>
         <div class="closing-note">
-          <p>Start with the operating-system research guide. Keep your sources, dates, assumptions, findings, gaps, and open questions together. Then share a short update in the relevant operating-system project channel or with the founder.</p>
+          <p>Cioré is preparing to work with an Android platform engineering firm to validate the first Lumé build. The firm will recommend the reference device, AOSP branch, build environment, feasible Privacy Center data, limited Gaia signals, app compatibility test list, security architecture, accessibility scope, and the first build scope that can be responsibly delivered.</p>
         </div>
+        <a class="btn btn-primary" href="https://drive.google.com/file/d/1abI2q1liRnLP22wBabWr5aLhK3536Zzv/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+          Read the Lumé OS Product Definition Guide
+          <span class="arrow-circle" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
       </section>
 
     </div>
@@ -6918,7 +7000,7 @@
 
   </div>
 
-  <!-- ============================================================
+<!-- ============================================================
        PAGE: GAIA
        ============================================================ -->
   <div id="gaia" class="page" data-page="gaia">
@@ -9841,32 +9923,40 @@
             </div>
           </details>
 
-          <details class="work-project" id="business-structure-s-corp">
+          <details class="work-project" id="v1-testing-kit-experience">
             <summary class="work-project-summary">
               <span class="status-badge status-researching">Researching</span>
-              <span class="work-project-title">Business Structure and S-Corporation Transition Research</span>
-              <span class="work-project-desc">Help organize research questions and useful background for Founder review as Cioré explores future business-structure decisions.</span>
-              <span class="work-project-channel">📡・general-support</span>
+              <span class="work-project-title">V1 Testing Kit Experience</span>
+              <span class="work-project-desc">Help plan what goes into early V1 testing kits, how testers are guided through the experience, and what feedback we need.</span>
+              <span class="work-project-channel">🔬・hardware-testing-lab</span>
               <span class="work-project-expand-label">View details</span>
             </summary>
             <div class="work-project-details">
 <p class="work-label">Good fit if you enjoy</p>
-        <p class="work-fit">Business structure research, corporate formation, general operational research, or organized documentation. This is research support only, not legal or tax advice.</p>
+        <p class="work-fit">Program design, user research, product operations, instructional writing, or planning a first-time experience for someone unboxing something new.</p>
         <p class="work-label">You could help with</p>
         <ul class="bullets">
-          <li>Researching how other early-stage companies have approached entity structure and transition questions, using credible public sources</li>
-          <li>Organizing publicly available information into clear reference notes for Founder and professional review</li>
-          <li>Identifying questions that should be directed to a qualified attorney or accountant</li>
-          <li>Helping keep source materials, dates, and open questions organized</li>
+          <li>Kit contents and 3D printed prototype planning</li>
+          <li>Tester guide and printed material planning</li>
+          <li>Short feedback questions and data needs</li>
+          <li>Testing flow and timeline planning</li>
+          <li>Thank you items such as a T shirt, keychain, or other optional item</li>
+          <li>Making the kit experience clear, useful, and worth the purchase</li>
         </ul>
         <p class="work-label">Weekly goal examples</p>
-        <p class="work-weekly">Summarize one public source on business structure transitions, or organize a list of open questions for professional review.</p>
-        <div class="discord-block founder-note-block">
-          <p class="founder-note">Post in 📡・general-support before beginning. Share what you want to organize or research, then wait for Founder guidance on any sensitive records or professional questions.</p>
+        <p class="work-weekly">Draft a kit contents checklist, outline a tester guide, or propose a short feedback survey for review.</p>
+        <div class="discord-block">
+          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🔬・hardware-testing-lab</span></p>
+          <a class="btn btn-primary discord-btn" href="https://discord.gg/YCSBz5Ubfk" target="_blank" rel="noopener noreferrer">
+            Open 🔬・hardware-testing-lab
+            <span class="arrow-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
         </div>
-        <p class="when-done"><strong>When you're done:</strong> Drop a quick note in <code>📡・general-support</code> about what you found, organized, or need reviewed.</p>
+        <p class="when-done"><strong>When you're done:</strong> Drop a quick note in <code>🔬・hardware-testing-lab</code> about what you planned, drafted, or think needs another look.</p>
         <div class="wonow-callout">
-          <p>This is not legal or tax advice. Contributors must not file elections, contact government agencies, make tax decisions, create legal filings, or present guidance as professional advice.</p>
+          <p><strong>Current direction:</strong> Planning and waitlist interest review. Kit contents, pricing, shipping, and final tester experience are still being planned. We cannot yet promise that all testers will receive a kit, that international shipping is available, that thank you items are confirmed, or that kit contents and pricing are final.</p>
         </div>
             </div>
           </details>
@@ -10076,18 +10166,57 @@
             </div>
           </details>
 
-          <details class="work-project" id="lumeos-gaia-digital-experience">
+          <details class="work-project" id="lumeos">
             <summary class="work-project-summary">
-              <span class="status-badge status-researching">Researching</span>
-              <span class="work-project-title">Lumé OS, Gaia, and Digital Experience</span>
-              <span class="work-project-desc">Help research how Cioré could explain AI activity, permissions, privacy, and accessibility clearly.</span>
+              <span class="status-badge status-researching">Early planning and first build scope</span>
+              <span class="work-project-title">Lumé OS</span>
+              <span class="work-project-desc">Planning a focused custom Android experience based on AOSP. Requires technical, security, and accessibility validation.</span>
               <span class="work-project-channel">💻・operating-system</span>
               <span class="work-project-expand-label">View details</span>
             </summary>
             <div class="work-project-details">
-              <p class="work-framing"><strong>Important framing:</strong> Gaia is a research area. It isn’t a finished AI assistant, chatbot, mandatory assistant, or confirmed product feature.</p>
+              <p class="work-framing"><strong>Important framing:</strong> Lumé OS is in planning and early development preparation. It is not a finished operating system, public download, or final Cioré hardware platform.</p>
 <p class="work-label">Good fit if you enjoy</p>
-        <p class="work-fit">Privacy, ethical technology, AI literacy, accessibility, UX research, writing in plain language, interaction design, user consent, or designing technology people can understand and control.</p>
+        <p class="work-fit">AOSP and Android platform research, privacy and app permission research, accessibility research, UX writing, or plain-language settings design.</p>
+        <p class="work-label">You could help with</p>
+        <ul class="bullets">
+          <li>Researching AOSP, the Android Open Source Project, and open foundation questions</li>
+          <li>Researching app permissions, app isolation, and network control patterns</li>
+          <li>Researching app compatibility considerations for a first reference device</li>
+          <li>Accessibility and inclusive design research</li>
+          <li>Plain-language settings and permission writing</li>
+          <li>Organizing sources, decisions, and open questions for the operating system research library</li>
+        </ul>
+        <p class="work-label">Weekly goal examples</p>
+        <p class="work-weekly">Summarize an AOSP question, compare permission-language examples, or organize accessibility research notes.</p>
+        <div class="discord-block">
+          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">💻・operating-system</span></p>
+          <a class="btn btn-primary discord-btn" href="https://discord.gg/vDDuEevxZu" target="_blank" rel="noopener noreferrer">
+            Open 💻・operating-system
+            <span class="arrow-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+        <p class="when-done"><strong>When you're done:</strong> Drop a quick note in <code>💻・operating-system</code> about what you researched, compared, or organized.</p>
+        <div class="wonow-callout">
+          <p>Read the full Lumé OS Product Definition Guide and Brief on the <a href="#building-our-operating-system">Building Our Operating System</a> page before beginning research.</p>
+        </div>
+            </div>
+          </details>
+
+          <details class="work-project" id="gaia-work-project">
+            <summary class="work-project-summary">
+              <span class="status-badge status-researching">Research direction</span>
+              <span class="work-project-title">Gaia</span>
+              <span class="work-project-desc">Researching an optional on device indicator and user control direction. Signals require technical and privacy validation.</span>
+              <span class="work-project-channel">💻・operating-system</span>
+              <span class="work-project-expand-label">View details</span>
+            </summary>
+            <div class="work-project-details">
+              <p class="work-framing"><strong>Important framing:</strong> Gaia is a research direction. It is not a chatbot, not generative AI, not a required assistant, and not a system that reads private app content.</p>
+<p class="work-label">Good fit if you enjoy</p>
+        <p class="work-fit">Privacy, AI literacy, accessibility, UX research, writing in plain language, interaction design, user consent, or designing technology people can understand and control.</p>
         <p class="work-label">You could help with</p>
         <ul class="bullets">
           <li>Review waitlist or community feedback about AI, privacy, data use, and user control</li>
@@ -10110,11 +10239,44 @@
             </span>
           </a>
         </div>
-        <p class="when-done"><strong>When you’re done:</strong> Drop a quick note in <code>💻・operating-system</code> about what you researched, compared, organized, or need feedback on.</p>
+        <p class="when-done"><strong>When you're done:</strong> Drop a quick note in <code>💻・operating-system</code> about what you researched, compared, organized, or need feedback on.</p>
         <div class="example-updates">
           <p class="work-label">Example updates</p>
-          <p class="example-update">“Researched four examples of plain-language permission prompts and added notes about what made them easier to understand.”</p>
-          <p class="example-update">“Organized user-control feedback into consent, transparency, data handling, and accessibility categories.”</p>
+          <p class="example-update">"Researched four examples of plain-language permission prompts and added notes about what made them easier to understand."</p>
+          <p class="example-update">"Organized user-control feedback into consent, transparency, data handling, and accessibility categories."</p>
+        </div>
+        <div class="wonow-callout">
+          <p><a href="#gaia">Explore Gaia research</a></p>
+        </div>
+            </div>
+          </details>
+
+          <details class="work-project" id="digital-experience">
+            <summary class="work-project-summary">
+              <span class="status-badge status-open">Active design and research</span>
+              <span class="work-project-title">Digital Experience</span>
+              <span class="work-project-desc">Designing clear contributor and waitlist experiences that make information, feedback, and next steps easier to understand.</span>
+              <span class="work-project-channel">📡・general-support</span>
+              <span class="work-project-expand-label">View details</span>
+            </summary>
+            <div class="work-project-details">
+<p class="work-label">Good fit if you enjoy</p>
+        <p class="work-fit">UX writing, information design, content organization, user research, or making complex information easier to follow.</p>
+        <p class="work-label">You could help with</p>
+        <ul class="bullets">
+          <li>Contributor Hub organization, clarity, and navigation improvements</li>
+          <li>Organizing waitlist concerns and feedback themes</li>
+          <li>Planning testing feedback questions and formats</li>
+          <li>Supporting Lumé experience research and plain-language documentation</li>
+        </ul>
+        <p class="work-label">Weekly goal examples</p>
+        <p class="work-weekly">Suggest a Hub clarity improvement, organize a set of waitlist notes, or draft a short feedback question set for review.</p>
+        <div class="discord-block founder-note-block">
+          <p class="founder-note">Share your idea, question, useful finding, or starting point in 📡・general-support so the Founder or relevant contributors can help connect it to the right area.</p>
+        </div>
+        <p class="when-done"><strong>When you're done:</strong> Drop a quick note in <code>📡・general-support</code> about what you organized, drafted, or think needs another look.</p>
+        <div class="wonow-callout">
+          <p>Current work includes Contributor Hub improvements, Waitlist Concerns organization, testing feedback planning, and Lumé experience research.</p>
         </div>
             </div>
           </details>
