@@ -3953,6 +3953,37 @@
   #working-on-now .status-paused{ background:var(--white); color:var(--ink-faint); border:1px dashed var(--line); }
   #working-on-now .status-later{ background:var(--white); color:var(--ink-faint); border:1px dashed var(--line); }
 
+  /* Team activity section */
+  #working-on-now .team-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-top:20px;
+  }
+  @media (max-width:760px){
+    #working-on-now .team-grid{ grid-template-columns:1fr; }
+  }
+  #working-on-now .team-card{
+    background:#FFFFFF; border:1px solid #171717; border-radius:var(--radius-md);
+    padding:20px 22px;
+  }
+  #working-on-now .team-name{ margin:0 0 4px; font-weight:700; font-size:1rem; color:#171717; }
+  #working-on-now .team-role{ margin:0 0 12px; font-size:0.82rem; color:var(--ink-soft); }
+  #working-on-now .team-focus{ margin:0 0 14px; font-size:0.92rem; color:var(--ink-soft); line-height:1.6; }
+  #working-on-now .team-channels{ display:flex; flex-wrap:wrap; gap:8px; }
+  #working-on-now .team-channel-pill{
+    display:inline-block; font-size:0.78rem; font-weight:600;
+    padding:5px 12px; border-radius:999px;
+    background:#171717; color:#FFFFFF; text-decoration:none;
+    border:1px solid #171717;
+  }
+  #working-on-now .team-channel-pill:hover{ background:#000000; }
+  #working-on-now .team-channel-pill--text{
+    background:#FFFFFF; color:#171717; border:1px solid #171717; cursor:default;
+  }
+  #working-on-now .team-channel-pill:focus-visible{ outline:2px solid #171717; outline-offset:2px; }
+  #working-on-now .wonow-team-accent{ border-left:3px solid #D2FF3B; padding-left:10px; }
+  #working-on-now .team-channel-note{
+    margin:8px 0 0; font-size:0.8rem; color:var(--ink-faint); line-height:1.5;
+  }
+
   /* Hub / Discord / Notion flow row */
   #working-on-now .flow-row{
     display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin:16px 0 20px;
@@ -9617,7 +9648,8 @@
 
       <div class="wonow-callout">
         <p class="wonow-callout-label">Before you begin</p>
-        <p>Project priorities can change. Check the project status, read the available context, post your starting point in the project channel, and use the Notion workspace linked there before beginning substantial work.</p>
+        <p>Project priorities can change. Before beginning substantial work, check the team activity section below, review the project status, read the available context, and post your starting point in the relevant project channel.</p>
+        <p>If another contributor is already working in a related area, use the channel to coordinate, offer support, or identify a complementary question before starting overlapping work.</p>
       </div>
 
       <!-- ================= HOW TO BEGIN A PROJECT ================= -->
@@ -9628,8 +9660,8 @@
         <div class="step-row">
           <div class="step-card">
             <span class="step-num">1</span>
-            <h3>Choose a focus</h3>
-            <p>Choose an active priority or an existing project that matches your skills, interests, and available time.</p>
+            <h3>Check the team activity</h3>
+            <p>Review "Who Is Working on What" to see whether someone is already exploring a connected topic. If so, open the listed project channel before starting.</p>
           </div>
           <div class="step-card">
             <span class="step-num">2</span>
@@ -9638,8 +9670,8 @@
           </div>
           <div class="step-card">
             <span class="step-num">3</span>
-            <h3>Post before you begin</h3>
-            <p>Post a short introduction in the relevant Discord project channel. Say what you plan to explore, what you already know, and what you need clarified.</p>
+            <h3>Introduce your starting point</h3>
+            <p>Post a short introduction in the relevant Discord project channel. Share what you plan to explore, what you already know, and whether you are offering support to work already in motion.</p>
           </div>
           <div class="step-card">
             <span class="step-num">4</span>
@@ -9758,19 +9790,110 @@
         <p class="fine-note">An interesting research page is not always an active project. Check the status and project channel before beginning substantial work.</p>
       </section>
 
-      <section aria-labelledby="wonow-idea-heading">
-        <p class="section-label">General support</p>
-        <h2 id="wonow-idea-heading">Have an Idea That Does Not Fit a Project Yet?</h2>
-        <p>Cross-functional ideas, project recommendations, and questions about where something belongs are all welcome in 📡・general-support.</p>
-        <p>You do not need a polished plan to post. A short, imperfect idea is still useful, and it's often the fastest way to find out where it belongs.</p>
+      <!-- ================= WHO IS WORKING ON WHAT ================= -->
+            <section aria-labelledby="wonow-team-heading">
+        <p class="section-label">Team activity</p>
+        <h2 id="wonow-team-heading">Who Is Working on What</h2>
+        <p>Before you begin a project, take a moment to see what teammates are already exploring.</p>
+        <p>If your idea connects to someone's current work, check the listed channel first. You can offer a source, ask a question, share relevant experience, or suggest a complementary piece of work before beginning something similar.</p>
+        <p class="fine-note">Some projects are private or still being organized. If a channel is listed as private or being built, contact the founder for guidance before assuming access or project ownership.</p>
 
-        <div class="wonow-callout">
-          <p class="wonow-callout-label">Sample message</p>
-          <p>"I noticed a few people on the waitlist asking about repair options before they even see the phone. Might be worth a short FAQ on this. Not sure which project this belongs to, wanted to flag it here first."</p>
+        <div class="team-grid">
+          <div class="team-card">
+            <p class="team-name">Tamira H.</p>
+            <p class="team-role">Front End Development and UX Research Contributor</p>
+            <p class="team-focus">Researching how Lumé should stay clear and accessible for everyday users. Her work includes interface clarity, settings organization, nonrectangular screen questions, safe screen areas, accessibility, and future UX and engineering questions.</p>
+            <div class="team-channels">
+            <a class="team-channel-pill" href="https://discord.gg/vDDuEevxZu" target="_blank" rel="noopener noreferrer">💻・operating-system</a>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <p class="team-name">Ahunnaya A.</p>
+            <p class="team-role">Project Management and Strategic Operations Contributor</p>
+            <p class="team-focus">Leading Innovation Pathways pilot planning and completing C Corporation readiness research. For Innovation Pathways, she is collaborating with Chinemma A. on project tracking, milestones, progress-report planning, points of contact, support needs, and founder decision questions.</p>
+            <div class="team-channels">
+            <span class="team-channel-pill team-channel-pill--text">Private channel</span>
+            </div>
+            <p class="team-channel-note">Innovation Pathways project channel is private.</p>
+          </div>
+
+          <div class="team-card">
+            <p class="team-name">Chinemma A.</p>
+            <p class="team-role">Project Management Contributor</p>
+            <p class="team-focus">Collaborating with Ahunnaya A. on Innovation Pathways planning. She brings prior data-tracking and project-management experience to help shape project tracking, milestones, progress-report planning, points of contact, support needs, and founder decision workflows.</p>
+            <div class="team-channels">
+            <span class="team-channel-pill team-channel-pill--text">Channel being built</span>
+            </div>
+            <p class="team-channel-note">This collaboration channel is being set up.</p>
+          </div>
+
+          <div class="team-card">
+            <p class="team-name">Chiazam O.</p>
+            <p class="team-role">Accessibility Research and Waitlist Engagement Contributor</p>
+            <p class="team-focus">Researching accessible phone interaction, buttons, cases, grips, and adaptive accessory concepts for different mobility and hand-use needs. She is also reviewing approved waitlist feedback and preparing future vote or engagement concepts for founder review.</p>
+            <div class="team-channels">
+            <a class="team-channel-pill" href="https://discord.gg/YCSBz5Ubfk" target="_blank" rel="noopener noreferrer">🔬・hardware-testing-lab</a>
+            <a class="team-channel-pill" href="https://discord.gg/AFW24cZBUt" target="_blank" rel="noopener noreferrer">📈・waitlist-growth</a>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <p class="team-name">Stéphanie P.</p>
+            <p class="team-role">Repairability Research and Lumé QA Preparedness Contributor</p>
+            <p class="team-focus">Reviewing repairability and Device Care priorities, then preparing Lumé user questions, user-flow risks, and QA-readiness questions for future Android platform work.</p>
+            <div class="team-channels">
+            <a class="team-channel-pill" href="https://discord.gg/YCSBz5Ubfk" target="_blank" rel="noopener noreferrer">🔬・hardware-testing-lab</a>
+            <a class="team-channel-pill" href="https://discord.gg/vDDuEevxZu" target="_blank" rel="noopener noreferrer">💻・operating-system</a>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <p class="team-name">Aaron</p>
+            <p class="team-role">Lumé Open-Source Foundation Research Contributor</p>
+            <p class="team-focus">Comparing Android open-source foundations for Lumé, including GrapheneOS, CalyxOS, LineageOS, and other suitable AOSP-based options. His work organizes technical fit, maintainability, device support, privacy, app compatibility, accessibility, licensing, and open questions for founder review.</p>
+            <div class="team-channels">
+            <a class="team-channel-pill" href="https://discord.gg/vDDuEevxZu" target="_blank" rel="noopener noreferrer">💻・operating-system</a>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <p class="team-name">Oluwaferanmi A.</p>
+            <p class="team-role">Sustainability, Circular Economy, and Materials Research Contributor</p>
+            <p class="team-focus">Researching circular economy options for modular phone casings and related parts, including repairability, reuse, refurbishment, material recovery, supplier evidence, durability, and lifecycle tradeoffs. Her follow-up work turns Cioré's material and repairability research into clear customer-facing explanations that distinguish current direction from claims needing evidence.</p>
+            <div class="team-channels">
+            <a class="team-channel-pill" href="https://discord.gg/qTPC2fBt3N" target="_blank" rel="noopener noreferrer">🌱・components-suppliers</a>
+            <a class="team-channel-pill" href="https://discord.gg/YCSBz5Ubfk" target="_blank" rel="noopener noreferrer">🔬・hardware-testing-lab</a>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <p class="team-name">Candy</p>
+            <p class="team-role">Contributor Offboarding and Operations Support Contributor</p>
+            <p class="team-focus">Building a clearer person-led contributor offboarding process. Her work covers activity review, check-ins, pauses, changing project focus, exits, access updates, return paths, contributor records, and Contributor Hub guidance.</p>
+            <div class="team-channels">
+            <span class="team-channel-pill team-channel-pill--text">Private onboarding/offboarding channel</span>
+            </div>
+            <p class="team-channel-note">This channel is private.</p>
+          </div>
+
+          <div class="team-card">
+            <p class="team-name">Angelica</p>
+            <p class="team-role">Nyro Display and Camera Research Contributor</p>
+            <p class="team-focus">Researching Nyro-related display and camera questions, visual direction, technical unknowns, and items that need future hardware or engineering validation.</p>
+            <div class="team-channels">
+            <a class="team-channel-pill" href="https://discord.gg/YCSBz5Ubfk" target="_blank" rel="noopener noreferrer">🔬・hardware-testing-lab</a>
+            </div>
+          </div>
         </div>
 
-        <p>Share what you're noticing, even if it's incomplete. Someone else may be able to point you to the right project, or it may become a new one.</p>
+        <div class="wonow-callout">
+          <p class="wonow-callout-label">Want to help with something already in motion?</p>
+          <p>Open the project channel, introduce yourself, and share the specific way you can help. For example, you might offer a source, review a draft, organize information, test a user flow, or take on a complementary research question.</p>
+        </div>
       </section>
+
+      
 
       <section aria-labelledby="wonow-active-heading">
         <p class="section-label">All active projects</p>
@@ -9778,89 +9901,488 @@
         <p>Open a project to see the current context, where to share your work, and a few ways to get started. If you see a useful gap or idea that is not listed in the project workspace, bring it to the channel.</p>
 
         <div class="project-list">
-          <details class="work-project">
+<details class="work-project" id="carrier-readiness-privacy-outreach">
             <summary class="work-project-summary">
-              <span class="status-badge status-open">Open for contributor support</span>
-              <span class="work-project-title">Strategic Outreach</span>
-              <span class="work-project-desc">Help identify and prepare outreach to aligned brands, organizations, educators, and communities that could help Cioré grow thoughtfully.</span>
+              <span class="status-badge status-needs-owner">Needs project coordination</span>
+              <span class="work-project-title">Carrier Readiness and Privacy-Aligned Carrier Outreach</span>
+              <span class="work-project-desc">Help Cioré prepare for future carrier conversations by researching what it means for a phone to be unlocked, what carrier readiness may involve, what information carriers may need, and which privacy-aligned carrier or mobile-service organizations may be worth researching for future founder outreach.</span>
               <span class="work-project-channel">🌐・strategic-outreach</span>
               <span class="work-project-expand-label">View details</span>
             </summary>
             <div class="work-project-details">
-<p class="priority-label">Why it matters</p>
-          <p>Cioré needs a more organized way to introduce the project to people, communities, potential collaborators, and future supporters. Strategic outreach helps us communicate clearly, build thoughtful relationships, and focus energy where it can lead to real progress.</p>
-
-          <p class="priority-label">What we need help with</p>
-          <ul class="bullets">
-  <li>Mapping outreach audiences that align with Cioré's mission</li>
-  <li>Organizing potential community, education, media, nonprofit, research, design, accessibility, privacy, sustainability, and technology connections</li>
-  <li>Researching how to introduce Cioré clearly without making unsupported product claims</li>
-  <li>Drafting outreach research summaries</li>
-  <li>Helping organize outreach themes, contact categories, and relationship notes</li>
-  <li>Identifying what information should be prepared before future outreach begins</li>
-  <li>Reviewing existing public-facing language for clarity and research-stage accuracy</li>
-  <li>Creating organized outreach templates for Founder review only</li>
+<p class="work-label">Why it matters</p>
+        <p>Carrier readiness is separate from building Lumé or designing Cioré hardware. Cioré needs a clearer understanding of the technical, business, regulatory, device, certification, SIM, eSIM, compatibility, and partnership questions that may arise before future carrier relationships are considered.</p>
+        <p class="work-label">What we need help with</p>
+        <ul class="bullets">
+  <li>Research the plain-language meaning of an unlocked phone and how carrier compatibility differs from being unlocked</li>
+  <li>Identify the stages Cioré may need to complete before a future carrier or mobile-service conversation</li>
+  <li>Research general carrier readiness topics, including device certification, supported bands, radio and modem requirements, SIM and eSIM, network testing, IMEI or device-identity considerations, consumer support, activation, and compliance questions</li>
+  <li>Identify what information a carrier may ask for before considering a new device or mobile-service relationship</li>
+  <li>Research privacy-aligned carriers, mobile virtual network operators, privacy-minded mobile services, and related organizations through public sources</li>
+  <li>Organize potential outreach targets and public contact paths for founder review</li>
+  <li>Prepare founder-ready questions and a carrier-readiness checklist</li>
+  <li>Clearly distinguish public research from decisions that require carrier, legal, technical, regulatory, or engineering review</li>
 </ul>
-
-          <p class="priority-label">Best fit</p>
-          <ul class="bullets">
-  <li>Community research</li>
-  <li>Partnership research</li>
-  <li>Communications</li>
-  <li>Writing</li>
-  <li>Research synthesis</li>
-  <li>Relationship mapping</li>
-  <li>Project coordination</li>
-  <li>CRM or database organization</li>
-  <li>Privacy, accessibility, sustainability, or technology community knowledge</li>
+        <p class="work-label">Start here</p>
+        <p>Review these Contributor Hub pages:</p>
+        <ul class="bullets">
+  <li>The Phone</li>
+  <li>Building Our Operating System</li>
+  <li>Features We're Exploring</li>
+  <li>Research</li>
+  <li>What We Are Working On Now</li>
+  <li>Read Our Mission & Values</li>
 </ul>
-
-          <p class="priority-label">First step</p>
-          <p>Post in the Strategic Outreach Discord project channel. Briefly share your background, what type of outreach research you want to help with, and what you plan to review first. Then open the Notion workspace linked in that channel.</p>
-
-          <p class="priority-label">What a helpful first contribution could look like</p>
-          <p>A short, source-backed outreach landscape note that identifies one audience group, why it may align with Cioré, relevant organizations or communities, public contact pathways, possible outreach goals, important cautions, and open questions.</p>
-
-                    <div class="discord-block">
-            <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🌐・strategic-outreach</span></p>
-            <a class="btn btn-primary discord-btn" href="https://discord.gg/QVXT3bRXqH" target="_blank" rel="noopener noreferrer">
-              Open 🌐・strategic-outreach
-              <span class="arrow-circle" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-            </a>
-          </div>
-
-          <div class="priority-meta">
-            <div class="priority-meta-row">
-              <p class="priority-label">Project contact</p>
-              <p>Founder, unless a project-specific contact is listed in the Discord channel.</p>
-            </div>
-            <div class="priority-meta-row">
-              <p class="priority-label">Where to work</p>
-              <p>Start in the Strategic Outreach Discord project channel. The project-specific Notion workspace is linked there.</p>
-            </div>
-            <div class="priority-meta-row">
-              <p class="priority-label">What done looks like</p>
-              <p>A contribution is ready for review when it clearly separates facts, assumptions, suggestions, sources, risks, and open questions. The Founder or project lead decides whether it will be used, revised, implemented, or archived.</p>
-            </div>
-          </div>
-
-          <div class="priority-boundary">
-            <p>Do not contact organizations, colleges, media, potential partners, investors, vendors, or any outside party on Cioré's behalf unless the Founder has approved the exact outreach and message.</p>
-          </div>
+        <p class="work-label">What a helpful first contribution could look like</p>
+        <p>A plain-language Carrier Readiness Starter Brief with:</p>
+        <ul class="bullets">
+  <li>What unlocked means</li>
+  <li>What unlocked does not guarantee</li>
+  <li>5 to 10 questions Cioré should prepare for future carrier conversations</li>
+  <li>A list of technical and regulatory questions that need specialist review</li>
+  <li>3 to 5 privacy-aligned carrier or mobile-service organizations for founder research only</li>
+</ul>
+        <div class="discord-block">
+          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🌐・strategic-outreach</span></p>
+          <a class="btn btn-primary discord-btn" href="https://discord.gg/QVXT3bRXqH" target="_blank" rel="noopener noreferrer">
+            Open 🌐・strategic-outreach
+            <span class="arrow-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+        <div class="wonow-callout">
+          <p>Do not contact carriers, MVNOs, mobile-service providers, regulators, device-certification organizations, or outside companies on Cioré's behalf without founder approval of the exact message and outreach plan. Do not claim that Cioré phones will work on every carrier, support every SIM or eSIM system, or are currently unlocked, certified, or carrier-ready.</p>
+        </div>
             </div>
           </details>
 
-          <details class="work-project">
+<details class="work-project" id="v1-testing-kit-experience">
             <summary class="work-project-summary">
               <span class="status-badge status-open">Open for contributor support</span>
+              <span class="work-project-title">V1 Testing Kit Experiences</span>
+              <span class="work-project-desc">Help plan a clear and respectful early testing-kit experience, including what testers may need before, during, and after a future controlled testing process.</span>
+              <span class="work-project-channel">🔬・hardware-testing-lab</span>
+              <span class="work-project-expand-label">View details</span>
+            </summary>
+            <div class="work-project-details">
+<p class="work-label">Good fit if you enjoy</p>
+        <p class="work-fit">Program design, user research, product operations, instructional writing, or planning a first-time experience for someone unboxing something new.</p>
+        <p class="work-label">You could help with</p>
+        <ul class="bullets">
+          <li>Kit contents and 3D printed prototype planning</li>
+          <li>Tester guide and printed material planning</li>
+          <li>Short feedback questions and data needs</li>
+          <li>Testing flow and timeline planning</li>
+          <li>Thank you items such as a T shirt, keychain, or other optional item</li>
+          <li>Making the kit experience clear, useful, and worth the purchase</li>
+        </ul>
+        <p class="work-label">Weekly goal examples</p>
+        <p class="work-weekly">Draft a kit contents checklist, outline a tester guide, or propose a short feedback survey for review.</p>
+        <div class="discord-block">
+          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🔬・hardware-testing-lab</span></p>
+          <a class="btn btn-primary discord-btn" href="https://discord.gg/YCSBz5Ubfk" target="_blank" rel="noopener noreferrer">
+            Open 🔬・hardware-testing-lab
+            <span class="arrow-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+        <p class="when-done"><strong>When you're done:</strong> Drop a quick note in <code>🔬・hardware-testing-lab</code> about what you planned, drafted, or think needs another look.</p>
+        <div class="wonow-callout">
+          <p><strong>Current direction:</strong> Planning and waitlist interest review. Kit contents, pricing, shipping, and final tester experience are still being planned. We cannot yet promise that all testers will receive a kit, that international shipping is available, that thank you items are confirmed, or that kit contents and pricing are final.</p>
+        </div>
+            </div>
+          </details>
+
+<details class="work-project" id="phone-hardware-feasibility">
+            <summary class="work-project-summary">
+              <span class="status-badge status-open">Open for contributor support</span>
+              <span class="work-project-title">Phone Hardware Feasibility and Firm Preparation</span>
+              <span class="work-project-desc">Help Cioré prepare for future product-development and hardware-engineering firm conversations by reviewing current phone direction, identifying missing information, organizing requirements, and creating founder-ready feasibility questions.</span>
+              <span class="work-project-channel">🔬・hardware-testing-lab</span>
+              <span class="work-project-expand-label">View details</span>
+            </summary>
+            <div class="work-project-details">
+<p class="work-label">Why it matters</p>
+        <p>Cioré is preparing to speak with hardware product-development firms in the Dallas Fort Worth area and beyond. The goal is to understand what must be prepared before requesting feasibility work, prototype planning, electrical engineering, charging-system work, thermal analysis, or manufacturing guidance.</p>
+        <p class="work-label">What we need help with</p>
+        <ul class="bullets">
+  <li>Review current phone, modularity, repairability, charging, battery, thermal, accessibility, and hardware research in the Contributor Hub</li>
+  <li>Identify what information a hardware, industrial-design, mechanical-engineering, electrical-engineering, battery, charging, thermal, RF, or manufacturing firm may need from Cioré</li>
+  <li>Identify gaps, unanswered questions, assumptions, dependencies, and decisions that need founder or engineering review</li>
+  <li>Help organize founder-ready hardware briefing materials</li>
+  <li>Research hardware product-development firms, engineering platforms, and prototype-development options in Dallas Fort Worth and other relevant areas</li>
+  <li>Build a source-backed comparison of possible firm capabilities, services, public project examples, and fit questions</li>
+  <li>Recommend questions Cioré should ask during an initial discovery conversation</li>
+  <li>Help distinguish what should be validated first from what belongs in later prototype or production stages</li>
+</ul>
+        <p class="work-label">Start here</p>
+        <p>Review these Contributor Hub pages before researching outside firms:</p>
+        <ul class="bullets">
+  <li>The Phone</li>
+  <li>Modularity and Repairability</li>
+  <li>Features We're Exploring</li>
+  <li>Components, Suppliers, Materials, and Repairability</li>
+  <li>Building Our Operating System</li>
+  <li>Research</li>
+  <li>What We Are Working On Now</li>
+  <li>Read Our Mission & Values</li>
+</ul>
+        <p>Then review the current Founder Hardware Systems Concept and Feasibility materials if they are linked in the project workspace.</p>
+        <p class="work-label">What a helpful first contribution could look like</p>
+        <p>A founder-ready gap and question list that identifies what a hardware firm may ask, what Cioré already knows, what needs clarification, and what should be marked for engineering validation.</p>
+        <div class="discord-block">
+          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🔬・hardware-testing-lab</span></p>
+          <a class="btn btn-primary discord-btn" href="https://discord.gg/YCSBz5Ubfk" target="_blank" rel="noopener noreferrer">
+            Open 🔬・hardware-testing-lab
+            <span class="arrow-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+        <div class="wonow-callout">
+          <p>Do not contact hardware firms, industrial designers, engineers, manufacturers, suppliers, or other outside organizations on Cioré's behalf without founder approval of the exact outreach and message.</p>
+        </div>
+            </div>
+          </details>
+
+<details class="work-project" id="gaia-work-project">
+            <summary class="work-project-summary">
+              <span class="status-badge status-researching">Research direction</span>
+              <span class="work-project-title">Gaia</span>
+              <span class="work-project-desc">Research how Gaia can serve as an optional, calm, on-device indicator that helps users understand selected permissions, privacy choices, settings changes, and other clearly defined signals without overwhelming people.</span>
+              <span class="work-project-channel">💻・operating-system</span>
+              <span class="work-project-expand-label">View details</span>
+            </summary>
+            <div class="work-project-details">
+<p class="work-framing"><strong>Important framing:</strong> Gaia is a research direction. It is not a chatbot, not generative AI, not a required assistant, and not a system that reads private app content.</p>
+        <p class="work-label">You could help with</p>
+        <ul class="bullets">
+  <li>Review Lumé OS materials and the Gaia section before beginning research</li>
+  <li>Study how a calm indicator can appear across settings, permissions, Privacy Center, accessibility, and device-care directions</li>
+  <li>Research plain-language permission prompts, consent patterns, privacy notices, and user-control patterns</li>
+  <li>Explore how Gaia could explain selected permission requests without creating fear, noise, or too many settings</li>
+  <li>Recommend when Gaia should show a notice, when it should remain quiet, and what a user should be able to do next</li>
+  <li>Create brief concept notes for founder review about possible Gaia signals, user choices, notice language, and accessibility considerations</li>
+  <li>Identify what must be technically validated before Cioré describes any Gaia behavior publicly</li>
+  <li>Consider visual, haptic, audio, voice, and plain-language approaches that do not rely on a single interaction style</li>
+</ul>
+        <div class="wonow-callout">
+          <p>Cioré already has community feedback about AI and user control. For this work, begin with the current Lumé OS and Gaia directions, then focus on how Gaia could be understandable, optional, calm, and technically supportable.</p>
+        </div>
+        <div class="discord-block">
+          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">💻・operating-system</span></p>
+          <a class="btn btn-primary discord-btn" href="https://discord.gg/vDDuEevxZu" target="_blank" rel="noopener noreferrer">
+            Open 💻・operating-system
+            <span class="arrow-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+        <p><a class="inline-link" href="#gaia">Explore Gaia research</a></p>
+            </div>
+          </details>
+
+<details class="work-project" id="strategic-outreach-project">
+            <summary class="work-project-summary">
+              <span class="status-badge status-open">Open for contributor support</span>
+              <span class="work-project-title">Strategic Outreach</span>
+              <span class="work-project-desc">Help Cioré prepare thoughtful outreach to privacy-aligned brands, browser and privacy-tool communities, VPN companies, colleges, internship and experiential-learning programs, and other organizations that may align with Cioré's next stage.</span>
+              <span class="work-project-channel">🌐・strategic-outreach</span>
+              <span class="work-project-expand-label">View details</span>
+            </summary>
+            <div class="work-project-details">
+<p class="work-label">Why it matters</p>
+        <p>Cioré is preparing for its next stage of relationships and research. Outreach should focus on organizations that connect with privacy, user control, accessibility, repairability, technology education, and ethical product development.</p>
+        <p class="work-label">What we need help with</p>
+        <ul class="bullets">
+  <li>Research privacy-aligned browsers, privacy tools, VPN companies, and related technology organizations that may be relevant to Cioré's direction</li>
+  <li>Research colleges, career centers, experiential-learning offices, internship programs, practicum pathways, and academic departments that may welcome project-based collaboration</li>
+  <li>Identify public contact paths, partnership criteria, relevant programs, and questions Cioré should prepare before outreach</li>
+  <li>Organize outreach targets by category, mission fit, audience, and suggested next step</li>
+  <li>Prepare founder-review outreach briefs and relationship maps</li>
+  <li>Draft clear introduction points for founder review only</li>
+  <li>Identify what Cioré should have ready before requesting a conversation</li>
+</ul>
+        <p class="work-label">Best fit</p>
+        <ul class="bullets">
+  <li>Partnership research</li>
+  <li>Privacy technology knowledge</li>
+  <li>Higher education research</li>
+  <li>Communications</li>
+  <li>Writing</li>
+  <li>CRM organization</li>
+  <li>Relationship mapping</li>
+  <li>Project coordination</li>
+  <li>Research synthesis</li>
+</ul>
+        <p class="work-label">First step</p>
+        <p>Start in the strategic-outreach Discord channel. Share the audience group you want to research, the public sources you plan to review, and the question you want to help Cioré answer. Then open the Notion workspace linked in that channel.</p>
+        <p class="work-label">What a helpful first contribution could look like</p>
+        <p>A short source-backed outreach landscape note on 1 audience group, such as privacy-aligned browsers, VPN providers, colleges with experiential-learning programs, or internship offices. Include organization names, public contact routes, relevance to Cioré, cautions, open questions, and possible next steps for founder review.</p>
+        <div class="priority-meta">
+          <div class="priority-meta-row"><p class="priority-label">Project contact</p><p>Founder, unless a project-specific contact is listed in the Discord channel.</p></div>
+          <div class="priority-meta-row"><p class="priority-label">Where to work</p><p>strategic-outreach</p></div>
+        </div>
+        <div class="discord-block">
+          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🌐・strategic-outreach</span></p>
+          <a class="btn btn-primary discord-btn" href="https://discord.gg/QVXT3bRXqH" target="_blank" rel="noopener noreferrer">
+            Open 🌐・strategic-outreach
+            <span class="arrow-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+        <div class="wonow-callout">
+          <p>Do not contact brands, browser teams, VPN providers, colleges, faculty, career centers, internship offices, carriers, investors, vendors, or other outside organizations on Cioré's behalf unless the founder approves the exact outreach and message.</p>
+        </div>
+            </div>
+          </details>
+
+<details class="work-project" id="components-suppliers-repairability">
+            <summary class="work-project-summary">
+              <span class="status-badge status-open">Open for contributor support</span>
+              <span class="work-project-title">Components, Suppliers, Materials, and Repairability</span>
+              <span class="work-project-desc">Help Cioré prepare ethical supplier and material research for future hardware product-development firms, while continuing repairability, modularity, and accessible-device research.</span>
+              <span class="work-project-channel">🌱・components-suppliers</span>
+              <span class="work-project-expand-label">View details</span>
+            </summary>
+            <div class="work-project-details">
+<div class="wonow-callout">
+          <p class="wonow-callout-label">Active work in motion</p>
+          <p>Oluwaferanmi A. is researching circular economy options for modular casings and related parts, including repairability, reuse, refurbishment, material recovery, supplier evidence, durability, and lifecycle tradeoffs.</p>
+          <p>Before beginning overlapping circular-economy or modular-casing research, review the team activity section and coordinate through components-suppliers or hardware-testing-lab.</p>
+        </div>
+
+<p class="work-label">Start here</p>
+        <p>Before researching suppliers, review these Contributor Hub pages:</p>
+        <ul class="bullets">
+  <li>The Phone</li>
+  <li>Modularity and Repairability</li>
+  <li>Features We're Exploring</li>
+  <li>Component Guide</li>
+  <li>What We Are Working On Now</li>
+  <li>Research</li>
+  <li>Read Our Mission & Values</li>
+</ul>
+        <p>Use these pages to understand Cioré's current direction before adding outside sources.</p>
+        <p class="work-label">What you could help with</p>
+        <ul class="bullets">
+  <li>Review the component, materials, repairability, and sourcing directions already listed in the Contributor Hub</li>
+  <li>Identify potential ethical suppliers, materials, component manufacturers, and hardware ecosystems that may be relevant to future prototype planning</li>
+  <li>Research publicly available information about materials, sourcing, labor practices, environmental claims, repairability, minimum orders, lead times, certifications, documentation, and manufacturing location</li>
+  <li>Organize supplier candidates and material options into a source-backed research tracker</li>
+  <li>Separate confirmed public evidence from missing information and claims that need verification</li>
+  <li>Identify questions Cioré should bring to future hardware engineering firms about materials, sourcing, repairability, component availability, and prototype feasibility</li>
+  <li>Support research on repairable cores, serviceable parts, accessible repair, packaging, repair logistics, and material recovery</li>
+</ul>
+        <div class="discord-block">
+          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🌱・components-suppliers</span></p>
+          <a class="btn btn-primary discord-btn" href="https://discord.gg/qTPC2fBt3N" target="_blank" rel="noopener noreferrer">
+            Open 🌱・components-suppliers
+            <span class="arrow-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+        <p class="fine-note">For supplier and material research, post in components-suppliers. For repairability, modularity, accessible-repair, grip, attachment, or hardware-use research, coordinate in hardware-testing-lab.</p>
+        <div class="wonow-callout">
+          <p>Do not contact suppliers or manufacturers on Cioré's behalf.</p>
+        </div>
+            </div>
+          </details>
+
+<details class="work-project" id="lumeos">
+            <summary class="work-project-summary">
+              <span class="status-badge status-researching">Early planning and first build scope</span>
+              <span class="work-project-title">Lumé OS</span>
+              <span class="work-project-desc">Help Cioré prepare the visual design, UX, UI, plain-language settings, permission explanations, app-isolation research, network-control research, and first-build questions for a focused custom Android experience based on AOSP.</span>
+              <span class="work-project-channel">💻・operating-system</span>
+              <span class="work-project-expand-label">View details</span>
+            </summary>
+            <div class="work-project-details">
+<div class="wonow-callout">
+          <p class="wonow-callout-label">Active work in motion</p>
+          <p>Aaron is completing the Lumé Open-Source Foundation Assessment.</p>
+          <p>He is comparing potential Android open-source foundations and organizing questions about device support, maintainability, privacy, app compatibility, accessibility, licensing, and technical fit.</p>
+          <p>Before beginning a full comparison of GrapheneOS, CalyxOS, LineageOS, or other Android open-source foundations, coordinate in operating-system.</p>
+        </div>
+
+<p class="work-label">Start here</p>
+        <p>Open Building Our Operating System in the Contributor Hub. Read the Lumé OS Product Definition and First Build Scope Guide first. Then read the Lumé OS Brief for a shorter overview.</p>
+        <p>Use those documents to understand:</p>
+        <ul class="bullets">
+  <li>The 5 first-build Lumé experiences</li>
+  <li>Lumé Settings</li>
+  <li>Privacy Center</li>
+  <li>Plain-language permissions</li>
+  <li>Accessibility and Comfort Center</li>
+  <li>Gaia</li>
+  <li>App isolation and intentional sharing</li>
+  <li>App compatibility limits</li>
+  <li>Network and privacy questions</li>
+  <li>What needs technical validation</li>
+</ul>
+        <p class="work-label">You could help with</p>
+        <ul class="bullets">
+  <li>Review the Lumé OS Product Definition and First Build Scope Guide and the Lumé OS Brief on the Building Our Operating System page</li>
+  <li>Support visual design, UX, UI, wireframe, content-structure, or settings-dashboard planning for Lumé</li>
+  <li>Help shape a simple, searchable settings experience that explains controls in plain language</li>
+  <li>Build a plain-language explanation map for selected Lumé settings, permissions, privacy controls, accessibility options, and user choices</li>
+  <li>Research app permissions, app isolation, profiles, app sharing, network-control patterns, and meaningful user-control choices</li>
+  <li>Research how networks can be made safer and easier to understand, including what users need to know about network activity, public Wi-Fi, app access, and privacy choices</li>
+  <li>Identify what requires Android-platform, security, privacy, accessibility, or engineering validation</li>
+  <li>Organize sources, decisions, open questions, and research findings for future Android platform work</li>
+</ul>
+        <div class="discord-block">
+          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">💻・operating-system</span></p>
+          <a class="btn btn-primary discord-btn" href="https://discord.gg/vDDuEevxZu" target="_blank" rel="noopener noreferrer">
+            Open 💻・operating-system
+            <span class="arrow-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+        <p class="fine-note">Before building a concept, writing a recommendation, or researching an outside source, review the Lumé documents first and post your starting point in operating-system.</p>
+        <div class="wonow-callout">
+          <p>Read the full Lumé OS Product Definition Guide and Brief on the <a href="#building-our-operating-system">Building Our Operating System</a> page before beginning research.</p>
+        </div>
+            </div>
+          </details>
+
+<details class="work-project" id="nyro-charging-battery-thermal">
+            <summary class="work-project-summary">
+              <span class="status-badge status-open">Open for contributor support</span>
+              <span class="work-project-title">Nyro Charging, Battery, and Thermal Research</span>
+              <span class="work-project-desc">Help organize Cioré's Nyro-related charging, battery, solar-assistance, thermal, and power research into clear, realistic briefs and engineering questions.</span>
+              <span class="work-project-channel">🔬・hardware-testing-lab</span>
+              <span class="work-project-expand-label">View details</span>
+            </summary>
+            <div class="work-project-details">
+<p class="work-label">Why it matters</p>
+        <p>Cioré is exploring dependable everyday charging alongside longer-term energy and thermal research. The work needs to clearly separate what can be researched now from what needs future hardware, battery, safety, thermal, and engineering validation.</p>
+        <p class="work-label">What we need help with</p>
+        <ul class="bullets">
+  <li>Review Cioré's current charging, battery, solar-assistance, warmth-based energy, portable battery, charging-base, heat, and thermal-management directions</li>
+  <li>Organize current research into short, source-backed technical briefs</li>
+  <li>Compare realistic charging and energy alternatives that may support the Cioré direction</li>
+  <li>Research battery safety, heat management, charging ergonomics, USB-C power, battery health, and charging-base considerations</li>
+  <li>Identify what should be presented as a concept, a research question, a prototype test, or a later engineering decision</li>
+  <li>Prepare questions for future hardware, electrical-engineering, battery, thermal, and charging-system firms</li>
+  <li>Identify tradeoffs involving energy output, heat, battery safety, device thickness, durability, cost, repairability, and user understanding</li>
+  <li>Help Cioré avoid unsupported charging, solar, thermal, or battery claims</li>
+</ul>
+        <p class="work-label">Start here</p>
+        <p>Review these Contributor Hub pages:</p>
+        <ul class="bullets">
+  <li>The Phone</li>
+  <li>Features We're Exploring</li>
+  <li>Modularity and Repairability</li>
+  <li>Component Guide</li>
+  <li>Research</li>
+  <li>What We Are Working On Now</li>
+</ul>
+        <p>Then use the project workspace for current Nyro notes and approved source material.</p>
+        <p class="work-label">What a helpful first contribution could look like</p>
+        <p>A 1 to 2 page evidence and question brief on one focused area, such as USB-C charging, charging-base design, solar-assisted supplemental energy, battery health, heat management, warmth-based energy limits, or portable battery design.</p>
+        <div class="discord-block">
+          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🔬・hardware-testing-lab</span></p>
+          <a class="btn btn-primary discord-btn" href="https://discord.gg/YCSBz5Ubfk" target="_blank" rel="noopener noreferrer">
+            Open 🔬・hardware-testing-lab
+            <span class="arrow-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+            </div>
+          </details>
+
+<details class="work-project" id="offline-capability-community-research">
+            <summary class="work-project-summary">
+              <span class="status-badge status-researching">Researching</span>
+              <span class="work-project-title">Offline Capability and Community Research</span>
+              <span class="work-project-desc">Research how phones and devices can support communication, information access, and community resilience when normal cellular service, internet access, or power may be limited.</span>
+              <span class="work-project-channel">🔬・hardware-testing-lab</span>
+              <span class="work-project-expand-label">View details</span>
+            </summary>
+            <div class="work-project-details">
+<p class="work-label">Why it matters</p>
+        <p>Cioré is exploring future offline and low-connectivity directions, including communication resilience, AM/FM capability, walkie-talkie-style concepts, local information access, and other approaches that may help people when cellular towers or regular connections are unavailable.</p>
+        <p class="work-label">What we need help with</p>
+        <ul class="bullets">
+  <li>Research how existing phones, radios, messaging systems, and emergency tools support limited-connectivity or offline use</li>
+  <li>Compare approaches such as local device-to-device communication, broadcast radio, AM/FM reception, satellite-supported systems, emergency alerts, offline maps, local file sharing, and walkie-talkie-style communication</li>
+  <li>Identify hardware, battery, antenna, legal, safety, carrier, and regulatory questions connected to each approach</li>
+  <li>Research what users may need during power outages, disaster conditions, rural travel, connectivity loss, or emergencies</li>
+  <li>Identify accessible communication needs for people with hearing, vision, mobility, language, or cognitive differences</li>
+  <li>Recommend realistic early research questions that could become a future Cioré project brief</li>
+  <li>Clearly separate current technology examples from unvalidated Cioré future directions</li>
+</ul>
+        <p class="work-label">Start here</p>
+        <p>Review these Contributor Hub pages:</p>
+        <ul class="bullets">
+  <li>The Phone</li>
+  <li>Features We're Exploring</li>
+  <li>Research</li>
+  <li>Modularity and Repairability</li>
+  <li>Building Our Operating System</li>
+  <li>Read Our Mission & Values</li>
+</ul>
+        <p class="work-label">What a helpful first contribution could look like</p>
+        <p>A source-backed comparison of 2 to 3 existing offline or low-connectivity approaches, including what each can do, key limitations, hardware or carrier dependencies, accessibility considerations, and questions Cioré should investigate next.</p>
+        <div class="discord-block">
+          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🔬・hardware-testing-lab</span></p>
+          <a class="btn btn-primary discord-btn" href="https://discord.gg/YCSBz5Ubfk" target="_blank" rel="noopener noreferrer">
+            Open 🔬・hardware-testing-lab
+            <span class="arrow-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+        <div class="wonow-callout">
+          <p>Do not state that Cioré already provides offline communication, emergency calling, AM/FM, walkie-talkie communication, mesh networking, satellite communication, or carrier-independent service.</p>
+        </div>
+            </div>
+          </details>
+
+<details class="work-project" id="social-media-project">
+            <summary class="work-project-summary">
+              <span class="status-badge status-active-now">Active Now</span>
+              <span class="work-project-title">Social Media</span>
+              <span class="work-project-desc">Help Cioré communicate current research, project progress, community questions, early product direction, accessibility, repairability, and the build journey clearly and honestly through social media content.</span>
+              <span class="work-project-channel">📱・social-media</span>
+              <span class="work-project-expand-label">View details</span>
+            </summary>
+            <div class="work-project-details">
+<p>Cioré needs active support turning current work into clear, truthful social posts, short videos, carousels, captions, founder updates, and community-facing explanations.</p>
+        <div class="discord-block">
+          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">📱・social-media</span></p>
+          <a class="btn btn-primary discord-btn" href="https://discord.gg/253qUxaf38" target="_blank" rel="noopener noreferrer">
+            Open 📱・social-media
+            <span class="arrow-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+        </div>
+            </div>
+          </details>
+
+<details class="work-project">
+            <summary class="work-project-summary">
+              <span class="status-badge status-needs-owner">Needs project coordination</span>
               <span class="work-project-title">Contributor Program and Internship Planning</span>
               <span class="work-project-desc">Help shape a clearer contributor experience and turn Give and Grow into a practical, project-based internship pathway.</span>
               <span class="work-project-channel">📡・general-support</span>
               <span class="work-project-expand-label">View details</span>
             </summary>
             <div class="work-project-details">
+<div class="wonow-callout">
+          <p class="wonow-callout-label">Active work in motion</p>
+          <p>Ahunnaya A. is leading Innovation Pathways pilot planning and will collaborate with Chinemma A. on project tracking, milestones, progress-report planning, points of contact, support needs, and founder decision questions.</p>
+          <p>This work is happening in a private project channel. If you have a related idea or want to offer support, contact the founder before beginning overlapping work.</p>
+        </div>
+
 <p class="priority-label">Why it matters</p>
           <p>Cioré is exploring how Give &amp; Grow could develop into a more structured contributor, internship, practicum, project-based learning, or college-partnership pathway. The goal is to create meaningful learning opportunities while giving people clear expectations, useful project experience, and responsible support.</p>
 
@@ -9923,53 +10445,20 @@
             </div>
           </details>
 
-          <details class="work-project" id="v1-testing-kit-experience">
+<details class="work-project" id="waitlist-growth">
             <summary class="work-project-summary">
-              <span class="status-badge status-researching">Researching</span>
-              <span class="work-project-title">V1 Testing Kit Experience</span>
-              <span class="work-project-desc">Help plan what goes into early V1 testing kits, how testers are guided through the experience, and what feedback we need.</span>
-              <span class="work-project-channel">🔬・hardware-testing-lab</span>
-              <span class="work-project-expand-label">View details</span>
-            </summary>
-            <div class="work-project-details">
-<p class="work-label">Good fit if you enjoy</p>
-        <p class="work-fit">Program design, user research, product operations, instructional writing, or planning a first-time experience for someone unboxing something new.</p>
-        <p class="work-label">You could help with</p>
-        <ul class="bullets">
-          <li>Kit contents and 3D printed prototype planning</li>
-          <li>Tester guide and printed material planning</li>
-          <li>Short feedback questions and data needs</li>
-          <li>Testing flow and timeline planning</li>
-          <li>Thank you items such as a T shirt, keychain, or other optional item</li>
-          <li>Making the kit experience clear, useful, and worth the purchase</li>
-        </ul>
-        <p class="work-label">Weekly goal examples</p>
-        <p class="work-weekly">Draft a kit contents checklist, outline a tester guide, or propose a short feedback survey for review.</p>
-        <div class="discord-block">
-          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🔬・hardware-testing-lab</span></p>
-          <a class="btn btn-primary discord-btn" href="https://discord.gg/YCSBz5Ubfk" target="_blank" rel="noopener noreferrer">
-            Open 🔬・hardware-testing-lab
-            <span class="arrow-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-        </div>
-        <p class="when-done"><strong>When you're done:</strong> Drop a quick note in <code>🔬・hardware-testing-lab</code> about what you planned, drafted, or think needs another look.</p>
-        <div class="wonow-callout">
-          <p><strong>Current direction:</strong> Planning and waitlist interest review. Kit contents, pricing, shipping, and final tester experience are still being planned. We cannot yet promise that all testers will receive a kit, that international shipping is available, that thank you items are confirmed, or that kit contents and pricing are final.</p>
-        </div>
-            </div>
-          </details>
-
-          <details class="work-project" id="waitlist-growth">
-            <summary class="work-project-summary">
-              <span class="status-badge status-active-now">Active Now</span>
+              <span class="status-badge status-active-now">In progress</span>
               <span class="work-project-title">Waitlist Growth</span>
-              <span class="work-project-desc">Help organize community feedback, poll themes, and outreach ideas to understand what people need from Cioré.</span>
+              <span class="work-project-desc">Waitlist feedback, vote planning, and engagement work are currently in motion. Contributors can still offer supporting research, organization, privacy-respecting theme analysis, and founder-review ideas through the project channel.</span>
               <span class="work-project-channel">📈・waitlist-growth</span>
               <span class="work-project-expand-label">View details</span>
             </summary>
             <div class="work-project-details">
+<div class="wonow-callout">
+          <p class="wonow-callout-label">Active work in motion</p>
+          <p>Chiazam O. is reviewing approved waitlist feedback and developing future engagement or vote concepts. Check the team activity section and coordinate in waitlist-growth before beginning overlapping work.</p>
+        </div>
+
 <p class="work-label">Good fit if you enjoy</p>
         <p class="work-fit">Writing, community-building, audience research, surveys, newsletters, social listening, organizing feedback, or turning ideas into clear messages.</p>
         <p class="work-label">You could help with</p>
@@ -10001,53 +10490,37 @@
             </div>
           </details>
 
-          <details class="work-project" id="social-media">
+<details class="work-project" id="contributor-onboarding-offboarding-ops">
             <summary class="work-project-summary">
-              <span class="status-badge status-active-now">Active Now</span>
-              <span class="work-project-title">Social Media</span>
-              <span class="work-project-desc">Help document and share what we're working on clearly and honestly.</span>
-              <span class="work-project-channel">📱・social-media</span>
+              <span class="status-badge status-needs-owner">Needs project owner</span>
+              <span class="work-project-title">Contributor Onboarding and Offboarding Operations</span>
+              <span class="work-project-desc">Help Cioré maintain clear, caring, and organized contributor onboarding, project guidance, transitions, access changes, and offboarding processes.</span>
+              <span class="work-project-channel">Private onboarding/offboarding channel</span>
               <span class="work-project-expand-label">View details</span>
             </summary>
             <div class="work-project-details">
-<p class="work-label">Good fit if you enjoy</p>
-        <p class="work-fit">Social media, content strategy, visual storytelling, writing, video editing, design, newsletters, community communication, trend research, or making complex work easier to understand.</p>
-        <p class="work-label">You could help with</p>
+<p class="work-label">What we need help with</p>
         <ul class="bullets">
-          <li>Suggest post ideas for social media, newsletters, or community updates</li>
-          <li>Create ideas for reels, short videos, carousels, stories, graphics, and founder updates</li>
-          <li>Write captions, hooks, talking points, headlines, or calls to action</li>
-          <li>Turn a research update into a simple, understandable post</li>
-          <li>Develop content around hardware testing, Lumé OS planning, accessibility research, ethical sourcing, repairability, community feedback, and Cioré’s build journey</li>
-          <li>Suggest content that supports waitlist growth while staying truthful and grounded</li>
-          <li>Create a content calendar or organize post ideas by theme</li>
-          <li>Identify community questions and suggest content that answers them</li>
-        </ul>
-        <p class="work-label">Weekly goal examples</p>
-        <p class="work-weekly">Contribute post ideas, write caption options, turn an update into a carousel outline, or suggest a week of community content.</p>
-        <div class="discord-block">
-          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">📱・social-media</span></p>
-          <a class="btn btn-primary discord-btn" href="https://discord.gg/253qUxaf38" target="_blank" rel="noopener noreferrer">
-            Open 📱・social-media
-            <span class="arrow-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-        </div>
-        <p class="when-done"><strong>When you’re done:</strong> Drop a quick note in <code>📱・social-media</code> about what you drafted, added, organized, or would like feedback on.</p>
-        <div class="example-updates">
-          <p class="work-label">Example updates</p>
-          <p class="example-update">“Added 10 post ideas around accessibility research, repairability, and the early prototype-testing process.”</p>
-          <p class="example-update">“Drafted three caption options for a post about why user feedback matters before product decisions are made.”</p>
+  <li>Maintain and improve the contributor onboarding and offboarding process</li>
+  <li>Organize contributor project guides, role-alignment documentation, orientation steps, and communication templates</li>
+  <li>Identify where project handoff, access changes, documentation, or follow-up can be clearer</li>
+  <li>Support the offboarding system currently being developed</li>
+  <li>Help maintain a clear contributor lifecycle from first orientation through active project work, pause, transition, or exit</li>
+  <li>Recommend documentation, checklists, and support routes that help contributors know what happens next</li>
+</ul>
+        <div class="wonow-callout">
+          <p class="wonow-callout-label">Active work in motion</p>
+          <p>Candy is currently building the offboarding process, including context review, check-ins, pauses, exits, access updates, return paths, and contributor-facing Hub guidance.</p>
+          <p>This work is coordinated through a private onboarding/offboarding channel. Contact the founder before beginning related work.</p>
         </div>
             </div>
           </details>
 
-          <details class="work-project" id="grant-research">
+<details class="work-project" id="grant-research">
             <summary class="work-project-summary">
-              <span class="status-badge status-active-now">Active Now</span>
+              <span class="status-badge status-later">Later priority</span>
               <span class="work-project-title">Grant Research</span>
-              <span class="work-project-desc">Help find and organize grant and funding opportunities that could fit Cioré for review.</span>
+              <span class="work-project-desc">Grant research remains useful for future planning, but it is not one of Cioré's central immediate priorities. Contributors may still organize relevant opportunities for founder review when they clearly fit current work.</span>
               <span class="work-project-channel">📄・grant-research</span>
               <span class="work-project-expand-label">View details</span>
             </summary>
@@ -10085,459 +10558,54 @@
             </div>
           </details>
 
-          <details class="work-project" id="components-suppliers-repairability">
-            <summary class="work-project-summary">
-              <span class="status-badge status-active-now">Active Now</span>
-              <span class="work-project-title">Components, Suppliers, Materials, and Repairability</span>
-              <span class="work-project-desc">Help research components, suppliers, materials, and repairability for a more serviceable phone.</span>
-              <span class="work-project-channel">🌱・components-suppliers</span>
-              <span class="work-project-expand-label">View details</span>
-            </summary>
-            <div class="work-project-details">
-<p class="work-label">Good fit if you enjoy</p>
-        <p class="work-fit">Product research, supplier discovery, ethical sourcing, spreadsheets, hardware ecosystems, procurement research, documentation, sustainability, or comparing options carefully.</p>
-        <p class="work-label">You could help with</p>
-        <ul class="bullets">
-          <li>Find potential component suppliers and manufacturers</li>
-          <li>Add supplier candidates to the research tracker</li>
-          <li>Research what they offer, where they operate, and how they may fit early hardware exploration</li>
-          <li>Compare availability, published pricing, minimum-order information, lead-time information, certifications, sustainability claims, and documentation</li>
-          <li>Research repairability, labor, sourcing, environmental, and ethical-practice information where available</li>
-          <li>Complete ethics reviews for candidate suppliers</li>
-          <li>Identify unanswered sourcing questions</li>
-          <li>Prepare short supplier highlights for founder review</li>
-          <li>Organize links, notes, spec sheets, and supporting evidence</li>
-        </ul>
-        <p class="work-label">Weekly goal examples</p>
-        <p class="work-weekly">Log 10 supplier candidates, complete ethics reviews for 5 candidates, or prepare 3 to 5 supplier summaries for founder review.</p>
-        <div class="discord-block">
-          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🌱・components-suppliers</span></p>
-          <a class="btn btn-primary discord-btn" href="https://discord.gg/qTPC2fBt3N" target="_blank" rel="noopener noreferrer">
-            Open 🌱・components-suppliers
-            <span class="arrow-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-        </div>
-        <p class="when-done"><strong>When you’re done:</strong> Drop a quick note in <code>🌱・components-suppliers</code> about what you found, added, compared, or need reviewed.</p>
-        <div class="example-updates">
-          <p class="work-label">Example updates</p>
-          <p class="example-update">“Added six component suppliers to the tracker and included location, product category, public sourcing information, and open questions.”</p>
-          <p class="example-update">“Completed ethics reviews for three suppliers and flagged two where labor-practice information wasn’t clear.”</p>
-        </div>
+      <section aria-labelledby="wonow-idea-heading">
+        <p class="section-label">After you review the projects</p>
+        <h2 id="wonow-idea-heading">Have an Idea That Does Not Fit a Project Yet?</h2>
+        <p>If you reviewed the active projects and your idea does not fit an existing workstream, share it in general-support.</p>
+        <p>A short question, early observation, possible project idea, or useful source is enough. The founder or relevant contributors can help connect it to the right project area.</p>
 
-        <div class="wonow-callout"><p><strong>Also includes modularity and repairability research:</strong></p></div>
-
-<p class="work-label">What support can look like</p>
-        <ul class="bullets">
-          <li>Research screw types, internal frames, gasket materials, and opening methods for the repairable core</li>
-          <li>Identify accessibility barriers in repair tasks and help design more accessible repair workflows</li>
-          <li>Draft plain language repair instructions, visual guides, or component maps</li>
-          <li>Sketch or test grip, stand, button, and keyboard attachment concepts</li>
-          <li>Research heat, antenna clearance, and battery enclosure questions tied to removable panels and attachments</li>
-          <li>Compare packaging, return logistics, and material recovery approaches</li>
-          <li>Identify questions that need qualified engineering, safety, or accessibility review</li>
-        </ul>
-        <p class="work-label">Weekly goal examples</p>
-        <ul class="bullets">
-          <li>Find and summarize three credible sources about one repair, accessibility, or modularity question</li>
-          <li>Compare two approaches to a repairable core or accessory question and note the tradeoffs</li>
-          <li>Draft a short repair instruction or component map for one internal assembly</li>
-          <li>Sketch or describe a grip, stand, button, or keyboard concept</li>
-          <li>Identify a missing accessibility, safety, or logistics question</li>
-        </ul>
-        <div class="discord-block">
-          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🔬・hardware-testing-lab</span></p>
-          <a class="btn btn-primary discord-btn" href="https://discord.gg/YCSBz5Ubfk" target="_blank" rel="noopener noreferrer">
-            Open 🔬・hardware-testing-lab
-            <span class="arrow-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-        </div>
-        <p class="when-done"><strong>When you’re done:</strong> Drop a quick update in <code>🔬・hardware-testing-lab</code> about what you researched, compared, drafted, sketched, or think needs more review.</p>
-        <div class="example-updates">
-          <p class="work-label">Example updates</p>
-          <p class="example-update">“Compared two screw types for the repairable core and noted tradeoffs around strip resistance and repair access.”</p>
-          <p class="example-update">“Added notes about fastener and cable barriers for people with tremor or low vision.”</p>
-          <p class="example-update">“Sketched a grip attachment concept and flagged questions about weight and rear rail placement.”</p>
-          <p class="example-update">“Researched packaging options for shipping a single replacement part.”</p>
-        </div>
-            </div>
-          </details>
-
-          <details class="work-project" id="lumeos">
-            <summary class="work-project-summary">
-              <span class="status-badge status-researching">Early planning and first build scope</span>
-              <span class="work-project-title">Lumé OS</span>
-              <span class="work-project-desc">Planning a focused custom Android experience based on AOSP. Requires technical, security, and accessibility validation.</span>
-              <span class="work-project-channel">💻・operating-system</span>
-              <span class="work-project-expand-label">View details</span>
-            </summary>
-            <div class="work-project-details">
-              <p class="work-framing"><strong>Important framing:</strong> Lumé OS is in planning and early development preparation. It is not a finished operating system, public download, or final Cioré hardware platform.</p>
-<p class="work-label">Good fit if you enjoy</p>
-        <p class="work-fit">AOSP and Android platform research, privacy and app permission research, accessibility research, UX writing, or plain-language settings design.</p>
-        <p class="work-label">You could help with</p>
-        <ul class="bullets">
-          <li>Researching AOSP, the Android Open Source Project, and open foundation questions</li>
-          <li>Researching app permissions, app isolation, and network control patterns</li>
-          <li>Researching app compatibility considerations for a first reference device</li>
-          <li>Accessibility and inclusive design research</li>
-          <li>Plain-language settings and permission writing</li>
-          <li>Organizing sources, decisions, and open questions for the operating system research library</li>
-        </ul>
-        <p class="work-label">Weekly goal examples</p>
-        <p class="work-weekly">Summarize an AOSP question, compare permission-language examples, or organize accessibility research notes.</p>
-        <div class="discord-block">
-          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">💻・operating-system</span></p>
-          <a class="btn btn-primary discord-btn" href="https://discord.gg/vDDuEevxZu" target="_blank" rel="noopener noreferrer">
-            Open 💻・operating-system
-            <span class="arrow-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-        </div>
-        <p class="when-done"><strong>When you're done:</strong> Drop a quick note in <code>💻・operating-system</code> about what you researched, compared, or organized.</p>
         <div class="wonow-callout">
-          <p>Read the full Lumé OS Product Definition Guide and Brief on the <a href="#building-our-operating-system">Building Our Operating System</a> page before beginning research.</p>
+          <p class="wonow-callout-label">Sample message</p>
+          <p>"I noticed a question that may connect to more than 1 project area. I reviewed the current work first, but I am not sure where it fits best. I wanted to share the idea here and ask for guidance before I begin."</p>
         </div>
-            </div>
-          </details>
 
-          <details class="work-project" id="gaia-work-project">
-            <summary class="work-project-summary">
-              <span class="status-badge status-researching">Research direction</span>
-              <span class="work-project-title">Gaia</span>
-              <span class="work-project-desc">Researching an optional on device indicator and user control direction. Signals require technical and privacy validation.</span>
-              <span class="work-project-channel">💻・operating-system</span>
-              <span class="work-project-expand-label">View details</span>
-            </summary>
-            <div class="work-project-details">
-              <p class="work-framing"><strong>Important framing:</strong> Gaia is a research direction. It is not a chatbot, not generative AI, not a required assistant, and not a system that reads private app content.</p>
-<p class="work-label">Good fit if you enjoy</p>
-        <p class="work-fit">Privacy, AI literacy, accessibility, UX research, writing in plain language, interaction design, user consent, or designing technology people can understand and control.</p>
-        <p class="work-label">You could help with</p>
-        <ul class="bullets">
-          <li>Review waitlist or community feedback about AI, privacy, data use, and user control</li>
-          <li>Research plain-language ways to explain AI-related activity</li>
-          <li>Study permission prompts and user-control patterns</li>
-          <li>Compare examples of clear and confusing privacy or consent language</li>
-          <li>Help draft understandable questions a user may see before enabling an AI-related feature</li>
-          <li>Research concerns about AI-related data collection, storage, processing, and transparency</li>
-          <li>Identify visual, haptic, audio, voice, and plain-language feedback needs</li>
-          <li>Suggest accessibility considerations for low vision, dyslexia, motion sensitivity, hearing differences, cognitive-load concerns, or different levels of technical confidence</li>
-        </ul>
-        <p class="work-label">Weekly goal examples</p>
-        <p class="work-weekly">Document user-control patterns, compare permission language, summarize accessibility needs, or organize feedback themes.</p>
-        <div class="discord-block">
-          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">💻・operating-system</span></p>
-          <a class="btn btn-primary discord-btn" href="https://discord.gg/vDDuEevxZu" target="_blank" rel="noopener noreferrer">
-            Open 💻・operating-system
-            <span class="arrow-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-        </div>
-        <p class="when-done"><strong>When you're done:</strong> Drop a quick note in <code>💻・operating-system</code> about what you researched, compared, organized, or need feedback on.</p>
-        <div class="example-updates">
-          <p class="work-label">Example updates</p>
-          <p class="example-update">"Researched four examples of plain-language permission prompts and added notes about what made them easier to understand."</p>
-          <p class="example-update">"Organized user-control feedback into consent, transparency, data handling, and accessibility categories."</p>
-        </div>
-        <div class="wonow-callout">
-          <p><a href="#gaia">Explore Gaia research</a></p>
-        </div>
-            </div>
-          </details>
+        <p>Share what you're noticing, even if it's incomplete. Someone else may be able to point you to the right project, or it may become a new one.</p>
+      </section>
 
-          <details class="work-project" id="digital-experience">
+        <p class="section-label" style="margin-top:32px;">Additional research areas</p>
+
+<details class="work-project" id="digital-experience-work-project">
             <summary class="work-project-summary">
-              <span class="status-badge status-open">Active design and research</span>
-              <span class="work-project-title">Digital Experience</span>
-              <span class="work-project-desc">Designing clear contributor and waitlist experiences that make information, feedback, and next steps easier to understand.</span>
+              <span class="status-badge status-open">Open for contributor support</span>
+              <span class="work-project-title">Contributor Hub Organization and Digital Experience</span>
+              <span class="work-project-desc">Help improve the Contributor Hub's organization, clarity, navigation, responsive experience, and maintainable front-end structure so contributors can find information, active projects, and next steps more easily.</span>
               <span class="work-project-channel">📡・general-support</span>
               <span class="work-project-expand-label">View details</span>
             </summary>
             <div class="work-project-details">
-<p class="work-label">Good fit if you enjoy</p>
-        <p class="work-fit">UX writing, information design, content organization, user research, or making complex information easier to follow.</p>
-        <p class="work-label">You could help with</p>
+<p class="work-label">You could help with</p>
         <ul class="bullets">
-          <li>Contributor Hub organization, clarity, and navigation improvements</li>
-          <li>Organizing waitlist concerns and feedback themes</li>
-          <li>Planning testing feedback questions and formats</li>
-          <li>Supporting Lumé experience research and plain-language documentation</li>
-        </ul>
-        <p class="work-label">Weekly goal examples</p>
-        <p class="work-weekly">Suggest a Hub clarity improvement, organize a set of waitlist notes, or draft a short feedback question set for review.</p>
-        <div class="discord-block founder-note-block">
-          <p class="founder-note">Share your idea, question, useful finding, or starting point in 📡・general-support so the Founder or relevant contributors can help connect it to the right area.</p>
-        </div>
-        <p class="when-done"><strong>When you're done:</strong> Drop a quick note in <code>📡・general-support</code> about what you organized, drafted, or think needs another look.</p>
+  <li>Review the Contributor Hub for navigation, organization, clarity, and accessibility opportunities</li>
+  <li>Suggest or build approved HTML, CSS, and JavaScript improvements for the Contributor Hub</li>
+  <li>Improve page structure, headings, search, project navigation, internal links, responsive behavior, and information hierarchy</li>
+  <li>Help organize project sections so contributors can find context, channels, workspaces, and next steps without searching through unrelated pages</li>
+  <li>Create or improve clear contributor-facing templates, project cards, resource cards, and documentation layouts</li>
+  <li>Identify broken, unclear, duplicated, outdated, or difficult-to-find information</li>
+  <li>Recommend a maintainable way to organize current and future project content</li>
+  <li>Support approved front-end coding work after repository access and task scope are provided by the founder</li>
+</ul>
+        <p class="work-label">First step</p>
+        <p>Start in general-support and share the specific Contributor Hub improvement you want to explore. If the founder confirms the task, request the approved repository access and project guidance before editing code.</p>
         <div class="wonow-callout">
-          <p>Current work includes Contributor Hub improvements, Waitlist Concerns organization, testing feedback planning, and Lumé experience research.</p>
+          <p>Do not make code, backend, authentication, form, API, or production-site changes without founder approval and the correct repository access.</p>
+        </div>
+        <div class="discord-block founder-note-block">
+          <p class="founder-note">Post in 📡・general-support before beginning. Share what you want to organize or research.</p>
         </div>
             </div>
           </details>
 
-          <details class="work-project" id="phone-experience-hardware-accessibility">
-            <summary class="work-project-summary">
-              <span class="status-badge status-prototype">Prototype Concept</span>
-              <span class="work-project-title">Phone Experience, Hardware, and Accessibility</span>
-              <span class="work-project-desc">Help test early hardware prototypes and research ergonomics, form factor, and accessibility.</span>
-              <span class="work-project-channel">🔬・hardware-testing-lab</span>
-              <span class="work-project-expand-label">View details</span>
-            </summary>
-            <div class="work-project-details">
-<p class="work-label">Good fit if you enjoy</p>
-        <p class="work-fit">Hands-on testing, documenting observations, product feedback, usability testing, physical design, note-taking, accessibility, photography, or noticing what feels intuitive versus frustrating.</p>
-        <p class="work-label">You could help with</p>
-        <ul class="bullets">
-          <li>Document early prototype observations</li>
-          <li>Record what feels comfortable, awkward, clear, confusing, useful, or difficult</li>
-          <li>Observe grip, one-handed reach, hand fatigue, and general comfort</li>
-          <li>Give feedback on button, strip, port, and control placement</li>
-          <li>Give feedback on cases, stands, and form-factor concepts</li>
-          <li>Help structure user-testing notes</li>
-          <li>Organize repeated observations across testers</li>
-          <li>Identify questions that need more testing</li>
-          <li>Capture accessibility observations related to physical interaction</li>
-        </ul>
-        <p class="work-label">Weekly goal examples</p>
-        <p class="work-weekly">Document a test session, organize feedback, suggest testing questions, or summarize what needs another round of review.</p>
-        <div class="discord-block">
-          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🔬・hardware-testing-lab</span></p>
-          <a class="btn btn-primary discord-btn" href="https://discord.gg/YCSBz5Ubfk" target="_blank" rel="noopener noreferrer">
-            Open 🔬・hardware-testing-lab
-            <span class="arrow-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-        </div>
-        <p class="when-done"><strong>When you’re done:</strong> Drop a quick note in <code>🔬・hardware-testing-lab</code> about what you tested, noticed, organized, or think needs another look.</p>
-        <div class="example-updates">
-          <p class="work-label">Example updates</p>
-          <p class="example-update">“Added notes from the latest form-factor test: grip felt stable, but top-button reach was difficult one-handed.”</p>
-          <p class="example-update">“Organized feedback from three testers into comfort, control placement, stand use, and accessibility observations.”</p>
-        </div>
-
-        <div class="wonow-callout"><p><strong>Also includes ergonomics, form factor, and accessibility research:</strong></p></div>
-
-<p class="work-label">Good fit if you enjoy</p>
-        <p class="work-fit">Industrial design, human factors, occupational therapy, accessibility, inclusive design, UX research, usability, product design, physical-comfort research, or designing for a wide range of bodies and needs.</p>
-        <p class="work-label">You could help with</p>
-        <ul class="bullets">
-          <li>Research alternative phone shapes and form factors</li>
-          <li>Study hand comfort, grip, reach, and one-handed use</li>
-          <li>Research hand fatigue and repetitive-use considerations</li>
-          <li>Explore cases, stands, grips, and other physical-support concepts</li>
-          <li>Compare button and control placement approaches</li>
-          <li>Research physical accessibility needs</li>
-          <li>Map considerations for low vision, dyslexia, motion sensitivity, haptic feedback, audio feedback, voice access, and elder-friendly use</li>
-          <li>Organize accessibility themes found in waitlist feedback</li>
-          <li>Identify open questions for future testing</li>
-        </ul>
-        <p class="work-label">Weekly goal examples</p>
-        <p class="work-weekly">Summarize research, map accessibility needs, compare form-factor approaches, or identify considerations for specific user groups.</p>
-        <div class="discord-block">
-          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🔬・hardware-testing-lab</span></p>
-          <a class="btn btn-primary discord-btn" href="https://discord.gg/YCSBz5Ubfk" target="_blank" rel="noopener noreferrer">
-            Open 🔬・hardware-testing-lab
-            <span class="arrow-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-        </div>
-        <p class="when-done"><strong>When you’re done:</strong> Drop a quick note in <code>🔬・hardware-testing-lab</code> about what you researched, mapped, compared, or think should be tested.</p>
-        <div class="example-updates">
-          <p class="work-label">Example updates</p>
-          <p class="example-update">“Added research notes on one-handed reach zones and listed design questions for smaller hands, limited grip strength, and seated use.”</p>
-          <p class="example-update">“Mapped waitlist accessibility feedback into visual, physical, audio, cognitive, and motion-related needs.”</p>
-        </div>
-            </div>
-          </details>
-
-          <details class="work-project" id="nyro-charging-battery-thermal">
-            <summary class="work-project-summary">
-              <span class="status-badge status-researching">Researching</span>
-              <span class="work-project-title">Nyro, Charging, Battery, and Thermal Research</span>
-              <span class="work-project-desc">Help organize early research on hardware requirements, thermal questions, and technical documentation.</span>
-              <span class="work-project-channel">🔬・hardware-testing-lab</span>
-              <span class="work-project-expand-label">View details</span>
-            </summary>
-            <div class="work-project-details">
-<p class="work-label">Good fit if you enjoy</p>
-        <p class="work-fit">Hardware research, electrical engineering education, thermal-design research, systems thinking, test planning, technical documentation, measurements, component research, or organizing technical questions.</p>
-        <p class="work-label">You could help with</p>
-        <ul class="bullets">
-          <li>Organize hardware observations and requirements</li>
-          <li>Research thermal-management concepts and questions</li>
-          <li>Research components and supporting documentation</li>
-          <li>Explore stock-device research questions for learning and comparison</li>
-          <li>Organize carrier-related research questions without making carrier-compliance decisions</li>
-          <li>Help plan safe measurement, documentation, and test-fixture learning</li>
-          <li>Summarize technical research in clear language</li>
-          <li>Identify missing information, assumptions, risks, or questions for qualified review</li>
-          <li>Support documentation for future testing and engineering conversations</li>
-        </ul>
-        <p class="work-label">Weekly goal examples</p>
-        <p class="work-weekly">Organize requirements, summarize thermal research, create a research-question list, or prepare a measurement-planning document.</p>
-        <div class="discord-block">
-          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🔬・hardware-testing-lab</span></p>
-          <a class="btn btn-primary discord-btn" href="https://discord.gg/YCSBz5Ubfk" target="_blank" rel="noopener noreferrer">
-            Open 🔬・hardware-testing-lab
-            <span class="arrow-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-        </div>
-        <p class="when-done"><strong>When you’re done:</strong> Drop a quick note in <code>🔬・hardware-testing-lab</code> about what you researched, organized, documented, or need reviewed.</p>
-
-        <div class="example-updates">
-          <p class="work-label">Example updates</p>
-          <p class="example-update">“Added a thermal-management research summary with links and a list of questions for qualified engineering review.”</p>
-          <p class="example-update">“Organized the current hardware requirements into power, heat, controls, physical layout, and testing questions.”</p>
-        </div>
-
-        <div class="phone-subarea" id="phone-research-open-questions">
-          <span class="status-badge status-researching">Researching</span>
-          <h4>Phone Design, Energy and Accessibility Research</h4>
-          <p class="work-desc">Help us answer the open questions shaping Cioré’s physical phone direction. This work includes comfort, materials, repair, controls, camera placement, solar assisted energy, charging, and heat research.</p>
-          <p class="work-label">Good fit if you enjoy</p>
-          <p class="work-fit">Industrial design, accessibility, ergonomics, hardware research, solar research, materials research, thermal research, charging systems, technical writing, usability research, product design, or organizing complex questions.</p>
-
-          <div class="contributor-note">
-            <p>You do not need to solve every question before sharing something useful. A good source, comparison, sketch, testing idea, accessibility concern, or thoughtful question can move this work forward.</p>
-          </div>
-
-          <p class="work-label">Research prompts</p>
-          <div class="prompt-grid">
-            <div class="prompt-group">
-              <h5>Shape and comfort</h5>
-              <ul class="bullets">
-                <li>Does the rounded shape work across different hand sizes and ways of holding a phone</li>
-                <li>What makes a phone feel secure without making it bulky</li>
-                <li>What grip, stand, case, keyboard, or accessory ideas could make it easier to use</li>
-              </ul>
-            </div>
-            <div class="prompt-group">
-              <h5>Accessibility and controls</h5>
-              <ul class="bullets">
-                <li>What control choices work best for different mobility, vision, hearing, reading, and sensory needs</li>
-                <li>Should physical click buttons be offered alongside touch control strips</li>
-                <li>What alternatives should exist when touch, swiping, or small controls are difficult</li>
-                <li>What should be easier to find, read, hear, or feel</li>
-              </ul>
-            </div>
-            <div class="prompt-group">
-              <h5>Materials, rear rail, and repair</h5>
-              <ul class="bullets">
-                <li>Which materials can balance appearance, durability, repair, and responsible sourcing</li>
-                <li>How should the rear rail mechanism retain accessories safely without wobble</li>
-                <li>How should internal parts be replaced or repaired</li>
-                <li>How can the back panel remain useful without making the phone fragile</li>
-              </ul>
-            </div>
-            <div class="prompt-group">
-              <h5>Energy and charging</h5>
-              <ul class="bullets">
-                <li>How much extra energy can the rear panel collect in real life</li>
-                <li>How can the phone avoid overheating in sunlight</li>
-                <li>How should the back panel, USB-C, charging base, and portable backup battery work together</li>
-                <li>What would make off grid charging more useful without making everyday charging harder</li>
-              </ul>
-            </div>
-            <div class="prompt-group">
-              <h5>Camera and screen</h5>
-              <ul class="bullets">
-                <li>How can the cameras fit the phone without creating a large bump</li>
-                <li>What display choices make the phone clearer and easier to use</li>
-                <li>How can camera and microphone use be visible and understandable</li>
-              </ul>
-            </div>
-          </div>
-
-          <p class="work-label">Weekly goal examples</p>
-          <ul class="bullets">
-            <li>Find and summarize three credible sources related to one open question</li>
-            <li>Compare two or three design approaches and explain the tradeoffs</li>
-            <li>Create a visual mockup, sketch, or layout using the approved 158 mm by 72 mm by 8 mm baseline</li>
-            <li>Turn an accessibility, comfort, material, heat, camera, or charging question into a clear research note</li>
-            <li>Identify a missing question or risk that the team should consider</li>
-          </ul>
-
-          <div class="discord-block">
-            <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🔬・hardware-testing-lab</span></p>
-            <a class="btn btn-primary discord-btn" href="https://discord.gg/YCSBz5Ubfk" target="_blank" rel="noopener noreferrer">
-              Open 🔬・hardware-testing-lab
-              <span class="arrow-circle" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </span>
-            </a>
-          </div>
-          <p class="when-done"><strong>When you’re done:</strong> Drop a quick update in <code>🔬・hardware-testing-lab</code> about what you researched, compared, sketched, organized, or think needs more review.</p>
-
-          <div class="example-updates">
-            <p class="work-label">Example updates</p>
-            <p class="example-update">“Compared three flexible solar material options and added notes about heat, light collection, and durability.”</p>
-            <p class="example-update">“Added a research note about tactile controls and options for people with tremor or limited grip strength.”</p>
-            <p class="example-update">“Created a back panel mockup using the current dimensions and flagged questions about rear rail placement.”</p>
-            <p class="example-update">“Found two sources on heat spreading and added questions for qualified engineering review.”</p>
-          </div>
-        </div>
-            </div>
-          </details>
-
-          <details class="work-project" id="offline-capability-communication">
-            <summary class="work-project-summary">
-              <span class="status-badge status-researching">Researching</span>
-              <span class="work-project-title">Offline Capability and Communication Research</span>
-              <span class="work-project-desc">Help research how Cioré could stay useful when cell service, Wi-Fi, or internet access is limited.</span>
-              <span class="work-project-channel">🔬・hardware-testing-lab</span>
-              <span class="work-project-expand-label">View details</span>
-            </summary>
-            <div class="work-project-details">
-<p class="work-label">What support can look like</p>
-        <ul class="bullets">
-          <li>Compare offline map, saved information, and emergency guide needs</li>
-          <li>Research FM receiver options, AM antenna needs, and local broadcast accessibility</li>
-          <li>Explore how a charging base could support larger antennas and local radio controls</li>
-          <li>Compare Bluetooth and Wi-Fi direct options for nearby text, check ins, and selected sharing</li>
-          <li>Research consent, privacy, battery use, spam prevention, and accessibility for nearby connections</li>
-          <li>Draft plain language connection status messages</li>
-          <li>Help organize emergency checklists and local resource templates</li>
-          <li>Identify questions that need qualified radio, carrier, safety, legal, battery, security, or accessibility review</li>
-        </ul>
-        <p class="work-label">Weekly goal examples</p>
-        <ul class="bullets">
-          <li>Find and summarize three credible sources about one offline, radio, nearby networking, or emergency information question</li>
-          <li>Compare two ways a phone could keep maps or information available without service</li>
-          <li>Draft a simple Offline Ready or Communication Mode mockup</li>
-          <li>Create a short research note about FM, AM, nearby sharing, store and forward messaging, or battery impact</li>
-          <li>Identify a missing safety, privacy, accessibility, or connection status question</li>
-        </ul>
-        <div class="discord-block">
-          <p class="discord-meta"><span class="discord-cat">Active Projects</span><span class="discord-channel-name">🔬・hardware-testing-lab</span></p>
-          <a class="btn btn-primary discord-btn" href="https://discord.gg/YCSBz5Ubfk" target="_blank" rel="noopener noreferrer">
-            Open 🔬・hardware-testing-lab
-            <span class="arrow-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-        </div>
-        <p class="when-done"><strong>When you’re done:</strong> Drop a quick update in <code>🔬・hardware-testing-lab</code> about what you researched, compared, drafted, mapped, or think needs more review.</p>
-        <div class="example-updates">
-          <p class="work-label">Example updates</p>
-          <p class="example-update">“Compared two offline map approaches and added notes about storage, updates, and low battery use.”</p>
-          <p class="example-update">“Added research notes about FM reception, headphone antenna options, and internal antenna questions.”</p>
-          <p class="example-update">“Drafted clear connection status messages for cellular, Wi-Fi, nearby connection, and offline use.”</p>
-          <p class="example-update">“Organized emergency resource ideas and flagged items that need local or legal review.”</p>
-        </div>
-            </div>
-          </details>
-
-          <details class="work-project" id="cross-functional-general-support">
+<details class="work-project" id="cross-functional-general-support">
             <summary class="work-project-summary">
               <span class="status-badge status-researching">Researching</span>
               <span class="work-project-title">Cross-Functional Ideas and General Support</span>
