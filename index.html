@@ -3379,6 +3379,10 @@
     border-radius:var(--radius-md); padding:18px 18px 16px;
   }
   #page-how-we-want-the-phone-to-charge .nyro-card h3{ font-size:0.94rem; margin:0 0 8px; }
+  #page-how-we-want-the-phone-to-charge .nyro-card-eyebrow{
+    font-size:0.74rem; font-weight:600; text-transform:uppercase; letter-spacing:0.03em;
+    color:var(--green-deep); margin:0 0 8px;
+  }
   #page-how-we-want-the-phone-to-charge .nyro-card p{ font-size:0.88rem; margin:0; }
 
   #page-how-we-want-the-phone-to-charge .accessory-note{
@@ -3399,6 +3403,123 @@
   #page-how-we-want-the-phone-to-charge .two-col-panel{
     background:var(--white); border:1px solid var(--line);
     border-radius:var(--radius-md); padding:22px 22px 20px;
+  }
+
+  /* Status legend grid */
+  #page-how-we-want-the-phone-to-charge .nyro-doc-link-block{
+    background:var(--white); border:1px solid var(--line);
+    border-radius:var(--radius-md); padding:22px 24px; margin:28px 0;
+  }
+  #page-how-we-want-the-phone-to-charge .nyro-doc-link-label{
+    font-size:0.78rem; font-weight:600; text-transform:uppercase; letter-spacing:0.03em;
+    color:var(--ink-faint); margin:0 0 8px;
+  }
+  #page-how-we-want-the-phone-to-charge .nyro-doc-link-text{
+    font-size:0.96rem; color:var(--ink-soft); margin:0 0 16px;
+  }
+  #page-how-we-want-the-phone-to-charge .nyro-doc-link-note{
+    font-size:0.84rem; color:var(--ink-faint); line-height:1.55; margin:14px 0 0;
+  }
+
+  #page-how-we-want-the-phone-to-charge .status-legend-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:16px;
+  }
+  @media (max-width:700px){ #page-how-we-want-the-phone-to-charge .status-legend-grid{ grid-template-columns:1fr; } }
+  #page-how-we-want-the-phone-to-charge .status-legend-item{
+    background:var(--white); border:1px solid var(--line);
+    border-radius:var(--radius-md); padding:16px 18px;
+  }
+  #page-how-we-want-the-phone-to-charge .status-legend-item .status-badge{ margin-bottom:8px; }
+  #page-how-we-want-the-phone-to-charge .status-legend-item p:last-child{ margin:0; font-size:0.88rem; }
+
+  /* Reused status-badge visual variants (scoped to this page) */
+  #page-how-we-want-the-phone-to-charge .status-badge{
+    display:inline-block; font-size:0.78rem; font-weight:600;
+    padding:4px 12px; border-radius:999px; margin-bottom:10px;
+  }
+  #page-how-we-want-the-phone-to-charge .status-open{ background:var(--green-tint); color:var(--green-deep); }
+  #page-how-we-want-the-phone-to-charge .status-researching{ background:var(--bg-panel); color:var(--ink-soft); border:1px solid var(--line); }
+  #page-how-we-want-the-phone-to-charge .status-later{ background:var(--white); color:var(--ink-faint); border:1px dashed var(--line); }
+  #page-how-we-want-the-phone-to-charge .status-forming{ background:var(--white); color:var(--ink-soft); border:1px solid var(--line); }
+  #page-how-we-want-the-phone-to-charge .status-paused{ background:var(--black); color:var(--white); }
+
+  /* Nyro hierarchy block */
+  #page-how-we-want-the-phone-to-charge .nyro-hierarchy{
+    margin:20px 0; display:flex; flex-direction:column; align-items:center; gap:4px;
+  }
+  #page-how-we-want-the-phone-to-charge .nyro-hierarchy-row{
+    width:100%; max-width:420px; text-align:center;
+    background:var(--bg-panel); border:1px solid var(--line);
+    border-radius:var(--radius-md); padding:12px 18px;
+  }
+  #page-how-we-want-the-phone-to-charge .nyro-hierarchy-row--main{
+    background:var(--green-tint); border-color:#D9E7DF;
+  }
+  #page-how-we-want-the-phone-to-charge .nyro-hierarchy-label{ margin:0; font-weight:700; color:var(--ink); }
+  #page-how-we-want-the-phone-to-charge .nyro-hierarchy-sub{ margin:4px 0 0; font-size:0.84rem; color:var(--ink-soft); }
+  #page-how-we-want-the-phone-to-charge .nyro-hierarchy-arrow{ font-size:1.1rem; color:var(--ink-faint); line-height:1; }
+
+  /* Flow diagrams */
+  #page-how-we-want-the-phone-to-charge .flow-diagram-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:16px; margin:16px 0 20px;
+  }
+  @media (max-width:900px){ #page-how-we-want-the-phone-to-charge .flow-diagram-grid{ grid-template-columns:1fr; } }
+  #page-how-we-want-the-phone-to-charge .flow-diagram{
+    background:var(--white); border:1px solid var(--line);
+    border-radius:var(--radius-md); padding:18px;
+  }
+  #page-how-we-want-the-phone-to-charge .flow-diagram-title{
+    font-weight:700; font-size:0.88rem; color:var(--ink); margin:0 0 12px;
+  }
+  #page-how-we-want-the-phone-to-charge .flow-step{
+    background:var(--bg-panel); border-radius:var(--radius-sm);
+    padding:10px 12px; font-size:0.86rem; color:var(--ink-soft); text-align:center;
+  }
+  #page-how-we-want-the-phone-to-charge .flow-arrow{
+    text-align:center; color:var(--ink-faint); font-size:0.95rem; line-height:1.8;
+  }
+
+  /* Glossary */
+  #page-how-we-want-the-phone-to-charge .glossary-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-top:16px;
+  }
+  @media (max-width:700px){ #page-how-we-want-the-phone-to-charge .glossary-grid{ grid-template-columns:1fr; } }
+  #page-how-we-want-the-phone-to-charge .glossary-item{
+    background:var(--white); border:1px solid var(--line);
+    border-radius:var(--radius-sm); padding:14px 16px;
+  }
+  #page-how-we-want-the-phone-to-charge .glossary-term{ margin:0 0 6px; font-weight:700; font-size:0.9rem; color:var(--ink); }
+  #page-how-we-want-the-phone-to-charge .glossary-def{ margin:0; font-size:0.86rem; color:var(--ink-soft); line-height:1.55; }
+
+  #page-how-we-want-the-phone-to-charge .work-label{ font-size:0.8rem; font-weight:600; color:var(--ink); margin:16px 0 8px; }
+  #page-how-we-want-the-phone-to-charge .closing-note-text{ font-size:0.9rem; color:var(--ink-faint); margin-top:20px; }
+
+  /* Buttons (scoped copy, matching established Hub button system) */
+  #page-how-we-want-the-phone-to-charge .btn{
+    display:inline-flex; align-items:center; gap:12px;
+    font-weight:600; font-size:0.96rem;
+    padding:14px 20px 14px 22px; border-radius:999px;
+    border:1px solid transparent; cursor:pointer; white-space:nowrap;
+    text-decoration:none;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  #page-how-we-want-the-phone-to-charge .btn:hover{ transform:translateY(-1px); }
+  #page-how-we-want-the-phone-to-charge .btn:focus-visible{ outline:2px solid var(--green); outline-offset:2px; }
+  #page-how-we-want-the-phone-to-charge .btn-primary{ background:var(--black); color:var(--white); }
+  #page-how-we-want-the-phone-to-charge .btn-primary:hover{ background:var(--black-soft); }
+  #page-how-we-want-the-phone-to-charge .btn-primary .arrow-circle{ color:var(--green-on-black); border-color:rgba(79,190,147,0.5); }
+  #page-how-we-want-the-phone-to-charge .arrow-circle{
+    width:34px; height:34px; border-radius:50%;
+    border:1px solid currentColor;
+    display:inline-flex; align-items:center; justify-content:center; flex:none;
+  }
+  #page-how-we-want-the-phone-to-charge .arrow-circle svg{ width:13px; height:13px; }
+
+  @media (max-width:560px){
+    #page-how-we-want-the-phone-to-charge .btn{
+      width:100%; justify-content:center;
+      white-space:normal; text-align:center; line-height:1.3;
+    }
   }
 
   /* ================================================
@@ -4024,6 +4145,122 @@
     border-radius:var(--radius-md); padding:18px 20px;
   }
   #page-research-library .rl-contributor-note p{ margin:0; font-size:0.92rem; color:#3D5F51; }
+
+  #page-research-library{ --maxw: 1100px; }
+
+  #page-research-library .page-header{ padding:28px 0 0; }
+  #page-research-library .eyebrow-label{
+    display:flex; align-items:center; gap:8px;
+    font-size:0.82rem; font-weight:500; color:var(--green);
+    margin:0 0 14px;
+  }
+  #page-research-library .eyebrow-label::before{ content:""; width:16px; height:1.5px; background:var(--green); display:inline-block; }
+  #page-research-library .page-header h1{
+    font-size:clamp(2rem, 4.2vw, 2.7rem);
+    letter-spacing:-0.025em; line-height:1.12; font-weight:700;
+    margin:0 0 22px;
+  }
+  #page-research-library .page-header .lede{
+    font-size:1.06rem; line-height:1.65; color:var(--ink-soft);
+    max-width:70ch; margin:0 0 14px;
+  }
+
+  #page-research-library .rl-callout{
+    background:var(--bg-panel); border:1px solid var(--line);
+    border-radius:var(--radius-md); padding:20px 22px; margin:28px 0;
+  }
+  #page-research-library .rl-callout-label{ font-weight:700; color:var(--ink); margin:0 0 8px; font-size:0.96rem; }
+  #page-research-library .rl-callout p{ margin:0 0 10px; font-size:0.92rem; color:var(--ink-soft); }
+  #page-research-library .rl-callout p:last-child{ margin-bottom:0; }
+
+  #page-research-library section{ padding:36px 0; border-top:1px solid var(--line); }
+  #page-research-library .section-label{
+    display:flex; align-items:center; gap:8px;
+    font-size:0.8rem; font-weight:500; color:var(--green);
+    margin:0 0 14px;
+  }
+  #page-research-library .section-label::before{ content:""; width:16px; height:1.5px; background:var(--green); display:inline-block; }
+  #page-research-library h2{
+    font-size:clamp(1.3rem, 2.4vw, 1.6rem);
+    letter-spacing:-0.02em; line-height:1.25; font-weight:700;
+    margin:0 0 12px;
+  }
+  #page-research-library h3{ font-size:1rem; font-weight:700; margin:10px 0 8px; }
+
+  #page-research-library .rl-steps{
+    margin:16px 0 0; padding-left:22px; display:grid; gap:8px;
+  }
+  #page-research-library .rl-steps li{ font-size:0.94rem; color:var(--ink-soft); line-height:1.6; }
+
+  #page-research-library .status-legend-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-top:16px;
+  }
+  @media (max-width:820px){ #page-research-library .status-legend-grid{ grid-template-columns:1fr; } }
+  #page-research-library .status-legend-item{
+    background:var(--white); border:1px solid var(--line);
+    border-radius:var(--radius-md); padding:16px 18px;
+  }
+  #page-research-library .status-legend-item .status-badge{ margin-bottom:8px; }
+  #page-research-library .status-legend-item p:last-child{ margin:0; font-size:0.88rem; color:var(--ink-soft); }
+
+  #page-research-library .status-badge{
+    display:inline-block; font-size:0.78rem; font-weight:600;
+    padding:4px 12px; border-radius:999px; margin-bottom:10px;
+  }
+  #page-research-library .status-researching{ background:var(--bg-panel); color:var(--ink-soft); border:1px solid var(--line); }
+  #page-research-library .status-needs-owner{ background:var(--white); color:var(--ink-soft); border:1px solid var(--line); }
+  #page-research-library .status-forming{ background:var(--green-tint); color:var(--green-deep); }
+
+  /* Document cards */
+  #page-research-library .research-doc-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:16px;
+  }
+  @media (max-width:820px){ #page-research-library .research-doc-grid{ grid-template-columns:1fr; } }
+  #page-research-library .research-doc-card{
+    background:var(--white); border:1px solid var(--line);
+    border-radius:var(--radius-lg); padding:22px;
+  }
+  #page-research-library .research-doc-eyebrow{
+    font-size:0.76rem; font-weight:600; text-transform:uppercase; letter-spacing:0.03em;
+    color:var(--ink-faint); margin:0 0 10px;
+  }
+  #page-research-library .research-doc-meta{ font-size:0.86rem; color:var(--ink-faint); margin:0 0 12px; }
+  #page-research-library .research-doc-summary{ font-size:0.92rem; color:var(--ink-soft); line-height:1.6; margin:0 0 14px; }
+  #page-research-library .research-doc-confidentiality{
+    font-size:0.82rem; color:var(--ink-faint); line-height:1.5;
+    background:var(--bg-panel); border-radius:var(--radius-sm); padding:10px 12px; margin:0 0 16px;
+  }
+  #page-research-library .research-doc-footnote{
+    font-size:0.8rem; color:var(--ink-faint); margin:10px 0 0;
+  }
+
+  /* Buttons (scoped copy, matching established Hub button system) */
+  #page-research-library .btn{
+    display:inline-flex; align-items:center; gap:12px;
+    font-weight:600; font-size:0.94rem;
+    padding:13px 18px 13px 20px; border-radius:999px;
+    border:1px solid transparent; cursor:pointer; white-space:nowrap;
+    text-decoration:none;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+  }
+  #page-research-library .btn:hover{ transform:translateY(-1px); }
+  #page-research-library .btn:focus-visible{ outline:2px solid var(--green); outline-offset:2px; }
+  #page-research-library .btn-primary{ background:var(--black); color:var(--white); }
+  #page-research-library .btn-primary:hover{ background:var(--black-soft); }
+  #page-research-library .btn-primary .arrow-circle{ color:var(--green-on-black); border-color:rgba(79,190,147,0.5); }
+  #page-research-library .arrow-circle{
+    width:30px; height:30px; border-radius:50%;
+    border:1px solid currentColor;
+    display:inline-flex; align-items:center; justify-content:center; flex:none;
+  }
+  #page-research-library .arrow-circle svg{ width:12px; height:12px; }
+
+  @media (max-width:560px){
+    #page-research-library .btn{
+      width:100%; justify-content:center;
+      white-space:normal; text-align:center; line-height:1.3;
+    }
+  }
 
   /* ================================================
      BACK TO TOP — shared across long pages
@@ -7436,165 +7673,504 @@
     <div class="wrap">
 
       <header class="page-header">
-        <p class="eyebrow-label">Energy &amp; charging</p>
+        <p class="eyebrow-label">Energy and charging</p>
         <h1>How We Want the Phone to Charge</h1>
-        <p class="lede">Cioré is researching a more thoughtful approach to power, one that stays dependable for everyday use while exploring supplemental energy, better battery care, and clearer information over time.</p>
-        <p class="lede">This research lives under Nyro, Cioré's developing energy and thermal direction. Nothing here is a confirmed feature or final specification.</p>
+        <p class="lede">Cioré is researching a more thoughtful approach to power. Nyro begins with dependable USB-C charging, then explores how a personal energy system can collect, store, and share energy over time.</p>
+        <p class="lede">Our first focus is Star, a Nyro power-base concept. Star is being explored as a way to collect energy mainly from sunlight, store it in a protected reserve, and make that stored energy available to charge a Cioré phone and other small devices when needed.</p>
+        <p class="lede">This page explains what Cioré is actively researching, what remains a future direction, and what needs measurement or engineering validation before it becomes a product promise.</p>
       </header>
 
-      <!-- ================= NYRO SYSTEM ================= -->
-      <section aria-labelledby="nyro-heading">
-        <p class="section-label">Nyro system</p>
-        <h2 id="nyro-heading">Nyro: Cioré's Energy and Thermal Direction</h2>
-        <p>Nyro is Cioré's developing energy and thermal system direction. It brings together how a phone receives power, stores it, protects its battery, manages heat, explains energy use, and may use carefully tested supplemental energy inputs over time.</p>
-        <p>Nyro connects the whole power experience: how users get power, how the phone receives and stores it, how the battery is protected, how heat is managed, how power use is explained, how a battery may be serviced, how supplemental energy research could be measured and controlled, and how charging components might be returned, repaired, reused, or recovered over time.</p>
+      <div class="nyro-callout">
+        <p><strong>Current research status.</strong> Nyro is active research. USB-C remains the dependable everyday charging baseline. Star is the first power-base direction Cioré wants to understand. The Energy Backplate, wireless charging, and other future concepts remain research tracks that depend on evidence, engineering, safety, accessibility, and user testing.</p>
+      </div>
 
-        <div class="nyro-grid">
-  <div class="nyro-card"><h3>Everyday charging</h3><p>The dependable ways users may charge their phone through normal routines.</p></div>
-  <div class="nyro-card"><h3>Light-powered base research</h3><p>A possible home or desk charging base that may collect light and manage energy.</p></div>
-  <div class="nyro-card"><h3>Battery care</h3><p>Research into useful life, battery health, charging behavior, and clearer information.</p></div>
-  <div class="nyro-card"><h3>Heat and comfort</h3><p>Research into how charging, sunlight, wireless coils, accessories, and batteries affect temperature.</p></div>
-  <div class="nyro-card"><h3>Repair-minded power design</h3><p>Planning how batteries, ports, panels, and power components may work with serviceability and modularity.</p></div>
-  <div class="nyro-card"><h3>Clear user information</h3><p>Helping users understand charging, heat, energy use, and battery-care choices in plain language.</p></div>
-</div>
-      </section>
+      <!-- ================= NYRO ONE PAGER LINK ================= -->
+      <div class="nyro-doc-link-block">
+        <p class="nyro-doc-link-label">Team reference</p>
+        <p class="nyro-doc-link-text">Want the full picture in one place? The Nyro one pager summarizes this direction for the team.</p>
+        <a class="btn btn-primary" href="https://drive.google.com/file/d/1YG7_sNI_NV_j8JZ7Nu7Lje-9gb_YR0Ya/view?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Open the Nyro one pager in a new tab. May require access request.">
+          Open the Nyro One Pager
+          <span class="arrow-circle" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+        <p class="nyro-doc-link-note">This document is restricted to contributors with founder approval. You will need to click the link and request access before you can view it.</p>
+      </div>
 
-      <!-- ================= DEPENDABLE CHARGING ================= -->
-      <section aria-labelledby="charging-priority-heading">
-        <p class="section-label">Charging priorities</p>
-        <h2 id="charging-priority-heading">USB-C First, Wireless Charging Under Research</h2>
-        <p>USB-C remains the baseline that any Nyro research direction has to work alongside, not complicate. It is the charging path we expect people to rely on every day.</p>
-        <p>Wireless charging is a separate research area. We are comparing dock, click-in, guided-position, and coil-based alignment concepts, and weighing each one against accessibility, heat, durability, and repair access before any direction is chosen.</p>
-      </section>
-
-      <!-- ================= FUTURE CHARGING ECOSYSTEM ================= -->
-      <section aria-labelledby="charging-base-heading">
-        <p class="section-label">Future charging ecosystem</p>
-        <h2 id="charging-base-heading">A Possible Light-Powered Charging Base</h2>
-        <p>A battery enclosure is the protective structure around a battery cell or battery pack.</p>
-        <p>A battery connector is the physical and electrical connection that lets the battery safely communicate with the phone.</p>
-
-        <div class="nyro-grid">
-  <div class="nyro-card"><h3>Protect</h3><p>The battery has to be protected from drops, puncture, swelling, moisture, and accidental damage.</p></div>
-  <div class="nyro-card"><h3>Secure</h3><p>The battery must stay safely in place during daily use, charging, travel, and attachment use.</p></div>
-  <div class="nyro-card"><h3>Connect</h3><p>Battery connectors need to reduce the risk of wear, incorrect installation, short circuits, accidental disconnection, and unreliable contact.</p></div>
-  <div class="nyro-card"><h3>Manage</h3><p>The battery-management system must understand battery condition, charging state, heat, and possible errors.</p></div>
-  <div class="nyro-card"><h3>Service</h3><p>Cioré needs to determine whether future battery work is user-serviceable, tool-assisted, or technician-supported.</p></div>
-  <div class="nyro-card"><h3>Support</h3><p>Replacement batteries would need planning for diagnostics, packaging, shipping, storage, return, inspection, recovery, recycling, warranties, and user guidance.</p></div>
-</div>
-
-        <p class="accessory-note">Rear panels, Energy Backplates, rails, grips, stands, cases, keyboard attachments, wireless charging coils, and other accessories may affect battery access, charging behavior, heat movement, structural design, and antenna performance.</p>
-
-        <div class="nyro-callout">
-          <p>Cioré is exploring a more serviceable battery direction so a worn battery may not require replacing an entire phone. Whether that becomes user-serviceable, tool-assisted, or technician-supported depends on safety, durability, testing, and certification.</p>
+      <!-- ================= RESEARCH STATUS GUIDE ================= -->
+      <section aria-labelledby="nyro-status-guide-heading">
+        <p class="section-label">Research status guide</p>
+        <h2 id="nyro-status-guide-heading">How to Read Research Status on This Page</h2>
+        <div class="status-legend-grid">
+          <div class="status-legend-item"><span class="status-badge status-researching">Active research</span><p>Work Cioré is currently organizing, reviewing, measuring, or preparing to test.</p></div>
+          <div class="status-legend-item"><span class="status-badge status-open">First exploration</span><p>The earliest practical direction Cioré wants to validate before building more complex concepts.</p></div>
+          <div class="status-legend-item"><span class="status-badge status-later">Future research track</span><p>A concept that remains important but depends on earlier evidence, engineering, or funding.</p></div>
+          <div class="status-legend-item"><span class="status-badge status-forming">Low-power research only</span><p>A concept that may support tiny sensing or logging functions but is not expected to charge the main phone battery.</p></div>
+          <div class="status-legend-item"><span class="status-badge status-paused">Not a product promise</span><p>Information that Cioré must not describe publicly as confirmed performance, availability, compatibility, safety, sustainability, or charging behavior.</p></div>
         </div>
       </section>
 
-      <!-- ================= REAR ENERGY PANEL ================= -->
+      <!-- ================= NYRO SYSTEM ================= -->
+      <section aria-labelledby="nyro-heading">
+        <p class="section-label">The energy system</p>
+        <h2 id="nyro-heading">Nyro: Cioré's Energy and Thermal Direction</h2>
+        <p>Nyro is Cioré's developing energy and thermal direction. It brings together how a phone receives power, stores it, protects its battery, manages heat, explains energy use, and may use carefully tested supplemental energy inputs over time.</p>
+
+        <div class="nyro-hierarchy">
+          <div class="nyro-hierarchy-row"><p class="nyro-hierarchy-label">Cioré</p></div>
+          <div class="nyro-hierarchy-arrow">↓</div>
+          <div class="nyro-hierarchy-row nyro-hierarchy-row--main"><p class="nyro-hierarchy-label">Nyro</p><p class="nyro-hierarchy-sub">Energy, charging, battery health, heat, and power research</p></div>
+          <div class="nyro-hierarchy-arrow">↓</div>
+          <div class="nyro-hierarchy-row nyro-hierarchy-row--main"><p class="nyro-hierarchy-label">Star</p><p class="nyro-hierarchy-sub">Nyro's first personal power-base research concept</p></div>
+          <div class="nyro-hierarchy-arrow">↓</div>
+          <div class="nyro-hierarchy-row"><p class="nyro-hierarchy-label">Star Home and Star Travel</p><p class="nyro-hierarchy-sub">Future power-base and portable-reserve research directions</p></div>
+        </div>
+
+        <p>Star is not a separate operating system, company, or completed product line. It is a physical power concept being explored under Nyro.</p>
+      </section>
+
+      <!-- ================= WHY CIORÉ IS EXPLORING NYRO ================= -->
+      <section aria-labelledby="nyro-purpose-heading">
+        <p class="section-label">The long-term purpose</p>
+        <h2 id="nyro-purpose-heading">Why Cioré Is Exploring Nyro</h2>
+        <p>Cioré's long-term goal is to reduce how often people need to depend on a wall outlet to keep their phone powered.</p>
+        <p>We are exploring whether a personal energy system can collect useful energy from sunlight, store it safely, and make that energy available later when a phone needs power.</p>
+        <p>The first version of this idea is not a promise that a phone will never need to plug in. It is a research path toward giving people more independence, more backup power, and more control over how they keep their devices charged.</p>
+        <div class="nyro-callout">
+          <p>Nyro is working toward less wall dependence over time. USB-C remains the dependable everyday charging baseline while Cioré measures what sunlight, storage, and future accessories can realistically add.</p>
+        </div>
+      </section>
+
+      <!-- ================= STAR AT A GLANCE ================= -->
+      <section aria-labelledby="star-glance-heading">
+        <p class="section-label">First exploration</p>
+        <h2 id="star-glance-heading">Star at a Glance</h2>
+        <p>Star is Cioré's first Nyro power-base research concept.</p>
+        <p>In simple terms, Star is a power bank that Cioré is researching to do more than store wall power. Star may collect useful energy mainly from sunlight, safely store that energy in a protected reserve, and later use that stored energy to charge a Cioré phone and other small devices.</p>
+        <p>Star is not a finished product. It is Cioré's first practical research direction for learning how a personal energy system could help people depend less on wall outlets over time.</p>
+        <p>If you see a Nyro term below that is unfamiliar, continue to the <a class="inline-link" href="#nyro-glossary-heading">Energy Words in Plain Language</a> section further down this page.</p>
+
+        <div class="nyro-grid">
+          <div class="nyro-card">
+            <p class="nyro-card-eyebrow">Collect</p>
+            <span class="status-badge status-researching">Active research</span>
+            <h3>Useful Light In</h3>
+            <p>Star is being researched to collect energy mainly from sunlight. Ambient light, such as window or room light, is also being studied as a smaller supplemental input.</p>
+          </div>
+          <div class="nyro-card">
+            <p class="nyro-card-eyebrow">Manage</p>
+            <span class="status-badge status-needs-owner">Needs engineering validation</span>
+            <h3>Power Controller</h3>
+            <p>A power controller is the safety electronics that manage changing energy input before it reaches storage. Cioré needs engineering validation before selecting one.</p>
+          </div>
+          <div class="nyro-card">
+            <p class="nyro-card-eyebrow">Store</p>
+            <span class="status-badge status-researching">Active research</span>
+            <h3>Protected Energy Reserve</h3>
+            <p>Star may store collected energy in a protected rechargeable reserve, similar to a power bank. The final battery type, size, capacity, and safety design have not been chosen.</p>
+          </div>
+          <div class="nyro-card">
+            <p class="nyro-card-eyebrow">Share</p>
+            <span class="status-badge status-open">First exploration</span>
+            <h3>Charge the Phone</h3>
+            <p>Star may charge a Cioré phone through USB-C. Cioré is researching a retractable USB-C cable and a direct USB-C connector that plugs into the phone without a hanging cable.</p>
+          </div>
+          <div class="nyro-card">
+            <p class="nyro-card-eyebrow">Explain</p>
+            <span class="status-badge status-forming">Future interface research</span>
+            <h3>Clear Energy Information</h3>
+            <p>Lumé may show battery state, charging status, reserve level, heat, and energy source. Gaia may later explain energy activity in plain language, with visible user control.</p>
+          </div>
+        </div>
+
+        <div class="flow-diagram" style="margin-top:20px;">
+          <div class="flow-steps">
+            <div class="flow-step">Sunlight</div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">Star solar collector</div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">Star power controller</div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">Star protected energy reserve</div>
+            <div class="flow-arrow">↓</div>
+            <div class="flow-step">USB-C charging to a Cioré phone</div>
+          </div>
+        </div>
+
+        <p>Star separates the jobs of collecting, storing, and using energy. This matters because a phone does not always sit in useful light. A separate reserve can collect energy when light is available and hold it until the phone needs power later.</p>
+        <p><a class="inline-link" href="#nyro-glossary-heading">Go to Energy Words in Plain Language below to see what terms like power bank, ambient light, watt hour, and mAh mean.</a></p>
+      </section>
+
+      <!-- ================= STAR ================= -->
+      <section aria-labelledby="star-heading">
+        <p class="section-label">First exploration</p>
+        <h2 id="star-heading">Star: A Personal Energy Base</h2>
+        <p>Star is Cioré's first Nyro power-base research concept.</p>
+        <p>Instead of expecting the phone itself to collect every bit of energy it needs, Star explores a separate personal energy system. Star may collect energy mainly from sunlight, store it in a protected rechargeable reserve, and later use that stored energy to charge a Cioré phone through USB-C.</p>
+        <p>The goal is to give people more ways to keep their phone powered without depending only on a wall outlet. Star is not a finished product. Its size, capacity, collector design, charging behavior, heat management, accessibility, repairability, and real-world energy contribution still need to be researched and tested.</p>
+        <div class="nyro-callout">
+          <p>Think of Star as a personal energy reserve. It is designed to collect energy when useful light is available, save that energy, and make it available later when a phone needs power.</p>
+        </div>
+      </section>
+
+      <!-- ================= STAR HOME AND STAR TRAVEL ================= -->
+      <section aria-labelledby="star-home-travel-heading">
+        <p class="section-label">One system, different situations</p>
+        <h2 id="star-home-travel-heading">Star Home and Star Travel</h2>
+
+        <div class="nyro-grid">
+          <div class="nyro-card">
+            <span class="status-badge status-open">First exploration</span>
+            <h3>Star Home</h3>
+            <p>Star Home is the main energy-base research direction for home, desk, window, balcony, or future safe outdoor placement. It may collect sunlight, store energy, charge a phone through USB-C, and refill smaller reserves. It needs research into collector size, panel placement, heat, weather, storage, safety, accessibility, repairability, and real energy yield.</p>
+          </div>
+          <div class="nyro-card">
+            <span class="status-badge status-open">First exploration</span>
+            <h3>Star Travel</h3>
+            <p>Star Travel is a smaller portable reserve research direction for bags, errands, offices, travel, and emergency use. It may carry stored energy from Star Home or another approved source and charge a phone through a retractable USB-C cable or a direct USB-C connector. Its size, weight, capacity, cable durability, connector safety, accessibility, and output still need testing.</p>
+          </div>
+        </div>
+
+        <div class="nyro-callout">
+          <p><strong>Future contexts.</strong> Future research may also consider Star Car, Star Bike, and Star Office. These are not current products or commitments. Each would need separate research into heat, weather, vibration, mounting, theft, safety, accessibility, and user behavior.</p>
+        </div>
+      </section>
+
+      <!-- ================= WHAT SHOULD STAR LOOK LIKE ================= -->
+      <section aria-labelledby="star-formfactor-heading">
+        <p class="section-label">Physical design research</p>
+        <h2 id="star-formfactor-heading">What Should Star Look Like?</h2>
+        <p>Star needs to be useful enough to store meaningful energy, but simple and attractive enough that people actually want it in their home, bag, car, or daily routine.</p>
+        <p>Cioré is not choosing a final shape yet. We are exploring how Star can feel compact, quiet, luxurious, and purposeful without hiding the practical work it needs to do.</p>
+
+        <div class="nyro-grid">
+          <div class="nyro-card">
+            <span class="status-badge status-researching">Active design research</span>
+            <h3>Star Home Form</h3>
+            <p>A stable home or desk base that can sit near useful light, store energy, and charge a phone or smaller reserve. Research questions include size, collector area, weight, heat, placement, cable storage, accessibility, and how it fits naturally into a room.</p>
+          </div>
+          <div class="nyro-card">
+            <span class="status-badge status-researching">Active design research</span>
+            <h3>Star Travel Form</h3>
+            <p>A smaller reserve designed for bags, errands, work, travel, and emergency use. Research questions include pocketability, weight, capacity, retractable cable design, direct USB-C connection, grip, and durability.</p>
+          </div>
+          <div class="nyro-card">
+            <span class="status-badge status-researching">Active design research</span>
+            <h3>Star Collector Form</h3>
+            <p>A solar collection surface that may be fixed, detachable, fold-out, stand-based, window-oriented, or placed near a balcony or outdoor area. Cioré needs to learn which form collects enough useful light without creating complicated setup.</p>
+          </div>
+          <div class="nyro-card">
+            <span class="status-badge status-later">Future research track</span>
+            <h3>Star Accessory Form</h3>
+            <p>Future research into car, bike, desk, stand, and other accessory contexts. Each option needs separate research into weather, heat, mounting, vibration, theft, accessibility, and safety.</p>
+          </div>
+        </div>
+
+        <div class="nyro-callout">
+          <p><strong>The design challenge.</strong> How can Cioré create a personal energy system that gathers meaningful energy, stores it safely, remains easy to use, and still feels refined rather than bulky or technical?</p>
+          <p>This question needs industrial design, electrical engineering, battery safety, accessibility, thermal, mechanical, and user research before Cioré chooses a final Star shape.</p>
+        </div>
+      </section>
+
+      <!-- ================= PHONE-CARE ACCESSORY RESEARCH ================= -->
+      <section aria-labelledby="star-phonecare-heading">
+        <p class="section-label">Contributor suggested research</p>
+        <span class="status-badge status-later">Contributor suggested future research</span>
+        <h2 id="star-phonecare-heading">Could a Future Star Accessory Support Phone Care?</h2>
+        <p>A waitlist member suggested exploring whether a future Star accessory could support phone-care routines, such as a station that may help keep a device, case, or accessory clean.</p>
+        <p>Cioré has not selected a method, designed a product, or validated whether a phone-care accessory would be safe, useful, accessible, or compatible with charging.</p>
+        <p>Any future research would need to consider:</p>
+        <ul class="bullets">
+          <li>What the accessory is actually intended to do</li>
+          <li>Whether it affects phone materials, screens, ports, cameras, cases, or battery temperature</li>
+          <li>Whether it creates heat, light, chemical, electrical, privacy, safety, or accessibility concerns</li>
+          <li>Whether it can be cleaned, repaired, and used safely</li>
+          <li>Whether any health or disinfection claim can be independently validated before it is ever communicated</li>
+        </ul>
+        <div class="nyro-callout">
+          <p>Cioré must not describe any future accessory as disinfecting, sanitizing, antimicrobial, or medically protective until the method, safety, materials compatibility, effectiveness, and applicable claim requirements have been independently validated.</p>
+        </div>
+      </section>
+
+      <!-- ================= HOW STAR MAY WORK ================= -->
+      <section aria-labelledby="star-flow-heading">
+        <p class="section-label">Energy flow</p>
+        <h2 id="star-flow-heading">How Star May Work</h2>
+
+        <div class="flow-diagram-grid">
+          <div class="flow-diagram">
+            <p class="flow-diagram-title">Main collection and charging path</p>
+            <div class="flow-steps">
+              <div class="flow-step">Sunlight</div>
+              <div class="flow-arrow">↓</div>
+              <div class="flow-step">Star solar collector</div>
+              <div class="flow-arrow">↓</div>
+              <div class="flow-step">Star power controller</div>
+              <div class="flow-arrow">↓</div>
+              <div class="flow-step">Star protected energy reserve</div>
+              <div class="flow-arrow">↓</div>
+              <div class="flow-step">USB-C charging to a Cioré phone</div>
+            </div>
+          </div>
+          <div class="flow-diagram">
+            <p class="flow-diagram-title">Ambient light research path</p>
+            <div class="flow-steps">
+              <div class="flow-step">Useful ambient light</div>
+              <div class="flow-arrow">↓</div>
+              <div class="flow-step">Small supplemental input</div>
+              <div class="flow-arrow">↓</div>
+              <div class="flow-step">Star monitoring, status, or low-power research</div>
+              <div class="flow-arrow">↓</div>
+              <div class="flow-step">Measured before any claim is made</div>
+            </div>
+          </div>
+          <div class="flow-diagram">
+            <p class="flow-diagram-title">Biothermic Touch research path</p>
+            <div class="flow-steps">
+              <div class="flow-step">Warm hand plus cooler surrounding air</div>
+              <div class="flow-arrow">↓</div>
+              <div class="flow-step">Biothermic Touch strip</div>
+              <div class="flow-arrow">↓</div>
+              <div class="flow-step">Tiny sensor, logger, or low-power research reserve</div>
+              <div class="flow-arrow">↓</div>
+              <div class="flow-step">Not a main phone charging source</div>
+            </div>
+          </div>
+        </div>
+
+        <p>Star is being researched as a collection, storage, and charging system. A solar collector turns useful light into electricity. A power controller is the safety electronics that manage changing input. A protected reserve stores energy. USB-C provides a dependable way to charge the phone later.</p>
+        <p>Ambient light is being researched as a smaller supplemental input. Biothermic Touch is being researched separately for tiny low-power functions. Neither is currently expected to rapidly charge a phone battery.</p>
+      </section>
+
+      <!-- ================= GLOSSARY ================= -->
+      <section aria-labelledby="nyro-glossary-heading">
+        <p class="section-label">Plain language guide</p>
+        <h2 id="nyro-glossary-heading">Energy Words in Plain Language</h2>
+
+        <div class="glossary-grid">
+          <div class="glossary-item"><p class="glossary-term">Power bank or portable reserve</p><p class="glossary-def">A rechargeable battery that stores energy so it can charge a phone or other small device later.</p></div>
+          <div class="glossary-item"><p class="glossary-term">Solar collector</p><p class="glossary-def">The part that turns useful sunlight into electricity.</p></div>
+          <div class="glossary-item"><p class="glossary-term">Ambient light</p><p class="glossary-def">Light already around someone, such as window light or indoor lighting. Cioré is researching it as a smaller supplemental input, not as a fast phone-charging source.</p></div>
+          <div class="glossary-item"><p class="glossary-term">Power controller</p><p class="glossary-def">The safety electronics that manage changing energy input before it reaches storage.</p></div>
+          <div class="glossary-item"><p class="glossary-term">USB-C</p><p class="glossary-def">The physical port and cable standard Cioré expects users to rely on for dependable everyday charging.</p></div>
+          <div class="glossary-item"><p class="glossary-term">Retractable USB-C cable</p><p class="glossary-def">A built-in charging cord that can pull out when needed and store inside Star when not in use.</p></div>
+          <div class="glossary-item"><p class="glossary-term">Direct USB-C connector</p><p class="glossary-def">A short physical connector that may plug directly into a phone without a loose hanging cable. It is still a physical connection, not Bluetooth and not wireless charging.</p></div>
+          <div class="glossary-item"><p class="glossary-term">Contactless charging</p><p class="glossary-def">A possible future set-down charging method. It is not part of the first Star research round because it needs separate research into heat, efficiency, alignment, repairability, and accessibility.</p></div>
+          <div class="glossary-item"><p class="glossary-term">Watt hour</p><p class="glossary-def">A measurement of stored energy. It helps explain how much energy a battery or reserve can hold.</p></div>
+          <div class="glossary-item"><p class="glossary-term">Milliamp hour</p><p class="glossary-def">A battery capacity number commonly written as mAh. A larger mAh number can mean more stored energy, but the final usable energy also depends on voltage, conversion, heat, and the device being charged.</p></div>
+          <div class="glossary-item"><p class="glossary-term">Biothermic Touch</p><p class="glossary-def">Cioré's early research name for studying whether a temperature difference, such as a warm hand and cooler air, can produce enough tiny energy for low-power sensing or logging.</p></div>
+        </div>
+      </section>
+
+      <!-- ================= WAYS STAR MAY CHARGE A PHONE ================= -->
+      <section aria-labelledby="star-charge-ways-heading">
+        <p class="section-label">Phone connection research</p>
+        <h2 id="star-charge-ways-heading">Ways Star May Charge a Phone</h2>
+
+        <div class="nyro-grid">
+          <div class="nyro-card">
+            <span class="status-badge status-researching">Researching</span>
+            <h3>Retractable USB-C cable</h3>
+            <p>Star may include a cable that stores neatly inside the reserve and pulls out when someone needs to charge.</p>
+          </div>
+          <div class="nyro-card">
+            <span class="status-badge status-researching">Researching</span>
+            <h3>Direct USB-C connector</h3>
+            <p>Star may explore a short connector that plugs directly into a phone without a hanging cable. This is a physical connection, not Bluetooth and not wireless charging. Cioré needs to test whether it is safe, durable, accessible, and comfortable.</p>
+          </div>
+          <div class="nyro-card">
+            <span class="status-badge status-later">Future research track</span>
+            <h3>Future set-down charging</h3>
+            <p>Cioré may revisit a set-down charging surface later. It is not part of the first Star research round because it adds questions about heat, efficiency, alignment, repairability, and accessibility.</p>
+          </div>
+          <div class="nyro-card">
+            <span class="status-badge status-later">Future research track</span>
+            <h3>Multiple-device charging</h3>
+            <p>Star may eventually support more than one small device. Cioré first needs to decide the safe output, energy storage, size, heat, and accessibility requirements before making any multi-device claim.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= ENERGY BACKPLATE ================= -->
       <section aria-labelledby="rear-panel-heading">
-        <p class="section-label">Connected research</p>
-        <h2 id="rear-panel-heading">How the Rear Energy Panel Connects</h2>
-        <p>The rear energy panel research described on The Phone page, the Energy Backplate, is closely tied to Nyro. Light collected through the back of the phone would need to pass through the same energy controller, storage, and safety systems that Nyro is researching for everyday and base charging.</p>
-        <a class="inline-link" href="#the-phone">See the Energy Backplate research on The Phone</a>
+        <p class="section-label">Future phone-side research</p>
+        <span class="status-badge status-later">Future research track</span>
+        <h2 id="rear-panel-heading">Energy Backplate: Future Phone-Side Research</h2>
+        <p>The Energy Backplate is Cioré's future research direction for a rear phone panel that may collect small amounts of supplemental energy from useful light.</p>
+        <p>Star comes first because a separate collector and reserve can use more surface area, store energy away from the phone, and let Cioré measure results before adding collection hardware to the phone itself.</p>
+        <p>The Energy Backplate may return as a later research track if testing shows that its energy contribution is worth the tradeoffs in heat, antennas, camera placement, thickness, repairability, and accessory compatibility.</p>
+        <p class="work-label">The Energy Backplate</p>
+        <ul class="bullets">
+  <li>Does not mean the phone fully charges itself from sunlight</li>
+  <li>Does not mean indoor light quickly charges the phone</li>
+  <li>Does not mean touch alone charges the phone</li>
+  <li>Does not replace USB-C</li>
+  <li>Is not a finished feature</li>
+</ul>
       </section>
 
       <!-- ================= BIOTHERMIC TOUCH ================= -->
       <section aria-labelledby="biothermic-heading">
-        <p class="section-label">Warmth-based research</p>
-        <h2 id="biothermic-heading">Biothermic Touch: Researching Energy From Warmth</h2>
-        <p>Biothermic Touch is Cioré's name for early research into small thermoelectric strips that could generate a tiny amount of energy from a temperature difference, such as a warm hand against cooler surrounding air.</p>
-        <p>This is a small-scale, supplemental research direction. Touch alone does not generate meaningful charging energy, and Biothermic Touch is not expected to replace USB-C, wireless charging, or the light-powered base research.</p>
+        <p class="section-label">Low-power research</p>
+        <span class="status-badge status-forming">Low-power research only</span>
+        <h2 id="biothermic-heading">Biothermic Touch: Low-Power Sensing Research</h2>
+        <p>Biothermic Touch studies whether a temperature difference, such as a warm hand on one side of a strip and cooler surrounding air on the other, can create a tiny amount of electrical energy.</p>
+        <p>This is not expected to charge the phone battery in a noticeable way. Cioré is exploring whether it could support very low-power sensing, logging, status functions, or a tiny research reserve without making the device uncomfortable or harder to hold.</p>
+        <p class="work-label">What we need to learn</p>
+        <ul class="bullets">
+  <li>Can a real hand and surrounding air create useful measurable output?</li>
+  <li>Can that output support a tiny sensor or logger?</li>
+  <li>Does the strip remain comfortable for people with tremor, chronic pain, fatigue, or limited grip strength?</li>
+  <li>Does it make the phone feel warmer?</li>
+  <li>Does it add too much thickness?</li>
+  <li>Does it interfere with grip, cases, buttons, antennas, or repairability?</li>
+  <li>Is it useful enough to keep researching?</li>
+</ul>
       </section>
 
-      <!-- ================= HEALTHIER BATTERY ================= -->
-      <section aria-labelledby="healthier-battery-heading">
-        <p class="section-label">Battery research</p>
-        <h2 id="healthier-battery-heading">Healthier Battery Directions</h2>
-        <p>We are comparing battery directions that may offer a safer, longer, or more responsibly sourced life cycle. No specific battery chemistry has been selected, and any direction still needs safety testing, certification, and supplier evidence before it can be considered.</p>
-      </section>
-
-      <!-- ================= MODULAR BATTERY ================= -->
-      <section aria-labelledby="modular-battery-heading">
-        <p class="section-label">Serviceable design</p>
-        <h2 id="modular-battery-heading">A Modular, Serviceable Battery</h2>
-        <p>A modular battery architecture connects directly to the repairable core research already underway on the Modularity &amp; Repairability page, including enclosure design, connector durability, and safe access methods.</p>
-        <a class="inline-link" href="#modularity-repairability">See the repairable core research</a>
-      </section>
-
-      <!-- ================= OVERHEATING ================= -->
-      <section aria-labelledby="overheating-heading">
-        <p class="section-label">Thermal safety</p>
-        <h2 id="overheating-heading">Staying Cool Under Real Use</h2>
-        <p>Charging, sunlight, wireless coils, attachments, and the battery itself can all add heat. We are researching how to spread and manage that heat so the phone stays comfortable to hold and safe to charge.</p>
-        <p>If the phone becomes too warm, it should protect itself, slow or pause energy activity when needed, and explain what is happening in plain language rather than failing silently.</p>
-      </section>
-
-      <!-- ================= THERMAL PLANNING ================= -->
-      <section aria-labelledby="thermal-planning-heading">
-        <p class="section-label">Thermal planning</p>
-        <h2 id="thermal-planning-heading">Being Honest About Program Realities</h2>
-        <p>As we research heat management, battery service, and supplemental energy directions, we also want to be clear about what Cioré does and does not have in place today.</p>
+      <!-- ================= ACCESSIBLE CHARGING ================= -->
+      <section aria-labelledby="accessibility-charging-heading">
+        <p class="section-label">Accessible by design</p>
+        <h2 id="accessibility-charging-heading">Charging That Works for More People</h2>
+        <p>Nyro and Star must be easy to understand and usable for people with different bodies, energy levels, vision, grip strength, and ways of interacting with technology.</p>
+        <p>Cioré is researching:</p>
+        <ul class="bullets">
+  <li>One-handed charging</li>
+  <li>Tactile orientation marks</li>
+  <li>Clear connector placement</li>
+  <li>Easy-to-find cable storage</li>
+  <li>Low-force cable use</li>
+  <li>Stable placement while charging</li>
+  <li>Clear visual charging status</li>
+  <li>Audio charging confirmation</li>
+  <li>Haptic feedback through the phone</li>
+  <li>Plain-language low-battery and heat messages</li>
+  <li>High-contrast status indicators</li>
+  <li>Screen-reader-readable energy information through Lumé</li>
+  <li>Adaptive options for people who do not use their hands</li>
+  <li>Passive collection options so someone does not need to deploy a panel every day</li>
+</ul>
         <div class="nyro-callout">
-          <p>Cioré doesn't have an active take-back, recycling, refurbishment, second-life battery, portable-power, or community-energy program today. These are research areas that require verified partners, safe logistics, regional review, and operational capacity.</p>
+          <p>Cioré has not yet selected final accessibility features for Star. These are research requirements that need input from people with lived experience, accessibility specialists, engineers, and future prototype testing.</p>
         </div>
       </section>
 
-      <!-- ================= CIRCULARITY ================= -->
-      <section aria-labelledby="circularity-heading">
-        <p class="section-label">Circular direction</p>
-        <h2 id="circularity-heading">Circular Energy Thinking</h2>
-        <p>Repair-minded power design is one part of a longer circular economy direction. It connects to the same keep, maintain, adapt, reuse, and recover thinking already underway for the rest of the phone.</p>
-        <a class="inline-link" href="#modularity-repairability" data-scroll-target="mr-circular">See the circular economy research on Modularity &amp; Repairability</a>
+      <!-- ================= HEAT AND SAFETY ================= -->
+      <section aria-labelledby="overheating-heading">
+        <p class="section-label">Staying safe</p>
+        <h2 id="overheating-heading">Staying Cool Under Real Use</h2>
+        <p>Star adds new heat and safety questions. Sunlight, energy collection, power conversion, battery storage, cable charging, vehicle placement, and enclosed spaces can all affect temperature.</p>
+        <p>Cioré needs to learn:</p>
+        <ul class="bullets">
+  <li>How warm Star becomes in direct sunlight</li>
+  <li>How a window, balcony, car, bike, bag, or desk location changes heat</li>
+  <li>When energy collection should slow or pause</li>
+  <li>How Star should communicate that it is warm</li>
+  <li>How Star protects stored energy when full</li>
+  <li>How Star protects stored energy when temperatures are unsafe</li>
+  <li>How separate solar collection can reduce direct solar heat on the phone itself</li>
+</ul>
+        <p>Early research must use safe, certified, off-the-shelf panels and reserves. Cioré is not building custom battery packs during the first research phase.</p>
+        <div class="nyro-callout">
+          <p>Cioré is researching protective charging behavior that can stop or adjust charging when storage is full, warm, or otherwise outside safe operating conditions.</p>
+        </div>
       </section>
 
-      <!-- ================= ACCESSIBILITY ================= -->
-      <section aria-labelledby="accessibility-charging-heading">
-        <p class="section-label">Accessible by design</p>
-        <h2 id="accessibility-charging-heading">Accessible Charging and Energy Information</h2>
-        <p>Charging status, heat warnings, and battery information need to be understandable in more than one way, including plain language, clear visual cues, and non-visual feedback for people who cannot rely on a screen alone.</p>
-        <a class="inline-link" href="#accessibility">See related accessibility research</a>
+      <!-- ================= BATTERY AND SERVICEABILITY ================= -->
+      <section aria-labelledby="modular-battery-heading">
+        <p class="section-label">Built to last</p>
+        <h2 id="modular-battery-heading">A Modular, Serviceable Battery</h2>
+        <p>Star requires its own battery-storage research. Cioré is not selecting a final battery chemistry yet.</p>
+        <p>Cioré is comparing what a future reserve may need:</p>
+        <ul class="bullets">
+  <li>Enough stored energy to support everyday phone charging</li>
+  <li>A size and weight people are willing to carry</li>
+  <li>Safe charging behavior</li>
+  <li>Clear battery status</li>
+  <li>Heat protection</li>
+  <li>Replaceable or serviceable parts where practical</li>
+  <li>Safe cables, ports, and connectors</li>
+  <li>End-of-life planning</li>
+  <li>Packaging, storage, shipping, return, recovery, and recycling considerations</li>
+</ul>
+        <p>A future Star Home, Star Travel, Star Car, or Star Bike reserve may need different storage sizes. Cioré has not selected final capacities, dimensions, battery chemistry, output levels, or repair procedures.</p>
+        <div class="nyro-callout">
+          <p>Milliamp hour, written as mAh, is a common capacity label. A larger mAh number can mean more stored energy, but final usable energy also depends on voltage, power conversion, heat, and the device being charged.</p>
+        </div>
       </section>
 
-      <!-- ================= CONTRIBUTOR RESEARCH ================= -->
+      <!-- ================= LUMÉ AND GAIA ================= -->
+      <section aria-labelledby="nyro-lume-gaia-heading">
+        <p class="section-label">Clear energy information</p>
+        <h2 id="nyro-lume-gaia-heading">How Lumé and Gaia Fit In</h2>
+        <p>Lumé may eventually show battery state, charging status, energy source, reserve level, heat state, and clear power choices. Until Cioré has working hardware, any energy screens must use clearly labeled illustrative or simulated data.</p>
+        <p>Gaia may eventually explain energy activity in plain language, such as why collection slowed, why a reserve stopped charging, or why the phone entered a power-saving state. Gaia must remain optional, visible, understandable, and controlled by the user.</p>
+        <p>Nyro handles energy research. Lumé communicates the device experience. Gaia may help explain what the system is doing. Star is a physical power-base research concept under Nyro.</p>
+      </section>
+
+      <!-- ================= RESEARCH LIBRARY LINK ================= -->
+      <section aria-labelledby="nyro-research-link-heading">
+        <h2 id="nyro-research-link-heading">Want the Research Behind This Direction?</h2>
+        <p>The Nyro Research Library includes the current Power Base research brief, engineering validation questions, and future research submitted by Cioré contributors. Read those documents to see the sources, assumptions, calculations, questions, and next validation steps behind this page.</p>
+        <a class="btn btn-primary" href="#research-library" data-nav="research-library">
+          Open Nyro Research Library
+          <span class="arrow-circle" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+      </section>
+
+      <!-- ================= CONTRIBUTOR HELP ================= -->
       <section aria-labelledby="nyro-help-heading">
         <p class="section-label">Contributor research</p>
-        <h2 id="nyro-help-heading">Help Shape the Nyro Direction</h2>
-        <p>Cioré needs research, engineering, testing, documentation, accessibility input, and lived experience to understand what a responsible energy system should look like.</p>
+        <h2 id="nyro-help-heading">Help Shape Nyro and Star</h2>
 
         <div class="two-col">
           <div class="two-col-panel">
             <h3>Good fit if you enjoy</h3>
             <ul class="bullets">
-  <li>Electrical systems and power research</li>
-  <li>Battery engineering and battery safety</li>
-  <li>Wireless charging and charging-base research</li>
   <li>Solar and light-collection research</li>
-  <li>Biothermic Touch and thermoelectric research</li>
+  <li>Portable-power research</li>
+  <li>Battery safety research</li>
+  <li>Battery-health research</li>
   <li>Thermal research</li>
-  <li>Mechanical design and repairability</li>
+  <li>Energy measurement</li>
+  <li>USB-C charging research</li>
   <li>Accessibility and inclusive design</li>
-  <li>Charging experience and UX design</li>
-  <li>Sustainable electronics and materials research</li>
-  <li>Supplier evidence and traceability</li>
-  <li>Packaging, shipping, returns, and logistics research</li>
-  <li>Circular-economy research</li>
-  <li>Technical writing and contributor documentation</li>
-  <li>Testing, measurement, risk tracking, and evidence review</li>
+  <li>Product design</li>
+  <li>Industrial design</li>
+  <li>Mechanical design</li>
+  <li>Repairability</li>
+  <li>Sustainable electronics</li>
+  <li>Supply-chain evidence</li>
+  <li>Circular economy</li>
+  <li>User experience design</li>
+  <li>Lumé battery and energy interface concepts</li>
+  <li>Gaia explanation patterns</li>
+  <li>Technical writing</li>
+  <li>Research documentation</li>
+  <li>Test planning</li>
+  <li>Risk tracking</li>
 </ul>
           </div>
           <div class="two-col-panel">
             <h3>Ways to help</h3>
             <ul class="bullets">
-  <li>Research dependable wired and wireless charging approaches without presenting a final standard as chosen</li>
-  <li>Compare dock, click-in, guided-position, and wireless-alignment concepts for accessibility, heat, durability, and repairability</li>
-  <li>Research what a light-powered charging base would need to collect, measure, regulate, store, and deliver energy safely</li>
-  <li>Study how charging-base light collection and phone-side rear-panel research could work together</li>
-  <li>Compare healthier battery directions without presenting any chemistry as selected</li>
-  <li>Research what a modular or serviceable battery architecture requires</li>
-  <li>Study battery enclosures, connectors, access methods, and heat questions</li>
+  <li>Research portable reserves and solar collection systems already in the market</li>
+  <li>Compare the size, capacity, weight, cable, output, and accessibility tradeoffs of power banks</li>
+  <li>Research solar collection in homes, balconies, windows, cars, bikes, offices, and travel settings</li>
+  <li>Research accessible cable design, direct USB-C connectors, and stable charging bases</li>
+  <li>Research how panels, cases, grips, stands, rails, and attachments affect heat and usability</li>
+  <li>Research serviceable batteries, ports, cables, panels, and energy accessories</li>
+  <li>Help organize Nyro test logs and source records</li>
+  <li>Help design plain-language Lumé energy screens using illustrative data</li>
+  <li>Identify claims that need evidence before Cioré can make them</li>
+  <li>Share lived experience about charging, disability access, outdoor power, travel, biking, vehicles, low vision, limited hand strength, fatigue, or emergency preparedness</li>
 </ul>
           </div>
         </div>
+
+        <p class="closing-note-text">For the latest Nyro research and linked documents, visit the Research Library and check the relevant Cioré HQ project channel. If a project contact is not listed, contact the founder.</p>
       </section>
 
     </div>
@@ -7616,205 +8192,7 @@
 
   </div>
 
-  <!-- ============================================================
-       PAGE: ORGANIZATION INFORMATION
-       ============================================================ -->
-  <div id="page-organization-information" class="page" data-page="organization-information">
-
-    <a class="wrap back-link" href="#home" data-nav="home" aria-label="Back to Contributor Hub home">
-      <svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      Contributor Hub
-    </a>
-
-    <div class="wrap">
-
-      <header class="page-header">
-        <p class="eyebrow-label">Organization information</p>
-        <h1>Organization Information</h1>
-        <p class="lede">This page collects basic organizational, contact, and brand reference information for contributors who need it for documentation, verification, or approved materials.</p>
-      </header>
-
-      <div class="intro-note">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l7 3v6c0 5-3.4 8.5-7 11-3.6-2.5-7-6-7-11V5l7-3z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
-        <div>
-          <p class="note-title">Need official Cioré information?</p>
-          <p>Use this page when approved Cioré work requires our business mailing address, business phone number, EIN, or approved brand-reference details. Do not share, submit, or use these details with an outside party unless the founder has approved that specific use.</p>
-        </div>
-      </div>
-
-      <!-- ================= WHERE WE'RE BASED ================= -->
-      <section aria-labelledby="oi-location-heading">
-        <p class="section-label">Location</p>
-        <h2 id="oi-location-heading">Where We're Based</h2>
-        <p>The founder is based in Dallas, Texas.</p>
-        <p>Cioré uses an Austin business mailing address for business correspondence and official mailing purposes. The mailing address should not be treated as the founder's personal location or as a public meeting location.</p>
-
-        <div class="org-info-list">
-          <div class="org-info-row">
-            <p class="org-info-label">Legal business name</p>
-            <p class="org-info-value">Cioré</p>
-          </div>
-          <div class="org-info-row">
-            <p class="org-info-label">Employer Identification Number (EIN)</p>
-            <p class="org-info-value">39-2327250</p>
-          </div>
-          <div class="org-info-row">
-            <p class="org-info-label">Business mailing address</p>
-            <p class="org-info-value">5900 Balcones Dr, Suite 100<br>Austin, TX 78731</p>
-          </div>
-          <div class="org-info-row">
-            <p class="org-info-label">Phone</p>
-            <p class="org-info-value">(804) 457-8731</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ================= BRAND IDENTITY ================= -->
-      <section aria-labelledby="oi-brand-heading">
-        <p class="section-label">Brand reference</p>
-        <h2 id="oi-brand-heading">Brand Identity</h2>
-
-        <div class="brand-logo-card">
-          <img
-            src="https://images.squarespace-cdn.com/content/682f59a12de6f2156dacf80c/6ee448a1-1f3a-475f-8ab3-9d74da69364a/IMG_0877.jpeg?content-type=image%2Fjpeg"
-            alt="Official Cioré logo"
-            class="brand-logo-img"
-            loading="lazy">
-        </div>
-        <a
-          class="btn btn-primary logo-download-link"
-          href="https://images.squarespace-cdn.com/content/682f59a12de6f2156dacf80c/6ee448a1-1f3a-475f-8ab3-9d74da69364a/IMG_0877.jpeg?content-type=image%2Fjpeg"
-          download="ciore-logo.jpg"
-          target="_blank"
-          rel="noopener noreferrer">
-          Download Official Cioré Logo
-          <span class="arrow-circle" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-        </a>
-
-        <h3 class="brand-subheading">Our Name</h3>
-        <p>Cioré takes its shape and sound from “core,” the center that holds everything else together. The name carries that idea forward: a technology company built around a steady center of privacy, repairability, and care, with room for the people, product, purpose, and impact that surround it.</p>
-
-        <h3 class="brand-subheading">Our Symbol</h3>
-
-        <div class="symbol-card">
-          <img
-            src="https://images.squarespace-cdn.com/content/682f59a12de6f2156dacf80c/f54af28e-88bd-4174-a657-e7c077b94693/Ciore+Symbol.jpeg?content-type=image%2Fjpeg"
-            alt="Official standalone Cioré symbol"
-            class="symbol-img"
-            loading="lazy">
-        </div>
-
-        <div class="symbol-download-row">
-          <a
-            class="btn btn-primary symbol-download-btn"
-            href="https://images.squarespace-cdn.com/content/682f59a12de6f2156dacf80c/f54af28e-88bd-4174-a657-e7c077b94693/Ciore+Symbol.jpeg?content-type=image%2Fjpeg"
-            download="ciore-symbol.jpg"
-            target="_blank"
-            rel="noopener noreferrer">
-            Download Official Cioré Symbol
-            <span class="arrow-circle" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            </span>
-          </a>
-          <p class="symbol-download-note">If the download does not start automatically, the button opens the original image in a new tab, where you can save it directly.</p>
-        </div>
-
-        <p>Our symbol replaces the letter O in our wordmark. It features two inward-facing forms with an open space at the center, mirroring the layered silhouette of a Cioré device.</p>
-        <p>Here is what that symbol holds for us:</p>
-        <ul class="bullets">
-          <li>A gathering place where people, product, purpose, and impact meet</li>
-          <li>Room to pause, listen, and make thoughtful choices</li>
-          <li>Two forms working closely together while keeping their distinct shapes</li>
-          <li>Capable innovation balanced with durability, repairability, privacy, and care</li>
-          <li>A commitment to build useful technology that lasts, rather than something disposable</li>
-        </ul>
-        <p>We are glad you are here with us.</p>
-
-        <h3 class="brand-subheading">Cioré Brand Colors</h3>
-        <p>Use Cioré's colors consistently across approved internal work, presentations, contributor materials, product concepts, and public-facing work that has received approval.</p>
-
-        <div class="color-grid">
-  <div class="color-card color-card--light-text" style="background:#0A0A0A;">
-    <h4>Obsidian</h4>
-    <p class="color-hex">#0A0A0A</p>
-    <p class="color-use">Primary dark foundation for backgrounds, text, and structure</p>
-  </div>
-  <div class="color-card color-card--light-text" style="background:#1E1E1C;">
-    <h4>Carbon</h4>
-    <p class="color-hex">#1E1E1C</p>
-    <p class="color-use">Secondary dark surface, panels, and layered depth</p>
-  </div>
-  <div class="color-card color-card--dark-text" style="background:#5DD62C;">
-    <h4>Signal</h4>
-    <p class="color-hex">#5DD62C</p>
-    <p class="color-use">Calls to action, selection, progress, and focused emphasis</p>
-  </div>
-  <div class="color-card color-card--dark-text" style="background:#A4ED3A;">
-    <h4>Lime</h4>
-    <p class="color-hex">#A4ED3A</p>
-    <p class="color-use">Supporting accent for tags, highlights, and secondary emphasis</p>
-  </div>
-  <div class="color-card color-card--dark-text" style="background:#D2FF3B;">
-    <h4>Chartreuse</h4>
-    <p class="color-hex">#D2FF3B</p>
-    <p class="color-use">Alternate accent for hover states and interactive highlights</p>
-  </div>
-  <div class="color-card color-card--dark-text" style="background:#E2FC02;">
-    <h4>Volt</h4>
-    <p class="color-hex">#E2FC02</p>
-    <p class="color-use">High-energy accent for rare, high-impact moments</p>
-  </div>
-  <div class="color-card color-card--light-text" style="background:#337418;">
-    <h4>Signal Deep</h4>
-    <p class="color-hex">#337418</p>
-    <p class="color-use">Secondary green states, hover states, and supporting accents</p>
-  </div>
-  <div class="color-card color-card--dark-text color-card--bordered" style="background:#FFFFFF;">
-    <h4>Pure White</h4>
-    <p class="color-hex">#FFFFFF</p>
-    <p class="color-use">High-contrast digital use and accessibility</p>
-  </div>
-  <div class="color-card color-card--light-text" style="background:#000000;">
-    <h4>Black</h4>
-    <p class="color-hex">#000000</p>
-    <p class="color-use">One-color print and black logo fallback</p>
-  </div>
-</div>
-        <p class="color-guidance">Primary brand combination: Pure White on Obsidian.</p>
-        <p class="color-guidance">Signal should be used sparingly and purposefully. It should guide attention, communicate action, or identify an active state. It is not the default color for large backgrounds, body text, or the primary logo.</p>
-      </section>
-
-
-      <!-- ================= BRAND-USE GUIDANCE ================= -->
-      <section aria-labelledby="oi-guidance-heading">
-        <p class="section-label">Using the brand</p>
-        <h2 id="oi-guidance-heading">Brand-Use Guidance</h2>
-        <p>Consistent brand use is not only about color and layout. It also means keeping technical claims accurate, grounded, and free of overstatement, even in casual contributor materials. For example, when describing charging or energy research, we keep the framing honest about what is dependable today and what is still being explored:</p>
-        <p>“USB-C is the dependable everyday path. Everything else Nyro explores has to work alongside it, not make it harder.”</p>
-      </section>
-
-    </div>
-
-      <div class="back-to-top-row">
-        <button type="button" class="back-to-top" data-scroll-top aria-label="Back to top">
-          <span class="back-to-top-arrow" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </span>
-          Back to top
-        </button>
-      </div>
-
-    <footer>
-      <div class="wrap">
-        <p>Cioré Contributor Hub. Private and internal. Not for external distribution.</p>
-      </div>
-    </footer>
-
-  </div>
-
-  <!-- ============================================================
+<!-- ============================================================
        PAGE: OFFLINE CAPABILITY
        ============================================================ -->
   <div id="offline-capability" class="page" data-page="offline-capability">
@@ -8510,6 +8888,194 @@
   </div>
 
   <!-- ============================================================
+       PAGE: ORGANIZATION INFORMATION
+       ============================================================ -->
+  <div id="page-organization-information" class="page" data-page="organization-information">
+
+    <a class="wrap back-link" href="#home" data-nav="home" aria-label="Back to Contributor Hub home">
+      <svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      Contributor Hub
+    </a>
+
+    <div class="wrap">
+
+      <header class="page-header">
+        <p class="eyebrow-label">Business reference</p>
+        <h1>Organization Information</h1>
+        <p class="lede">Reference details for Cioré's legal business identity, brand assets, and brand colors. Use this page when you need accurate business information or approved visual assets for contributor work.</p>
+      </header>
+
+      <!-- ================= BUSINESS DETAILS ================= -->
+      <section aria-labelledby="oi-business-heading">
+        <p class="section-label">Business details</p>
+        <h2 id="oi-business-heading">Legal and Business Information</h2>
+
+        <div class="org-info-list">
+          <div class="org-info-row">
+            <p class="org-info-label">Legal business name</p>
+            <p class="org-info-value">Cioré</p>
+          </div>
+          <div class="org-info-row">
+            <p class="org-info-label">Employer Identification Number (EIN)</p>
+            <p class="org-info-value">39-2327250</p>
+          </div>
+          <div class="org-info-row">
+            <p class="org-info-label">Business mailing address</p>
+            <p class="org-info-value">5900 Balcones Dr, Suite 100<br>Austin, TX 78731</p>
+          </div>
+          <div class="org-info-row">
+            <p class="org-info-label">Phone</p>
+            <p class="org-info-value">(804) 457-8731</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= BRAND IDENTITY ================= -->
+      <section aria-labelledby="oi-brand-heading">
+        <p class="section-label">Brand reference</p>
+        <h2 id="oi-brand-heading">Brand Identity</h2>
+
+        <div class="brand-logo-card">
+          <img
+            src="https://images.squarespace-cdn.com/content/682f59a12de6f2156dacf80c/6ee448a1-1f3a-475f-8ab3-9d74da69364a/IMG_0877.jpeg?content-type=image%2Fjpeg"
+            alt="Official Cioré logo"
+            class="brand-logo-img"
+            loading="lazy">
+        </div>
+        <a
+          class="btn btn-primary logo-download-link"
+          href="https://images.squarespace-cdn.com/content/682f59a12de6f2156dacf80c/6ee448a1-1f3a-475f-8ab3-9d74da69364a/IMG_0877.jpeg?content-type=image%2Fjpeg"
+          download="ciore-logo.jpg"
+          target="_blank"
+          rel="noopener noreferrer">
+          Download Official Cioré Logo
+          <span class="arrow-circle" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+        </a>
+
+        <h3 class="brand-subheading">Our Name</h3>
+        <p>Cioré takes its shape and sound from &ldquo;core,&rdquo; the center that holds everything else together. The name carries that idea forward: a technology company built around a steady center of privacy, repairability, and care, with room for the people, product, purpose, and impact that surround it.</p>
+
+        <h3 class="brand-subheading">Our Symbol</h3>
+
+        <div class="symbol-card">
+          <img
+            src="https://images.squarespace-cdn.com/content/682f59a12de6f2156dacf80c/f54af28e-88bd-4174-a657-e7c077b94693/Ciore+Symbol.jpeg?content-type=image%2Fjpeg"
+            alt="Official standalone Cioré symbol"
+            class="symbol-img"
+            loading="lazy">
+        </div>
+
+        <div class="symbol-download-row">
+          <a
+            class="btn btn-primary symbol-download-btn"
+            href="https://images.squarespace-cdn.com/content/682f59a12de6f2156dacf80c/f54af28e-88bd-4174-a657-e7c077b94693/Ciore+Symbol.jpeg?content-type=image%2Fjpeg"
+            download="ciore-symbol.jpg"
+            target="_blank"
+            rel="noopener noreferrer">
+            Download Official Cioré Symbol
+            <span class="arrow-circle" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12l7 7 7-7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+          </a>
+          <p class="symbol-download-note">If the download does not start automatically, the button opens the original image in a new tab, where you can save it directly.</p>
+        </div>
+
+        <p>Our symbol replaces the letter O in our wordmark. It features two inward-facing forms with an open space at the center, mirroring the layered silhouette of a Cioré device.</p>
+        <p>Here is what that symbol holds for us:</p>
+        <ul class="bullets">
+          <li>A gathering place where people, product, purpose, and impact meet</li>
+          <li>Room to pause, listen, and make thoughtful choices</li>
+          <li>Two forms working closely together while keeping their distinct shapes</li>
+          <li>Capable innovation balanced with durability, repairability, privacy, and care</li>
+          <li>A commitment to build useful technology that lasts, rather than something disposable</li>
+        </ul>
+        <p>We are glad you are here with us.</p>
+
+        <h3 class="brand-subheading">Cioré Brand Colors</h3>
+        <p>Use Cioré's colors consistently across approved internal work, presentations, contributor materials, product concepts, and public-facing work that has received approval.</p>
+
+        <div class="color-grid">
+          <div class="color-card color-card--light-text" style="background:#0A0A0A;">
+            <h4>Obsidian</h4>
+            <p class="color-hex">#0A0A0A</p>
+            <p class="color-use">Primary dark foundation for backgrounds, text, and structure</p>
+          </div>
+          <div class="color-card color-card--light-text" style="background:#1E1E1C;">
+            <h4>Carbon</h4>
+            <p class="color-hex">#1E1E1C</p>
+            <p class="color-use">Secondary dark surface, panels, and layered depth</p>
+          </div>
+          <div class="color-card color-card--dark-text" style="background:#5DD62C;">
+            <h4>Signal</h4>
+            <p class="color-hex">#5DD62C</p>
+            <p class="color-use">Calls to action, selection, progress, and focused emphasis</p>
+          </div>
+          <div class="color-card color-card--dark-text" style="background:#A4ED3A;">
+            <h4>Lime</h4>
+            <p class="color-hex">#A4ED3A</p>
+            <p class="color-use">Supporting accent for tags, highlights, and secondary emphasis</p>
+          </div>
+          <div class="color-card color-card--dark-text" style="background:#D2FF3B;">
+            <h4>Chartreuse</h4>
+            <p class="color-hex">#D2FF3B</p>
+            <p class="color-use">Alternate accent for hover states and interactive highlights</p>
+          </div>
+          <div class="color-card color-card--dark-text" style="background:#E2FC02;">
+            <h4>Volt</h4>
+            <p class="color-hex">#E2FC02</p>
+            <p class="color-use">High-energy accent for rare, high-impact moments</p>
+          </div>
+          <div class="color-card color-card--light-text" style="background:#337418;">
+            <h4>Signal Deep</h4>
+            <p class="color-hex">#337418</p>
+            <p class="color-use">Secondary green states, hover states, and supporting accents</p>
+          </div>
+          <div class="color-card color-card--dark-text color-card--bordered" style="background:#FFFFFF;">
+            <h4>Pure White</h4>
+            <p class="color-hex">#FFFFFF</p>
+            <p class="color-use">High-contrast digital use and accessibility</p>
+          </div>
+          <div class="color-card color-card--light-text" style="background:#000000;">
+            <h4>Black</h4>
+            <p class="color-hex">#000000</p>
+            <p class="color-use">One-color print and black logo fallback</p>
+          </div>
+        </div>
+
+        <p class="color-guidance">Primary brand combination: Pure White on Obsidian.</p>
+        <p class="color-guidance">Signal should be used sparingly and purposefully. It should guide attention, communicate action, or identify an active state. It is not the default color for large backgrounds, body text, or the primary logo.</p>
+      </section>
+
+      <!-- ================= BRAND-USE GUIDANCE ================= -->
+      <section aria-labelledby="oi-brand-use-heading">
+        <p class="section-label">Using the brand</p>
+        <h2 id="oi-brand-use-heading">Brand-Use Guidance</h2>
+        <p>Consistent brand use is not only about color and layout. It also means keeping technical claims accurate, grounded, and free of overstatement, even in casual contributor materials. For example, when describing charging or energy research, we keep the framing honest about what is dependable today and what is still being explored:</p>
+        <p>&ldquo;USB-C is the dependable everyday path. Everything else Nyro explores has to work alongside it, not make it harder.&rdquo;</p>
+      </section>
+
+    </div>
+
+      <div class="back-to-top-row">
+        <button type="button" class="back-to-top" data-scroll-top aria-label="Back to top">
+          <span class="back-to-top-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 19V5M5 12l7-7 7 7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </span>
+          Back to top
+        </button>
+      </div>
+
+    <footer>
+      <div class="wrap">
+        <p>Cioré Contributor Hub. Private and internal. Not for external distribution.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ============================================================
        PAGE: FEATURES WE'RE EXPLORING
        ============================================================ -->
   <div id="features-were-exploring" class="page" data-page="features-were-exploring">
@@ -8874,7 +9440,7 @@
   <!-- ============================================================
        PAGE: RESEARCH LIBRARY (placeholder)
        ============================================================ -->
-  <div id="page-research-library" class="page stub-page" data-page="research-library">
+  <div id="page-research-library" class="page" data-page="research-library">
 
     <a class="wrap back-link" href="#home" data-nav="home" aria-label="Back to Contributor Hub home">
       <svg viewBox="0 0 24 24" fill="none"><path d="M19 12H5M11 6l-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -8882,22 +9448,122 @@
     </a>
 
     <div class="wrap">
+
       <header class="page-header">
-        <h1>Research Library</h1>
+        <p class="eyebrow-label">Research library</p>
+        <h1>Internal Research and Shared Learning</h1>
+        <p class="lede">This library holds research, working briefs, contributor analysis, and planning documents that help Cioré make better decisions. Some documents come from founder research. Others come from contributors and may reflect a specific research question, recommendation, or working direction.</p>
+        <p class="lede">Check the document date before relying on a finding. Cioré research evolves as we test, learn, receive feedback, and make decisions. Newer documents may clarify, revise, or replace earlier assumptions.</p>
       </header>
 
-      <div class="rl-note">
-        <p>Use the Research Library to keep approved reports, PDFs, source collections, research notes, and reference material in one place. It will grow over time as Cioré receives new reports, contributor submissions, historical research, and validated source material.</p>
-        <p>Some earlier research may not be available yet. Add material as it becomes accessible, and label each item with its source, date, topic, status, and any important limits or open questions.</p>
+      <!-- ================= ACCESS AND CONFIDENTIALITY ================= -->
+      <div class="rl-callout">
+        <p class="rl-callout-label">Access and confidentiality</p>
+        <p>These documents are internal. Some require you to request access through Google before viewing them. Request access using the Google prompt, then wait for approval.</p>
+        <p>Do not share internal research outside Cioré. Do not forward links, copy content into public spaces, screenshot restricted material, quote it externally, or upload it elsewhere without explicit founder approval.</p>
       </div>
 
-      <div class="rl-contributor-note">
-        <p>When you share a report, PDF, source collection, or research summary, include the original source when possible, the date accessed, a short description of what it covers, and whether it is background context, active research, an early concept, or validated evidence.</p>
-      </div>
+      <!-- ================= HOW TO USE THIS LIBRARY ================= -->
+      <section aria-labelledby="rl-how-to-heading">
+        <p class="section-label">Getting started</p>
+        <h2 id="rl-how-to-heading">How to Use This Library</h2>
+        <ol class="rl-steps">
+          <li>Read the document title and date.</li>
+          <li>Check the document status.</li>
+          <li>Request access if Google asks.</li>
+          <li>Use the research to inform questions and contribute thoughtfully.</li>
+          <li>Flag anything that seems outdated, unclear, unsupported, or contradictory.</li>
+          <li>Do not treat research as a final product promise unless Cioré labels it as validated.</li>
+        </ol>
+      </section>
 
-      <div class="stub-note">
-        <p>This research page is being built. Return to <a href="#home">Home</a> or use the navigation to continue.</p>
-      </div>
+      <!-- ================= RESEARCH STATUS GUIDE ================= -->
+      <section aria-labelledby="rl-status-guide-heading">
+        <p class="section-label">Research status guide</p>
+        <h2 id="rl-status-guide-heading">What the Status Labels Mean</h2>
+        <div class="status-legend-grid">
+          <div class="status-legend-item"><span class="status-badge status-researching">Active research</span><p>Work Cioré is currently organizing, reviewing, measuring, or preparing to test.</p></div>
+          <div class="status-legend-item"><span class="status-badge status-needs-owner">Needs technical review</span><p>A working direction that needs validation from qualified engineers or specialists.</p></div>
+          <div class="status-legend-item"><span class="status-badge status-forming">Contributor research</span><p>A research document prepared by a Cioré contributor to inform community, communication, operations, or planning decisions.</p></div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 1: CURRENT PRODUCT AND SYSTEM RESEARCH ================= -->
+      <section aria-labelledby="rl-product-research-heading">
+        <p class="section-label">Product and system</p>
+        <h2 id="rl-product-research-heading">Current Product and System Research</h2>
+        <div class="research-doc-grid">
+          <div class="research-doc-card">
+            <p class="research-doc-eyebrow">Nyro energy and charging research brief</p>
+            <span class="status-badge status-researching">Active research</span>
+            <h3>Nyro Power Base Exploration</h3>
+            <p class="research-doc-meta"><strong>Date:</strong> September 19, 2026 &nbsp;&middot;&nbsp; <strong>Submitted by:</strong> Founder research</p>
+            <p class="research-doc-summary">This research brief explains why Cioré is exploring Star as a first Nyro power-base direction. It covers solar collection, ambient light, portable reserves, Biothermic Touch, charging paths, accessibility, testing, and safe language for future claims.</p>
+            <p class="research-doc-confidentiality">May require access request. Internal only. Do not share outside Cioré without founder approval.</p>
+            <a class="btn btn-primary research-doc-btn" href="https://drive.google.com/file/d/13c8FhwnEdy9LJxBKn9yWoIbzH5J8l0ur/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Nyro Power Base Exploration in a new tab. May require access request.">
+              Request access and open document
+              <span class="arrow-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+            <p class="research-doc-footnote">Opens Google Drive or Google Docs in a new tab.</p>
+          </div>
+          <div class="research-doc-card">
+            <p class="research-doc-eyebrow">Technical validation and engineering questions</p>
+            <span class="status-badge status-needs-owner">Needs technical review</span>
+            <h3>Nyro Power Base: Engineer Validation Brief</h3>
+            <p class="research-doc-meta"><strong>Date:</strong> September 19, 2026 &nbsp;&middot;&nbsp; <strong>Submitted by:</strong> Founder research</p>
+            <p class="research-doc-summary">This working brief organizes the technical questions Cioré needs engineers to validate, including solar collection, reserve storage, USB-C output, power safety, ambient light, Biothermic Touch, heat, accessibility, repairability, and first prototype testing.</p>
+            <p class="research-doc-confidentiality">May require access request. Internal only. Do not share outside Cioré without founder approval.</p>
+            <a class="btn btn-primary research-doc-btn" href="https://drive.google.com/file/d/1MBWOxBebMu63-mMiEnqlbDgYDlYi0hC9/view?usp=drive_link" target="_blank" rel="noopener noreferrer" aria-label="Open Nyro Power Base: Engineer Validation Brief in a new tab. May require access request.">
+              Request access and open document
+              <span class="arrow-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+            <p class="research-doc-footnote">Opens Google Drive or Google Docs in a new tab.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ================= SECTION 2: CONTRIBUTOR EXPERIENCE AND OPERATIONS RESEARCH ================= -->
+      <section aria-labelledby="rl-contributor-research-heading">
+        <p class="section-label">Contributor experience</p>
+        <h2 id="rl-contributor-research-heading">Contributor Experience and Operations Research</h2>
+        <div class="research-doc-grid">
+          <div class="research-doc-card">
+            <p class="research-doc-eyebrow">Contributor experience and retention research</p>
+            <span class="status-badge status-forming">Contributor research</span>
+            <h3>Volunteer and Contributor Pipeline Retention Research</h3>
+            <p class="research-doc-meta"><strong>Date:</strong> August 2026 &nbsp;&middot;&nbsp; <strong>Submitted by:</strong> Tamira, Contributor</p>
+            <p class="research-doc-summary">This contributor research examines onboarding friction, re-engagement, micro-task design, flexible participation, contributor motivation, and practical ways Cioré can make it easier for people to stay connected and contribute.</p>
+            <p class="research-doc-confidentiality">May require access request. Internal only. Do not share outside Cioré without founder approval.</p>
+            <a class="btn btn-primary research-doc-btn" href="https://docs.google.com/document/d/1H8YRy-uDXPiozsaTi9NThy3RDQFJIjHh8WdEP0HzZu4/edit?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Open Volunteer and Contributor Pipeline Retention Research in a new tab. May require access request.">
+              Request access and open document
+              <span class="arrow-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+            <p class="research-doc-footnote">Opens Google Drive or Google Docs in a new tab.</p>
+          </div>
+          <div class="research-doc-card">
+            <p class="research-doc-eyebrow">Contributor communications research</p>
+            <span class="status-badge status-forming">Contributor research</span>
+            <h3>Semi-Monthly Contributor Email Strategy and Timeline Analysis</h3>
+            <p class="research-doc-meta"><strong>Date:</strong> August 2026 &nbsp;&middot;&nbsp; <strong>Submitted by:</strong> Tamira, Contributor</p>
+            <p class="research-doc-summary">This contributor research outlines a suggested twice-monthly communication rhythm, including priority updates, contributor tasks, impact recaps, recognition, feedback loops, and scheduling considerations.</p>
+            <p class="research-doc-confidentiality">May require access request. Internal only. Do not share outside Cioré without founder approval.</p>
+            <a class="btn btn-primary research-doc-btn" href="https://docs.google.com/document/d/1f36rAk76fZkmZjfvYZhiR97oIV83PzHGcwJi6aAGkps/edit?usp=sharing" target="_blank" rel="noopener noreferrer" aria-label="Open Semi-Monthly Contributor Email Strategy and Timeline Analysis in a new tab. May require access request.">
+              Request access and open document
+              <span class="arrow-circle" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M7 17L17 7M9 7h8v8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </span>
+            </a>
+            <p class="research-doc-footnote">Opens Google Drive or Google Docs in a new tab.</p>
+          </div>
+        </div>
+      </section>
+
     </div>
 
       <div class="back-to-top-row">
@@ -8911,11 +9577,12 @@
 
     <footer>
       <div class="wrap">
-        <p>Cioré Contributor Hub — private &amp; internal. Not for external distribution.</p>
+        <p>Cioré Contributor Hub. Private and internal. Not for external distribution.</p>
       </div>
     </footer>
 
   </div>
+
 
   <!-- ============================================================
        PAGE: ACCESSIBILITY
@@ -9788,6 +10455,56 @@
         </div>
 
         <p class="fine-note">An interesting research page is not always an active project. Check the status and project channel before beginning substantial work.</p>
+      </section>
+
+      <!-- ================= NYRO AND STAR RESEARCH ================= -->
+      <section aria-labelledby="wonow-nyro-star-heading">
+        <p class="section-label">Open research areas</p>
+        <h2 id="wonow-nyro-star-heading">Nyro and Star Research</h2>
+
+        <div class="team-grid">
+          <div class="team-card">
+            <p class="team-role">Nyro system research</p>
+            <p class="team-name">Star Personal Energy Base</p>
+            <p class="team-focus">Help Cioré research how a personal energy base could collect sunlight, store energy safely, charge a phone through USB-C, and support smaller portable reserves over time.</p>
+            <p class="team-focus">Research needs include collector size, battery storage, heat, accessibility, retractable cables, direct USB-C connectors, form factor, home use, travel use, car use, bike use, and real-world testing.</p>
+            <span class="status-badge status-active-now">Active research</span>
+            <p class="work-label" style="margin-top:14px;">Suggested ways to help</p>
+            <ul class="bullets">
+              <li>Portable solar and battery reserve research</li>
+              <li>Industrial design and form-factor research</li>
+              <li>Accessibility research</li>
+              <li>Thermal and safety research</li>
+              <li>Energy measurement planning</li>
+              <li>Cable and connector research</li>
+              <li>Repairability and end-of-life research</li>
+              <li>Competitor and patent landscape research</li>
+            </ul>
+          </div>
+          <div class="team-card">
+            <p class="team-role">Contributor suggested research</p>
+            <p class="team-name">Phone-Care and Disinfection Accessory Exploration</p>
+            <p class="team-focus">A waitlist member suggested exploring whether a future accessory or station could support phone-care routines. This is an early research question, not a product commitment.</p>
+            <p class="team-focus">Research needs include material compatibility, heat, device safety, accessibility, cleaning methods, claims boundaries, repairability, and what users would actually find useful.</p>
+            <span class="status-badge status-later">Future research</span>
+            <p class="work-label" style="margin-top:14px;">Suggested ways to help</p>
+            <ul class="bullets">
+              <li>Research phone-care practices and accessory categories</li>
+              <li>Research materials compatibility</li>
+              <li>Research user needs and accessibility</li>
+              <li>Research safety and heat considerations</li>
+              <li>Research what evidence would be required before making any claim</li>
+              <li>Identify what questions need qualified engineering, materials, legal, or safety review</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="fine-note">Research contributors should document sources, assumptions, risks, questions, and limits. Do not make public claims, conduct hazardous testing, or represent a research idea as a confirmed Cioré feature.</p>
+
+        <div class="wonow-callout">
+          <p class="wonow-callout-label">Current Nyro direction</p>
+          <p>Cioré is first researching Star as a personal energy base that may collect sunlight, store energy, and charge a phone through USB-C. The Energy Backplate remains future phone-side research. Biothermic Touch remains low-power sensing research. Wireless charging and phone-care accessories are not part of the first Star research round.</p>
+        </div>
       </section>
 
       <!-- ================= WHO IS WORKING ON WHAT ================= -->
