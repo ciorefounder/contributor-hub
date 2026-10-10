@@ -1,5 +1,4 @@
-
-  (function () {
+(function () {
     var pages = document.querySelectorAll('.page');
     var validRoutes = [];
     pages.forEach(function (p) { validRoutes.push(p.dataset.page); });
@@ -840,6 +839,82 @@
       form.hidden = false;
     }
 
+    // ---- Structured acknowledgment over postMessage ----
+    //
+    // The form posts natively to a hidden iframe (not fetch), because the
+    // backend's HtmlService response cannot be reliably read by fetch across
+    // origins. The Apps Script response itself carries a small embedded
+    // script that posts a structured acknowledgment back to this page. This
+    // listener validates that acknowledgment before trusting it:
+    //   1. event.origin must look like an Apps Script execution domain.
+    //   2. the message must have the expected fixed type.
+    //   3. the requestId must match the one this page just sent.
+    // event.source is deliberately NOT required to be strictly identical to
+    // the iframe's contentWindow: Apps Script's HtmlService output can be
+    // nested inside its own internal sandbox iframe, so the message's
+    // immediate source may not equal iframe.contentWindow even when it
+    // genuinely came from this submission. Origin plus message shape plus
+    // requestId correlation stand in as the real check instead.
+    var ackFrame = document.getElementById('ciore-contribution-ack-frame');
+    var requestIdInput = document.getElementById('rcy-request-id');
+    var pendingRequestId = null;
+    var ackTimeoutId = null;
+    var ACK_TIMEOUT_MS = 15000;
+
+    function generateRequestId() {
+      if (window.crypto && typeof window.crypto.randomUUID === 'function') {
+        return window.crypto.randomUUID();
+      }
+      return 'rcy-' + Date.now() + '-' + Math.random().toString(36).slice(2);
+    }
+
+    function isLikelyAppsScriptOrigin(origin) {
+      try {
+        var url = new URL(origin);
+        return url.protocol === 'https:' && /(^|\.)googleusercontent\.com$/i.test(url.hostname);
+      } catch (e) {
+        return false;
+      }
+    }
+
+    function clearPending() {
+      if (ackTimeoutId) {
+        clearTimeout(ackTimeoutId);
+        ackTimeoutId = null;
+      }
+      pendingRequestId = null;
+    }
+
+    function finishSubmission() {
+      isSubmitting = false;
+      setSending(false);
+    }
+
+    window.addEventListener('message', function (event) {
+      if (!pendingRequestId) return; // nothing in flight right now
+      if (!isLikelyAppsScriptOrigin(event.origin)) return; // not from the Apps Script sandbox
+
+      var data = event.data;
+      if (!data || typeof data !== 'object') return;
+      if (data.type !== 'cioreContributionAck') return;
+      if (data.requestId !== pendingRequestId) return; // stale or unrelated acknowledgment
+
+      clearPending();
+      finishSubmission();
+
+      if (data.status === 'saved') {
+        showSuccess();
+      } else if (data.status === 'rejected') {
+        // The backend validated before writing anything and rejected it.
+        // Nothing was recorded.
+        showErrors([data.message || 'Your contribution was not recorded. Please review your entries and try again.']);
+      } else {
+        // status === 'unknown', or anything unrecognized. A record may or
+        // may not already exist; we do not claim either way.
+        showErrors(['We could not confirm whether your contribution was recorded. Please write in the help desk channel before submitting it again.']);
+      }
+    });
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
@@ -864,13 +939,39 @@
         return;
       }
 
+      // Write the trimmed values back into the fields so the native form
+      // submission carries the same trimmed text used for validation.
+      nameInput.value = data.contributorName;
+      document.getElementById('rcy-topic').value = data.contributionTopic;
+      document.getElementById('rcy-description').value = data.contributionDescription;
+      document.getElementById('rcy-link').value = data.contributionLink;
+
       isSubmitting = true;
       setSending(true);
+
+      var requestId = generateRequestId();
+      pendingRequestId = requestId;
+      requestIdInput.value = requestId;
+
+      // Register the listener state and the timeout BEFORE sending the form,
+      // so a very fast response can never arrive before we are ready for it.
+      // An iframe load event is not proof of anything by itself and is not
+      // used here; only the structured acknowledgment above resolves this.
+      // A silence past this window is an unknown outcome, not a rejection,
+      // and we do not automatically retry (a retry here could duplicate a
+      // row that was already written).
+      ackTimeoutId = setTimeout(function () {
+        if (pendingRequestId !== requestId) return; // already resolved or superseded
+        clearPending();
+        finishSubmission();
+        showErrors(['We could not confirm whether your contribution was recorded. Please write in the help desk channel before submitting it again.']);
+      }, ACK_TIMEOUT_MS);
 
       HTMLFormElement.prototype.submit.call(form);
     });
 
     submitAnotherBtn.addEventListener('click', function () {
+      clearPending();
       form.reset();
       setDefaultDate();
       clearErrors();
